@@ -24,7 +24,7 @@ The final portal leads to his spaceship, allowing him to finally go home.
 ## Milestones
 
 ### Milestone 1
-- [ ] Plan the game
+- [x] Plan the game
 
 ### Milestone 2
 
