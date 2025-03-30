@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqvrwckx3deuj"]
+
+[ext_resource type="PackedScene" uid="uid://crt6uwbl32w65" path="res://assets/kenney-space-station/chair.glb" id="1_740fq"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xos1s"]
+friction = 0.45
+bounce = 0.21
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c684q"]
+size = Vector3(0.2, 0.6, 0.1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l58o4"]
+size = Vector3(0.2, 0.2, 0.3)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+mass = 0.05
+physics_material_override = SubResource("PhysicsMaterial_xos1s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.984808, 0.173648, 0, -0.173648, 0.984808, 2.98023e-08, 0.3, -0.05)
+shape = SubResource("BoxShape3D_c684q")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98023e-08, 0.1, 0.05)
+shape = SubResource("BoxShape3D_l58o4")
+
+[node name="chair2" parent="." instance=ExtResource("1_740fq")]

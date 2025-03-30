@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dnimey6pf53jg"]
+
+[ext_resource type="PackedScene" uid="uid://bqvrwckx3deuj" path="res://scene/chair_rigid_body_3d.tscn" id="1_xods6"]
+
+[node name="Chair" type="Node3D"]
+
+[node name="RigidBody3D" parent="." instance=ExtResource("1_xods6")]
