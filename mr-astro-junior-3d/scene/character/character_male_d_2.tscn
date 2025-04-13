@@ -33,6 +33,12 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 [node name="TestPlayerSkin" instance=ExtResource("1_hn5t6")]
 script = SubResource("GDScript_hn5t6")
 
+[node name="Skeleton3D" parent="character-male-d" index="0"]
+bones/3/rotation = Quaternion(-0.00160028, 0, 0, 0.999999)
+bones/4/rotation = Quaternion(0, 0, -0.379295, 0.925276)
+bones/5/rotation = Quaternion(0, 0, 0.379295, 0.925276)
+bones/6/rotation = Quaternion(0, 0.00160028, 0, 0.999999)
+
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
 tree_root = SubResource("AnimationNodeStateMachine_2c54m")
 anim_player = NodePath("../AnimationPlayer")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b7vvmjyia85b8"]
+[gd_scene load_steps=17 format=3 uid="uid://b7vvmjyia85b8"]
 
 [ext_resource type="Script" uid="uid://cdrmbi4ydvh0g" path="res://scene/box.gd" id="1_ao1kn"]
 [ext_resource type="PackedScene" uid="uid://k5typy1xmvd6" path="res://assets/kenney-space-station/table-display.glb" id="2_1ltyt"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bqvrwckx3deuj" path="res://scene/chair_rigid_body_3d.tscn" id="14_75grf"]
 [ext_resource type="PackedScene" uid="uid://dqsruj7qf20rx" path="res://scene/chair.tscn" id="14_lpqig"]
 [ext_resource type="PackedScene" uid="uid://b5rc0q8qkw28d" path="res://scene/ball.tscn" id="15_olctt"]
+[ext_resource type="PackedScene" uid="uid://cxtaaqao485jr" path="res://scene/portal.tscn" id="16_dg04w"]
 
 [node name="Box" type="Node3D"]
 script = ExtResource("1_ao1kn")
@@ -560,3 +561,6 @@ mass = 20.0
 
 [node name="ball" parent="." instance=ExtResource("15_olctt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.296123, 5.45029, -4.33512)
+
+[node name="Portal" parent="." instance=ExtResource("16_dg04w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.1, 0, 8)
