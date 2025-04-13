@@ -34,7 +34,7 @@ The final portal leads to his spaceship, allowing him to finally go home.
   - [ ] Hit with sword
   - [ ] Collect items
   - [ ] Open doors
-  - [ ] Enter portals
+  - [x] Enter portals
   - [ ] Die
   - [ ] Respawn
 - [ ] Create Enemies

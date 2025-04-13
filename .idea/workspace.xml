@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="planned" />
+    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="mr astro animation">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/character/character_male_d_2.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/character/character_male_d_2.tscn" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +77,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743325846119</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mr astro animation">
+      <option name="closed" value="true" />
+      <created>1744535049986</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1744535049986</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,6 +115,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="the plan :)" />
     <MESSAGE value="planned" />
-    <option name="LAST_COMMIT_MESSAGE" value="planned" />
+    <MESSAGE value="mr astro animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="mr astro animation" />
   </component>
 </project>
