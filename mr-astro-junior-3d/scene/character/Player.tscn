@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bip8612jy06qs" path="res://scene/character/player.gd" id="1_d6bex"]
 [ext_resource type="PackedScene" uid="uid://co5v6b4s61sx" path="res://scene/character/camera_controller.tscn" id="1_gxxus"]
-[ext_resource type="PackedScene" uid="uid://bel7q3lounhml" path="res://scene/character/character_male_d_2.tscn" id="2_d6bex"]
+[ext_resource type="PackedScene" uid="uid://dpngvxne0gcab" path="res://mr_astro_jnr_skin.tscn" id="4_3l4lg"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3l4lg"]
 radius = 0.4
@@ -18,4 +18,5 @@ shape = SubResource("CapsuleShape3D_3l4lg")
 [node name="CameraController" parent="." instance=ExtResource("1_gxxus")]
 transform = Transform3D(0.4, 0, 0, 0, 0.35, 0, 0, 0, 0.4, 0, 0.3, 0)
 
-[node name="TestPlayerSkin" parent="." instance=ExtResource("2_d6bex")]
+[node name="MrAstroJnr" parent="." instance=ExtResource("4_3l4lg")]
+transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)

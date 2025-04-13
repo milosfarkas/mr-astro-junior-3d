@@ -1,7 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://bel7q3lounhml"]
+[gd_scene load_steps=8 format=3 uid="uid://cdcjun7yyqm8r"]
 
 [ext_resource type="PackedScene" uid="uid://b84y5kol54cbj" path="res://assets/kenney_mini-characters/character-male-d.glb" id="1_hn5t6"]
-[ext_resource type="Script" uid="uid://dp7gfobq4g4y" path="res://scene/character/character_male_d_2.gd" id="2_fs1sp"]
+
+[sub_resource type="GDScript" id="GDScript_hn5t6"]
+script/source = "extends Node3D
+
+@onready var move_state_machine = $AnimationTree.get(\"parameters/playback\")
+
+
+func set_move_state(state_name: String) -> void:
+	move_state_machine.travel(state_name)
+"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_fs1sp"]
 animation = &"idle"
@@ -22,13 +31,7 @@ states/running/position = Vector2(483, 100)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_kt1wk"), "idle", "running", SubResource("AnimationNodeStateMachineTransition_m5ngw")]
 
 [node name="TestPlayerSkin" instance=ExtResource("1_hn5t6")]
-script = ExtResource("2_fs1sp")
-
-[node name="Skeleton3D" parent="character-male-d" index="0"]
-bones/3/rotation = Quaternion(0.0182521, 0, 0, 0.999833)
-bones/4/rotation = Quaternion(0, 0, -0.349482, 0.936943)
-bones/5/rotation = Quaternion(0, 0, 0.349482, 0.936943)
-bones/6/rotation = Quaternion(0, -0.0182521, 0, 0.999833)
+script = SubResource("GDScript_hn5t6")
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]
 tree_root = SubResource("AnimationNodeStateMachine_2c54m")
