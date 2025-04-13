@@ -5,8 +5,7 @@ class_name PlayerCharacter
 @export var jump_height : float = 2.25
 @export var jump_time_to_peak : float = 0.4
 @export var jump_time_to_descent : float = 0.3
-@onready var skin = $TestPlayerSkin
-
+@onready var skin = $MrAstroJnr
 
 
 @onready var jump_velocity : float = ((2.0 * jump_height) / jump_time_to_peak) * -1.0
@@ -14,6 +13,9 @@ class_name PlayerCharacter
 @onready var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
 # source: https://youtu.be/IOe1aGY6hXA?feature=shared
 
+var action_jump = "jump"
+var action_idle = "idle"
+var action_run = "running"
 
 @export var base_speed := 4.0
 @export var run_speed := 6.0
@@ -42,25 +44,23 @@ func move_logic(delta) -> void:
 		vel_2d = vel_2d.limit_length(speed) * speed_modifier
 		velocity.x = vel_2d.x
 		velocity.z = vel_2d.y
-		skin.set_move_state('running')
+		skin.set_move_state(action_run)
 		var target_angle = -movement_input.angle() + PI/2
 		skin.rotation.y = rotate_toward(skin.rotation.y, target_angle, 6.0 * delta)
 	else:
 		vel_2d = vel_2d.move_toward(Vector2.ZERO, base_speed * 4.0 * delta)
 		velocity.x = vel_2d.x
 		velocity.z = vel_2d.y
-		skin.set_move_state('idle')
+		skin.set_move_state(action_idle)
 
 	if movement_input:
 		last_movement_input = movement_input.normalized()
-
-
 
 func jump_logic(delta) -> void:
 	if is_on_floor():
 		if Input.is_action_just_pressed("jump"):
 			velocity.y = -jump_velocity
 	else:
-		skin.set_move_state('jump')
+		skin.set_move_state(action_jump)
 	var gravity = jump_gravity if velocity.y > 0.0 else fall_gravity
 	velocity.y -= gravity * delta
