@@ -16,9 +16,10 @@ class_name PlayerCharacter
 var action_jump = "jump"
 var action_idle = "idle"
 var action_run = "running"
+var action_attack = "attack"
 
-@export var base_speed := 4.0
-@export var run_speed := 6.0
+@export var base_speed := 5.0
+@export var run_speed := 10
 @export var defend_speed := 2.0
 var speed_modifier := 1.0
 
@@ -30,6 +31,7 @@ var last_movement_input := Vector2(0,1)
 func _physics_process(delta: float) -> void:
 	move_logic(delta)
 	jump_logic(delta)
+	attack_logic()
 	move_and_slide()
 	
 
@@ -55,6 +57,10 @@ func move_logic(delta) -> void:
 
 	if movement_input:
 		last_movement_input = movement_input.normalized()
+
+func attack_logic() -> void:
+	if Input.is_action_just_pressed("attack"):
+		skin.attack()
 
 func jump_logic(delta) -> void:
 	if is_on_floor():

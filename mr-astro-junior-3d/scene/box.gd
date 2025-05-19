@@ -6,8 +6,9 @@ class_name Box
 @onready var gate_back: Node3D = $Walls/WallBack/Gate
 @onready var gate_left: Node3D = $Walls/WallLeft/Gate
 
-static func create() -> Box:
-	var box_scene: PackedScene = preload("res://scene/box.tscn")
+
+static func create(tscn: String) -> Box:
+	var box_scene: PackedScene = load(tscn)
 	var instance = box_scene.instantiate()
 	return instance
 
@@ -34,3 +35,8 @@ func open_gate(
 
 func get_size() -> Vector3:
 	return $Walls/Floor.size
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.name == "Player":
+		get_tree().change_scene_to_file("res://scene/level.tscn")
