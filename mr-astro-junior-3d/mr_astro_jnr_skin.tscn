@@ -1,98 +1,95 @@
-[gd_scene load_steps=10 format=3 uid="uid://dpngvxne0gcab"]
+[gd_scene load_steps=15 format=3 uid="uid://dpngvxne0gcab"]
 
 [ext_resource type="PackedScene" uid="uid://c63k5gefupk2r" path="res://assets/mrastro3d-animation-04.glb" id="1_0mrlr"]
 [ext_resource type="Script" uid="uid://cicm2yq08kn0f" path="res://mr_astro_jnr.gd" id="2_k6ycd"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_s3ksa"]
-animation = &"ActionTPose"
+animation = &"idle"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_tldp6"]
-animation = &"ActionJump"
+animation = &"jump"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hkd4w"]
-animation = &"ArmatureAction"
+animation = &"walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ahggu"]
-xfade_time = 0.3
 advance_mode = 2
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_s3ksa"]
-xfade_time = 0.3
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_a12fg"]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tldp6"]
-xfade_time = 0.3
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f0x48"]
 
-[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_6v64n"]
-states/Start/position = Vector2(199, 142)
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ibp5v"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jhjgv"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tp8cc"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3vrf5"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2v517"]
 states/idle/node = SubResource("AnimationNodeAnimation_s3ksa")
-states/idle/position = Vector2(357, 142)
+states/idle/position = Vector2(361, 100)
 states/jump/node = SubResource("AnimationNodeAnimation_tldp6")
-states/jump/position = Vector2(406, 53)
+states/jump/position = Vector2(476, 209)
 states/running/node = SubResource("AnimationNodeAnimation_hkd4w")
-states/running/position = Vector2(513, 142)
-transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_ahggu"), "idle", "running", SubResource("AnimationNodeStateMachineTransition_s3ksa"), "running", "idle", SubResource("AnimationNodeStateMachineTransition_tldp6")]
+states/running/position = Vector2(599, 100)
+transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_ahggu"), "idle", "running", SubResource("AnimationNodeStateMachineTransition_a12fg"), "running", "idle", SubResource("AnimationNodeStateMachineTransition_f0x48"), "running", "jump", SubResource("AnimationNodeStateMachineTransition_ibp5v"), "jump", "running", SubResource("AnimationNodeStateMachineTransition_jhjgv"), "jump", "idle", SubResource("AnimationNodeStateMachineTransition_tp8cc"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_3vrf5")]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1bfx3"]
+graph_offset = Vector2(-338.614, -21.9917)
+nodes/MoveStateMachine/node = SubResource("AnimationNodeStateMachine_2v517")
+nodes/MoveStateMachine/position = Vector2(-100, 140)
+node_connections = [&"output", 0, &"MoveStateMachine"]
 
 [node name="MrAstroJnrSkin" groups=["player"] instance=ExtResource("1_0mrlr")]
 script = ExtResource("2_k6ycd")
 
-[node name="Skeleton3D" parent="MrAstroJnr" index="0"]
-bones/0/position = Vector3(0, 0, 0)
-bones/0/rotation = Quaternion(0, 0, -0.000594764, 1)
-bones/1/rotation = Quaternion(0, 0, 0.000587153, 1)
-bones/2/rotation = Quaternion(-3.56595e-07, 0.000545447, -4.54747e-13, 1)
-bones/7/rotation = Quaternion(-3.15662e-08, -3.70752e-08, -0.694065, 0.719912)
-bones/8/rotation = Quaternion(-1.03262e-08, 5.55968e-09, -0.638515, 0.76961)
-bones/10/rotation = Quaternion(-3.15031e-08, 3.71289e-08, 0.695288, 0.718731)
-bones/11/rotation = Quaternion(-1.03262e-08, -5.55968e-09, 0.638515, 0.76961)
-bones/18/position = Vector3(0, 0, 0)
-bones/18/rotation = Quaternion(-0.452202, -0.543611, -0.452202, 0.543611)
-bones/19/rotation = Quaternion(-0.543611, -0.452202, 0.543611, 0.452202)
-bones/21/position = Vector3(0, 0, 0)
-bones/21/rotation = Quaternion(-0.452202, 0.543611, 0.452202, 0.543611)
-bones/22/rotation = Quaternion(0.543611, -0.452202, 0.543611, -0.452202)
+[node name="MrAstroJnr" parent="." index="0"]
+transform = Transform3D(0.946629, 0, 0, 0, 1.20641, 0, 0, 0, 0.946629, 0, 0, 0)
 
 [node name="eye" parent="MrAstroJnr/Skeleton3D" index="0"]
-transform = Transform3D(0.0001891, 2.07029e-06, -0.173344, 1.20749e-07, 0.136017, 2.63856e-06, 0.173344, -9.70062e-08, 0.0001891, -0.324926, 2.30576, 0.822057)
+transform = Transform3D(0, 1.23281e-13, -0.173344, 2.96893e-14, 0.136017, 1.57112e-13, 0.173344, -2.32963e-14, 0, -0.327032, 2.30575, 0.821702)
 
 [node name="glasshelmet" parent="MrAstroJnr/Skeleton3D" index="1"]
-transform = Transform3D(0.00106173, 8.55502e-06, -0.973264, 6.77961e-07, 0.562061, 1.48146e-05, 0.973264, -4.00856e-07, 0.00106173, 0.00558851, 2.19283, 0.46867)
+transform = Transform3D(0, 5.06071e-13, -0.973264, -4.34476e-13, 0.562061, 8.76312e-13, 0.973264, 2.5091e-13, 0, 0.00386956, 2.19283, 0.468675)
 
 [node name="head" parent="MrAstroJnr/Skeleton3D" index="2"]
-transform = Transform3D(0.00111785, 1.22384e-05, -1.02471, 7.13797e-07, 0.804056, 1.55977e-05, 1.02471, -5.73445e-07, 0.00111785, 0.00508503, 2.05441, 0.00910183)
+transform = Transform3D(0, -2.93437e-13, -1.02471, -1.73369e-13, 0.804056, -3.73963e-13, 1.02471, 1.36038e-13, 0, 0.00386953, 2.05442, 0.0091065)
 
 [node name="helmet" parent="MrAstroJnr/Skeleton3D" index="3"]
-transform = Transform3D(0.0013864, 1.51785e-05, -1.27088, 8.85279e-07, 0.997222, 1.93448e-05, 1.27088, -7.11209e-07, 0.0013864, 0.00121551, 2.05442, 0.00910605)
+transform = Transform3D(0, 3.26937e-13, -1.27088, 3.0427e-13, 0.997222, 4.16657e-13, 1.27088, -2.38751e-13, 0, 0, 2.05442, 0.0091065)
 
 [node name="arm_l" parent="MrAstroJnr/Skeleton3D" index="4"]
-transform = Transform3D(-4.18122e-08, 0.275478, -0.326904, 1.77654e-08, 0.0619001, 1.45484, 0.35983, 2.89544e-08, -1.09814e-07, 0.536873, 2.74203, 0.00910647)
+transform = Transform3D(-4.15471e-15, -1.68292e-08, -1.49112, -1.57287e-08, 0.282347, -8.88775e-08, 0.35983, 1.23418e-08, 2.82511e-15, -0.836099, 1.0372, 0.00910659)
 
 [node name="arm_r" parent="MrAstroJnr/Skeleton3D" index="5"]
-transform = Transform3D(1.30316e-07, -0.275541, -0.325416, 2.00046e-08, 0.0616185, -1.45518, 0.35983, 7.95349e-08, 1.09874e-07, -0.90121, 1.10959, 0.0091066)
+transform = Transform3D(2.14475e-08, 5.04876e-08, -1.49112, -1.01519e-07, 0.282347, 1.77755e-07, 0.35983, 6.28294e-08, -9.53517e-15, -0.8361, 1.0372, 0.0091066)
 
 [node name="action-step" parent="MrAstroJnr/Skeleton3D" index="6"]
-transform = Transform3D(9.45703e-14, 0.000746525, -1.05638, 7.95024e-11, 0.627581, 0.00125659, 0.783464, -6.36842e-11, 0, 0.00419369, 0.272514, 0.00910651)
+transform = Transform3D(0, 5.47657e-12, -1.05638, 7.95024e-11, 0.627582, 9.21847e-12, 0.783464, -6.36842e-11, 0, 0.00386953, 0.272519, 0.0091065)
 
 [node name="backpack" parent="MrAstroJnr/Skeleton3D" index="7"]
-transform = Transform3D(0.609908, 0.000619606, 2.97777e-14, -0.000725503, 0.520884, 2.50332e-11, 0, -5.2857e-11, 0.246692, 0.0009262, 0.778623, -0.614706)
+transform = Transform3D(0.609909, 4.54548e-12, 0, -5.32235e-12, 0.520884, 2.50332e-11, 0, -5.2857e-11, 0.246692, 6.98492e-09, 0.778623, -0.614706)
 
 [node name="Cylinder" parent="MrAstroJnr/Skeleton3D" index="8"]
-transform = Transform3D(0.152653, 0.000643624, 1.84264e-14, -0.000181585, 0.541075, 1.54905e-11, 0, -5.49059e-11, 0.152653, 0.714166, 0.771987, -0.690736)
+transform = Transform3D(0.152653, 4.72168e-12, 0, -1.33212e-12, 0.541075, 1.54906e-11, 0, -5.49059e-11, 0.152653, 0.713247, 0.772836, -0.690736)
 
 [node name="flag" parent="MrAstroJnr/Skeleton3D" index="9"]
-transform = Transform3D(0.0603629, 0.00013042, -0.204409, -7.18033e-05, 0.10964, 0.00024315, 0.126017, -8.10209e-12, 0.097913, 0.483389, 0.919048, 0.511344)
+transform = Transform3D(0.0603629, -5.05925e-12, -0.204409, 1.20977e-11, 0.10964, -2.19678e-12, 0.126017, -8.10209e-12, 0.097913, 0.482296, 0.919623, 0.511344)
 
 [node name="radio" parent="MrAstroJnr/Skeleton3D" index="10"]
-transform = Transform3D(-0.0817233, 0.000252853, -0.433093, 9.72121e-05, 0.212566, 0.000515176, 0.258279, -2.09086e-12, -0.137037, -0.325334, 0.829073, 0.447957)
+transform = Transform3D(-0.0817233, 2.85461e-12, -0.433093, 3.63798e-12, 0.212566, 4.46818e-12, 0.258279, -2.09086e-12, -0.137037, -0.32632, 0.828685, 0.447957)
 
 [node name="leg_l" parent="MrAstroJnr/Skeleton3D" index="11"]
-transform = Transform3D(-0.554698, -2.25807e-07, 5.99643e-07, 1.48224e-07, -0.760246, 8.93512e-08, 4.84881e-07, 1.33491e-07, 0.592345, -0.635165, -0.409677, 0.26205)
+transform = Transform3D(-0.554698, -3.6175e-07, 5.75857e-07, 1.81287e-07, -0.760247, 1.49343e-08, 5.13175e-07, 4.85014e-08, 0.592345, -0.635165, -0.409677, 0.26205)
 
 [node name="leg_r" parent="MrAstroJnr/Skeleton3D" index="12"]
-transform = Transform3D(-0.554698, -1.05645e-08, 1.72399e-07, 2.42395e-08, -0.760246, 8.93513e-08, 2.38093e-07, 1.33491e-07, 0.592345, -0.635165, -0.409677, 0.26205)
+transform = Transform3D(-0.554698, 1.25378e-07, 1.96185e-07, -8.82314e-09, -0.760247, 1.49344e-08, 2.09799e-07, 4.85014e-08, 0.592345, -0.635165, -0.409678, 0.26205)
 
 [node name="AnimationPlayer" parent="." index="1"]
 autoplay = "ActionTPose"
 
 [node name="AnimationTreeMrAstro" type="AnimationTree" parent="." index="2"]
-tree_root = SubResource("AnimationNodeStateMachine_6v64n")
+tree_root = SubResource("AnimationNodeBlendTree_1bfx3")
 anim_player = NodePath("../AnimationPlayer")
