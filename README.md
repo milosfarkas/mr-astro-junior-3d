@@ -35,14 +35,14 @@ The final portal leads to his spaceship, allowing him to finally go home.
   - [ ] Collect items
   - [ ] Open doors
   - [x] Enter portals
-  - [ ] Die
-  - [ ] Respawn
+  - [x] Die
+  - [x] Respawn
 - [ ] Create Enemies
   - [ ] Follow the player
   - [ ] Push back the player
   - [ ] Damage the player
-- [ ] add platform elements
-  - [ ] add collectibles, like key
+- [x] add platform elements
+- [ ] add collectibles, like key
 
 ### Milestone 3
 
