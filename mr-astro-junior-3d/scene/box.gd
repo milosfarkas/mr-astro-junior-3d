@@ -6,6 +6,8 @@ class_name Box
 @onready var gate_back: Node3D = $Walls/WallBack/Gate
 @onready var gate_left: Node3D = $Walls/WallLeft/Gate
 
+@export var ramp: Node3D
+
 var light_energy = .1
 
 static func create(tscn: String) -> Box:
@@ -22,7 +24,27 @@ func random_color():
 		rng.randf_range(min_value, 1.0)
 	)
 
+var default_state = true
+
+func turn_the_whole_world():
+	var r = Vector3(-1, 0, 0) if default_state else  Vector3(1, 0, 0)
+	default_state = not default_state
+	
+	var all_levels = get_tree().get_nodes_in_group("level")
+	if not all_levels.is_empty():
+		var level: Node3D = all_levels[0]
+		var angle = PI/2
+		level.rotate(r, angle)
+		var nodes = get_tree().get_nodes_in_group("player").filter(func(n: Node): return typeof(n) == typeof(Node3D))
+		var mr_astro: Node3D = nodes[0] if nodes else null
+		if mr_astro:
+			mr_astro.rotate(-r, angle)
+
 func _ready() -> void:
+	
+	if ramp:
+		ramp.should_turn.connect(turn_the_whole_world)
+	
 	for light: DirectionalLight3D in get_node("lights").get_children():
 		light.light_color = random_color()
 		light.light_energy = light_energy
