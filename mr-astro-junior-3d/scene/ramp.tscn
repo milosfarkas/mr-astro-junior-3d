@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b267puy52keyl"]
+
+[ext_resource type="Script" uid="uid://cu2nsyjtc05ds" path="res://scene/ramp.gd" id="1_6ujuh"]
+[ext_resource type="PackedScene" uid="uid://m152m5tiff6i" path="res://scene/monorail.tscn" id="1_mmxue"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v84vt"]
+size = Vector3(2.8, 0.8, 0.8)
+
+[node name="Ramp" type="Node3D"]
+script = ExtResource("1_6ujuh")
+
+[node name="monorail" parent="." instance=ExtResource("1_mmxue")]
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.98023e-08, 0.1, 0.1)
+shape = SubResource("BoxShape3D_v84vt")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

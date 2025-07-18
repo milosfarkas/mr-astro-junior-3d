@@ -24,7 +24,7 @@ fog_density = 0.0451
 volumetric_fog_density = 0.057
 volumetric_fog_albedo = Color(0.862711, 1, 0.757402, 1)
 
-[node name="Level" type="Node3D"]
+[node name="Level" type="Node3D" groups=["level"]]
 script = ExtResource("1_dmi07")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

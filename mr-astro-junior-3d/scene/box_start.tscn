@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://b41j66np8pr6f"]
+[gd_scene load_steps=17 format=3 uid="uid://b41j66np8pr6f"]
 
 [ext_resource type="Script" uid="uid://cdrmbi4ydvh0g" path="res://scene/box.gd" id="1_u52fe"]
 [ext_resource type="PackedScene" uid="uid://c806ukktxv0e4" path="res://assets/kenney-space-station/computer-screen.glb" id="2_almh7"]
+[ext_resource type="PackedScene" uid="uid://b267puy52keyl" path="res://scene/ramp.tscn" id="2_u52fe"]
 [ext_resource type="PackedScene" uid="uid://cxmpkgtv4eqlb" path="res://assets/kenney-space-station/display-wall.glb" id="3_0jh1v"]
 [ext_resource type="PackedScene" uid="uid://k5typy1xmvd6" path="res://assets/kenney-space-station/table-display.glb" id="4_hs0sq"]
 [ext_resource type="PackedScene" uid="uid://b4clibkc8cd11" path="res://assets/kenney-space-station/barrels.glb" id="5_gp3wp"]
@@ -16,8 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://bqvrwckx3deuj" path="res://scene/chair_rigid_body_3d.tscn" id="14_c2ara"]
 [ext_resource type="PackedScene" uid="uid://b5rc0q8qkw28d" path="res://scene/ball.tscn" id="15_74vnk"]
 
-[node name="Box" type="Node3D"]
+[node name="Box" type="Node3D" node_paths=PackedStringArray("ramp")]
 script = ExtResource("1_u52fe")
+ramp = NodePath("Objects/Ramp")
 
 [node name="lights" type="Node3D" parent="."]
 
@@ -106,6 +108,9 @@ size = Vector3(4, 0.1, 4)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9, 0.5, -8.9)
 
 [node name="Objects" type="Node3D" parent="."]
+
+[node name="Ramp" parent="Objects" instance=ExtResource("2_u52fe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39032, 0.347885, -9.44743)
 
 [node name="computer-screen2" parent="Objects" instance=ExtResource("2_almh7")]
 transform = Transform3D(1.73205, 0, -1, 0, 2, 0, 1, 0, 1.73205, 8.9, 0, -9.1)
@@ -535,9 +540,10 @@ transform = Transform3D(3.72529e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, 3.72529e-08, -1
 [node name="wall33" parent="w4" instance=ExtResource("13_bi3ky")]
 transform = Transform3D(3.72529e-08, 0, 0.5, 0, 0.5, 0, -0.5, 0, 3.72529e-08, -12, 1.1, 10)
 
-[node name="RigidBody3D" parent="." instance=ExtResource("14_c2ara")]
+[node name="Chair" parent="." instance=ExtResource("14_c2ara")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1, 6.3, -1.1)
 mass = 20.0
 
 [node name="ball" parent="." instance=ExtResource("15_74vnk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.296123, 5.45029, -4.33512)
+mass = 1.0
