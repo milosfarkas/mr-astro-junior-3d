@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://co2ufbo3f78ut"]
+
+[ext_resource type="PackedScene" uid="uid://ig58ehmrel7s" path="res://assets/KayKit_Platformer_Pack_1.0_FREE/Assets/fbx/yellow/diamond_yellow.fbx" id="1_0v0s1"]
+[ext_resource type="Script" uid="uid://bw8unoi6yvfs7" path="res://scene/diamond.gd" id="2_dplif"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mqhsm"]
+size = Vector3(1, 0.8, 1)
+
+[node name="diamond" instance=ExtResource("1_0v0s1")]
+script = ExtResource("2_dplif")
+
+[node name="Area3D" type="Area3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+shape = SubResource("BoxShape3D_mqhsm")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

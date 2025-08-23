@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b41j66np8pr6f"]
+[gd_scene load_steps=18 format=3 uid="uid://b41j66np8pr6f"]
 
 [ext_resource type="Script" uid="uid://cdrmbi4ydvh0g" path="res://scene/box.gd" id="1_u52fe"]
 [ext_resource type="PackedScene" uid="uid://c806ukktxv0e4" path="res://assets/kenney-space-station/computer-screen.glb" id="2_almh7"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cxorktv2ivnjn" path="res://assets/blender/wall3.glb" id="13_bi3ky"]
 [ext_resource type="PackedScene" uid="uid://bqvrwckx3deuj" path="res://scene/chair_rigid_body_3d.tscn" id="14_c2ara"]
 [ext_resource type="PackedScene" uid="uid://b5rc0q8qkw28d" path="res://scene/ball.tscn" id="15_74vnk"]
+[ext_resource type="PackedScene" uid="uid://co2ufbo3f78ut" path="res://scene/diamond.tscn" id="17_almh7"]
 
 [node name="Box" type="Node3D" node_paths=PackedStringArray("ramp")]
 script = ExtResource("1_u52fe")
@@ -116,7 +117,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39032, 0.347885, -9.44743)
 transform = Transform3D(1.73205, 0, -1, 0, 2, 0, 1, 0, 1.73205, 8.9, 0, -9.1)
 
 [node name="display-wall2" parent="Objects" instance=ExtResource("3_0jh1v")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.6, 0.6, -9.8)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.6, 0.6, -9.7)
 
 [node name="table-display2" parent="Objects" instance=ExtResource("4_hs0sq")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -8, 0.6, -9.1)
@@ -547,3 +548,6 @@ mass = 20.0
 [node name="ball" parent="." instance=ExtResource("15_74vnk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.296123, 5.45029, -4.33512)
 mass = 1.0
+
+[node name="diamond" parent="." instance=ExtResource("17_almh7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.8, 0.6, -6.9)
