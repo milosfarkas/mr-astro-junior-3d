@@ -15,8 +15,13 @@ run/main_scene="res://scene/level.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+State="*res://scene/state.gd"
+
 [display]
 
+window/size/mode=3
 window/emulate_mouse_from_touch=true
 
 [global_group]

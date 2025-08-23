@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="fix animation">
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/export_presets.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/export_presets.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/mr_astro_jnr_skin.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/mr_astro_jnr_skin.tscn" afterDir="false" />
-    </list>
+    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="ramp - day5" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747723469202</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ramp - day5">
+      <option name="closed" value="true" />
+      <created>1752857483090</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752857483090</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,6 +155,7 @@
     <MESSAGE value="Enter portals" />
     <MESSAGE value="levels - day4" />
     <MESSAGE value="fix animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix animation" />
+    <MESSAGE value="ramp - day5" />
+    <option name="LAST_COMMIT_MESSAGE" value="ramp - day5" />
   </component>
 </project>

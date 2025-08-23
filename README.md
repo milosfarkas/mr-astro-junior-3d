@@ -42,7 +42,7 @@ The final portal leads to his spaceship, allowing him to finally go home.
   - [ ] Push back the player
   - [ ] Damage the player
 - [x] add platform elements
-- [ ] add collectibles, like key
+- [x] add collectibles, like key
 
 ### Milestone 3
 

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://b24iuwbgqj1er"]
+
+[ext_resource type="PackedScene" uid="uid://i1ygbf6llnad" path="res://assets/kenney-space-station/floor-panel-corner.glb" id="1_nyk8t"]
+
+[node name="model-floor-panel-corner" instance=ExtResource("1_nyk8t")]
