@@ -28,6 +28,9 @@ var speed_modifier := 1.0
 var movement_input := Vector2.ZERO
 var last_movement_input := Vector2(0,1)
 
+func _ready() -> void:
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+
 func _physics_process(delta: float) -> void:
 	move_logic(delta)
 	jump_logic(delta)

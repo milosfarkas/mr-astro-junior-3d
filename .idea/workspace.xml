@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="ramp - day5" />
+    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="list issues">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/character/player.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/character/player.gd" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752857483090</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="list issues">
+      <option name="closed" value="true" />
+      <created>1765095964010</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1765095964010</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +169,7 @@
     <MESSAGE value="levels - day4" />
     <MESSAGE value="fix animation" />
     <MESSAGE value="ramp - day5" />
-    <option name="LAST_COMMIT_MESSAGE" value="ramp - day5" />
+    <MESSAGE value="list issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="list issues" />
   </component>
 </project>

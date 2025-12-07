@@ -70,5 +70,4 @@ The final portal leads to his spaceship, allowing him to finally go home.
 - [ ] [Kenney : Space Kit](https://kenney.nl/assets/space-kit)
 
 # - to fix
-- [ ] camera handling
 - [ ] rotation by hitting the ramp
