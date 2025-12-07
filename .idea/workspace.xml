@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="list issues" />
+    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="fix: rotation by hitting the ramp">
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/portal.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/portal.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/portal.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/portal.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/state.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/state.gd" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,7 +133,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765095964010</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fix: rotation by hitting the ramp">
+      <option name="closed" value="true" />
+      <created>1765099391838</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1765099391838</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +177,7 @@
     <MESSAGE value="fix animation" />
     <MESSAGE value="ramp - day5" />
     <MESSAGE value="list issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="list issues" />
+    <MESSAGE value="fix: rotation by hitting the ramp" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: rotation by hitting the ramp" />
   </component>
 </project>
