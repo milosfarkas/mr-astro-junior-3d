@@ -52,12 +52,19 @@ func _process(delta: float) -> void:
 			rotating = false
 
 func turn_the_whole_world():
-	rotating = true
-	elapsed = 0.0
-	
-	rotationVector = Vector3(-1, 0, 0) if default_state else  Vector3(1, 0, 0)
+	var r = Vector3(-1, 0, 0) if default_state else  Vector3(1, 0, 0)
 	default_state = not default_state
 	
+	var all_levels = get_tree().get_nodes_in_group("level")
+	if not all_levels.is_empty():
+		var level: Node3D = all_levels[0]
+		var angle = PI/2
+		level.rotate(r, angle)
+		var nodes = get_tree().get_nodes_in_group("player").filter(func(n: Node): return typeof(n) == typeof(Node3D))
+		var mr_astro: Node3D = nodes[0] if nodes else null
+		if mr_astro:
+			mr_astro.rotate(-r, angle)
+
 func _ready() -> void:
 	
 	if ramp:

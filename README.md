@@ -68,6 +68,3 @@ The final portal leads to his spaceship, allowing him to finally go home.
 - [ ] [Kenney : Mini Characters 1](https://kenney.nl/assets/mini-characters-1)
 - [ ] [Kenney : Space Station Kit](https://kenney.nl/assets/space-station-kit)
 - [ ] [Kenney : Space Kit](https://kenney.nl/assets/space-kit)
-
-# - to fix
-- [ ] rotation by hitting the ramp
