@@ -7,6 +7,7 @@ class_name Box
 @onready var gate_left: Node3D = $Walls/WallLeft/Gate
 
 @export var ramp: Node3D
+@export var unlock_gate_name: String = ""
 
 var light_energy = .1
 
@@ -87,3 +88,10 @@ func open_gate(
 
 func get_size() -> Vector3:
 	return $Walls/Floor.size
+
+func unlock() -> void:
+	if unlock_gate_name == "":
+		return
+	var gate_node: Node3D = get_node_or_null("Walls/" + unlock_gate_name + "/Gate")
+	if gate_node:
+		gate_node.visible = false

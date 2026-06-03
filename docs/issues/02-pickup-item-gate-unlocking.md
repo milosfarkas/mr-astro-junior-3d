@@ -10,17 +10,25 @@ Create a new `PickupItem` scene and script that replaces the old `diamond.gd`. E
 
 ## Acceptance criteria
 
-- [ ] `PickupItem` scene with `Area3D` collision, `@export target: NodePath`, `@export item_type: String`
-- [ ] On PlayerCharacter enters area → item added to State inventory → target receives unlock signal/call
-- [ ] Gate supports "locked until unlocked by item" state (stays hidden after unlock even on scene reload? No — full reset on death means gate is visible again after reload)
-- [ ] Gate accepts an unlock method that sets `visible = false`
-- [ ] Item becomes invisible and stops colliding after pickup
-- [ ] Works with any target node that has an `unlock()` method (gate, portal, chest)
+- [x] `PickupItem` scene with `Area3D` collision, `@export target: NodePath`, `@export item_type: String`
+- [x] On PlayerCharacter enters area → item added to State inventory → target receives unlock signal/call
+- [x] Gate supports "locked until unlocked by item" state (full reset on death means gate is visible again after reload)
+- [x] Gate accepts an unlock method that sets `visible = false`
+- [x] Item becomes invisible and stops colliding after pickup
+- [x] Works with any target node that has an `unlock()` method (gate, portal, chest)
 
 ## Blocked by
 
 - `docs/issues/01-extend-state-portal-killplane.md`
 
-## Further notes
+## Status
 
-The old `diamond.gd` (which directly calls `State.open_portal()`) should be removed or replaced. The target-based wiring makes items reusable across levels without per-item scripting.
+**COMPLETED**
+
+## Implementation notes
+
+- `pickup_item.gd` — on collision with PlayerCharacter, adds `item_type` to State inventory, calls `unlock()` on `target` node, then hides self and disables collision
+- `pickup_item.tscn` — scene with Area3D + CollisionShape3D + MeshInstance3D placeholder
+- `Box.unlock()` — opens gate specified by `@export unlock_gate_name` (e.g. "WallFront" → hides `Walls/WallFront/Gate`)
+- `Portal.unlock()` — alias for `open_portal()`
+- `diamond.gd` kept for legacy compatibility, but new items should use PickupItem

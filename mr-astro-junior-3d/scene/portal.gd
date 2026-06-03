@@ -14,5 +14,8 @@ func open_portal():
 	open = true
 	$PortalDoor.material.albedo_color = Color.GREEN
 
+func unlock():
+	open_portal()
+
 func _on_door_blink_timer_timeout() -> void:
 	$PortalDoor.visible = not $PortalDoor.visible
