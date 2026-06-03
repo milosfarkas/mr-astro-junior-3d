@@ -23,6 +23,13 @@ func get_level_path(level_index: int) -> String:
 		return LEVEL_PATHS[level_index]
 	return ""
 
+func highest_unlocked_level() -> int:
+	var highest: int = 1
+	for level in unlocked_levels:
+		if level > highest:
+			highest = level
+	return highest
+
 func go_to_next_level() -> void:
 	var next_level: int = current_level + 1
 	if LEVEL_PATHS.has(next_level):
@@ -38,8 +45,7 @@ func go_to_next_level() -> void:
 func reload_current_level() -> void:
 	inventory.clear()
 	inventory_changed.emit()
-	if LEVEL_PATHS.has(current_level):
-		get_tree().call_deferred("change_scene_to_file", LEVEL_PATHS[current_level])
+	get_tree().call_deferred("change_scene_to_file", "res://scene/start.tscn")
 
 func start_level(level_index: int) -> void:
 	current_level = level_index
