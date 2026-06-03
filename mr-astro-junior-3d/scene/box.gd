@@ -94,4 +94,4 @@ func unlock() -> void:
 		return
 	var gate_node: Node3D = get_node_or_null("Walls/" + unlock_gate_name + "/Gate")
 	if gate_node:
-		gate_node.visible = false
+		gate_node.visible = true

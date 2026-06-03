@@ -25,11 +25,11 @@ func _refresh() -> void:
 			"key":
 				label.add_theme_color_override("font_color", Color.GOLD)
 			"hammer":
-				label.add_theme_color_override("font_color", Color.ORYX_RED)
+				label.add_theme_color_override("font_color", Color(0.85, 0.2, 0.2))
 			"screwdriver":
 				label.add_theme_color_override("font_color", Color.CYAN)
 			"diamond":
-				label.add_theme_color_override("font_color", Color.DEEEP_SKY_BLUE)
+				label.add_theme_color_override("font_color", Color.DEEP_SKY_BLUE)
 			_:
 				label.add_theme_color_override("font_color", Color.WHITE)
 		grid.add_child(label)

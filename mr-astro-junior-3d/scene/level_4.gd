@@ -3,16 +3,16 @@ extends Node3D
 func _ready() -> void:
 	var box1: Box = Box.create("res://scene/box_start.tscn")
 	$Boxes.add_child(box1)
-	box1.open_gate(front=false, right=true, back=false, left=false)
+	box1.open_gate(false, true, false, false)
 	
 	var box2: Box = Box.create("res://scene/box_challenge.tscn")
 	$Boxes.add_child(box2)
-	box2.open_gate(front=false, right=true, back=false, left=true)
+	box2.open_gate(false, true, false, true)
 	box2.position.x += box2.get_size().x
 	
 	var box3: Box = Box.create("res://scene/box_end.tscn")
 	$Boxes.add_child(box3)
-	box3.open_gate(front=false, right=false, back=false, left=true)
+	box3.open_gate(false, false, false, true)
 	box3.position.x += box3.get_size().x * 2
 	
 	var portal_scene: PackedScene = load("res://scene/portal.tscn")
