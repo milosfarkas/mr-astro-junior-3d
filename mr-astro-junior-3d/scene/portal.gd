@@ -5,10 +5,12 @@ extends Node3D
 var open: bool = false
 
 func _ready() -> void:
-	$PortalDoor.material.albedo_color = Color.RED
-	State.open_portal_signal.connect(open_portal)
-	if not requires_key:
+	if requires_key:
+		$PortalDoor.material.albedo_color = Color.RED
 		State.inventory_changed.connect(_on_inventory_changed)
+	else:
+		open_portal()
+	State.open_portal_signal.connect(open_portal)
 
 func _on_inventory_changed() -> void:
 	if requires_key and not open and State.has_item("key"):
