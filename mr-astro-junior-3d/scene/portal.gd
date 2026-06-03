@@ -1,10 +1,18 @@
 extends Node3D
 
+@export var requires_key: bool = false
+
 var open: bool = false
 
 func _ready() -> void:
 	$PortalDoor.material.albedo_color = Color.RED
 	State.open_portal_signal.connect(open_portal)
+	if not requires_key:
+		State.inventory_changed.connect(_on_inventory_changed)
+
+func _on_inventory_changed() -> void:
+	if requires_key and not open and State.has_item("key"):
+		open_portal()
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter and open:

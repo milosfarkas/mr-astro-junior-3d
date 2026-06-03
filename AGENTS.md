@@ -22,6 +22,8 @@ Mr. Astro Junior 3D — a Godot 4.4 3D platformer/adventure game. GDScript only,
 - **`Box.create(tscn_path)`** is a static factory for instancing box scenes. Follow this pattern for new scene-loading scripts rather than calling `instantiate()` directly.
 - **`PickupItem`** (`scene/pickup_item.gd`) is the collectible item. Has `@export target: NodePath` (what it unlocks) and `@export item_type: String`. On player collision: adds to `State` inventory, calls `unlock()` on target, then hides itself. Target can be a Box, Portal, or any node with `unlock()`.
 - **`Box.unlock()`** opens a gate specified by `@export unlock_gate_name`. Gate name must match a wall child: `WallFront`, `WallRight`, `WallBack`, or `WallLeft`. `Portal.unlock()` opens the portal — same as `open_portal()`.
+- **Portal** has `@export requires_key: bool`. If true, stays red until `State.has_item("key")` is true, then turns green automatically via `inventory_changed` signal.
+- **HUD** (`scene/hud.gd`) is an instanced `CanvasLayer` in each level scene. Shows item labels from `State.inventory`. Responds to `State.inventory_changed` signal. Currently uses text labels; icons to be added later.
 - **`diamond.gd`** is legacy — use `PickupItem` for new items.
 - **Character animations** go through `AnimationTree` with a `MoveStateMachine` and `AttackOneShot`. Set states via `skin.set_move_state("idle"/"running"/"jump")` and trigger attack via `skin.attack()`.
 - **World rotation mechanic**: `Ramp` emits `should_turn` → `Box.turn_the_whole_world()` rotates all `"level"` group nodes and counter-rotates `"player"` group nodes.

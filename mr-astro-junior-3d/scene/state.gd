@@ -2,6 +2,7 @@ extends Node
 class_name GameState
 
 signal open_portal_signal
+signal inventory_changed
 
 var current_level: int = 1
 var inventory: Array[String] = []
@@ -29,23 +30,27 @@ func go_to_next_level() -> void:
 		if next_level not in unlocked_levels:
 			unlocked_levels.append(next_level)
 		inventory.clear()
+		inventory_changed.emit()
 		get_tree().call_deferred("change_scene_to_file", LEVEL_PATHS[next_level])
 	else:
 		get_tree().call_deferred("change_scene_to_file", "res://scene/credits.tscn")
 
 func reload_current_level() -> void:
 	inventory.clear()
+	inventory_changed.emit()
 	if LEVEL_PATHS.has(current_level):
 		get_tree().call_deferred("change_scene_to_file", LEVEL_PATHS[current_level])
 
 func start_level(level_index: int) -> void:
 	current_level = level_index
 	inventory.clear()
+	inventory_changed.emit()
 	if LEVEL_PATHS.has(level_index):
 		get_tree().call_deferred("change_scene_to_file", LEVEL_PATHS[level_index])
 
 func add_item(item_type: String) -> void:
 	inventory.append(item_type)
+	inventory_changed.emit()
 
 func has_item(item_type: String) -> bool:
 	return item_type in inventory
@@ -55,3 +60,4 @@ func item_count() -> int:
 
 func clear_inventory() -> void:
 	inventory.clear()
+	inventory_changed.emit()

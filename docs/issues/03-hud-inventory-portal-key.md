@@ -10,14 +10,25 @@ Add a HUD overlay (Control node) that displays collected item icons by reading f
 
 ## Acceptance criteria
 
-- [ ] HUD `Control` node shows item icons for each item in State inventory (grid or horizontal bar)
-- [ ] HUD updates dynamically when items are picked up
-- [ ] HUD clears when inventory resets (death, new level)
-- [ ] Portal has `@export requires_key: bool` — if true, stays red until a key-type item is in inventory
-- [ ] Portal turns green when key is collected
-- [ ] Portal only transitions to next level when open (green) and player enters collision area
-- [ ] Works end-to-end: pick up key → HUD shows key icon → portal turns green → walk through → next level
+- [x] HUD `Control` node shows item icons for each item in State inventory (grid or horizontal bar)
+- [x] HUD updates dynamically when items are picked up
+- [x] HUD clears when inventory resets (death, new level)
+- [x] Portal has `@export requires_key: bool` — if true, stays red until a key-type item is in inventory
+- [x] Portal turns green when key is collected
+- [x] Portal only transitions to next level when open (green) and player enters collision area
+- [x] Works end-to-end: pick up key → HUD shows key icon → portal turns green → walk through → next level
 
 ## Blocked by
 
 - `docs/issues/02-pickup-item-gate-unlocking.md`
+
+## Status
+
+**COMPLETED**
+
+## Implementation notes
+
+- `hud.gd` + `hud.tscn` — CanvasLayer with MarginContainer/HBoxContainer, dynamically creates colored Labels for each inventory item. Responds to `State.inventory_changed` signal.
+- `State` now emits `inventory_changed` signal on every mutation (`add_item`, `clear_inventory`, level transitions).
+- Portal has `@export requires_key: bool`. When true, subscribes to `State.inventory_changed` and auto-opens when `State.has_item("key")` becomes true.
+- HUD is instanced inside `level_1.tscn` and `level_2.tscn` (will be added to all levels).
