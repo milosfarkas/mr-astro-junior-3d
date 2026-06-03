@@ -10,14 +10,18 @@ Extend the existing `State` autoload singleton to manage level progression and i
 
 ## Acceptance criteria
 
-- [ ] `State` tracks `current_level: int`, unlocked levels map, and inventory array (cleared on level load and on death)
-- [ ] Portal calls `State.go_to_next_level()` which triggers `change_scene_to_file` to the correct next level scene
-- [ ] Portal no longer has a hardcoded scene path
-- [ ] Global kill plane exists in a level scene — player falling through it reloads the current level
-- [ ] Death clears inventory in State, doors and items reset (via scene reload)
-- [ ] `Box._on_area_3d_body_entered` death-zone logic removed
-- [ ] Two test level scenes confirm: portal A→B works, death on B reloads B
+- [x] `State` tracks `current_level: int`, unlocked levels map, and inventory array (cleared on level load and on death)
+- [x] Portal calls `State.go_to_next_level()` which triggers `change_scene_to_file` to the correct next level scene
+- [x] Portal no longer has a hardcoded scene path
+- [x] Global kill plane exists in a level scene — player falling through it reloads the current level
+- [x] Death clears inventory in State, doors and items reset (via scene reload)
+- [x] `Box._on_area_3d_body_entered` death-zone logic removed
+- [x] Two test level scenes confirm: portal A→B works, death on B reloads B
 
 ## Blocked by
 
 None — can start immediately.
+
+## Status
+
+**COMPLETED**

@@ -87,11 +87,3 @@ func open_gate(
 
 func get_size() -> Vector3:
 	return $Walls/Floor.size
-
-
-func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body.name == "Player":
-		call_deferred("reload_scene")
-
-func reload_scene():
-	get_tree().change_scene_to_file("res://scene/level.tscn")

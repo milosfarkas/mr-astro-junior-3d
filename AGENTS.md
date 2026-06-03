@@ -15,7 +15,9 @@ Mr. Astro Junior 3D — a Godot 4.4 3D platformer/adventure game. GDScript only,
 
 ## Key Conventions
 
-- **Autoload singleton `State`** (`scene/state.gd`) holds global signals. Access via `State.some_signal` everywhere — do not create new singletons for global state without adding them to `project.godot` `[autoload]`.
+- **Autoload singleton `State`** (`scene/state.gd`, class `GameState`) manages level progression and inventory. Access via `State.some_method()` everywhere — do not create new singletons for global state without adding them to `project.godot` `[autoload]`. Key methods: `go_to_next_level()`, `reload_current_level()`, `start_level(n)`, `add_item(type)`, `has_item(type)`, `item_count()`, `clear_inventory()`.
+- **Level scenes** are `level_1.tscn` through `level_4.tscn`. Portal navigation uses `State.go_to_next_level()`, not hardcoded paths. Main scene is `level_1.tscn`.
+- **Kill plane** (`kill_plane.tscn`) is an instanced `Area3D` placed below each level. Player falling into it calls `State.reload_current_level()`. Box death zones (`_on_area_3d_body_entered`) have been removed.
 - **Player class_name is `PlayerCharacter`** (not "Player"). `Player` is the scene node name.
 - **`Box.create(tscn_path)`** is a static factory for instancing box scenes. Follow this pattern for new scene-loading scripts rather than calling `instantiate()` directly.
 - **Character animations** go through `AnimationTree` with a `MoveStateMachine` and `AttackOneShot`. Set states via `skin.set_move_state("idle"/"running"/"jump")` and trigger attack via `skin.attack()`.
