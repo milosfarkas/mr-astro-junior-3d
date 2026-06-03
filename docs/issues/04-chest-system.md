@@ -10,17 +10,23 @@ Create a new `Chest` scene with `@export int required_item_count` (default 3). W
 
 ## Acceptance criteria
 
-- [ ] `Chest` scene with visible mesh, `Area3D` collision, `@export required_item_count: int`, `@export key_spawn_offset: Vector3`
-- [ ] PlayerCharacter enters chest area with enough items → chest hides → `PickupItem` key spawns at offset position
-- [ ] PlayerCharacter enters chest area with not enough items → nothing happens (no message, no effect)
-- [ ] Spawned key uses the `PickupItem` system from Slice 2 (has `@export target` pointing to a portal)
-- [ ] Chest resets on level reload (death) — reappears, key despawns
-- [ ] Works end-to-end: collect 3 items → approach chest → chest opens, key spawns → pick up key → portal opens
+- [x] `Chest` scene with visible mesh, `Area3D` collision, `@export required_item_count: int`, `@export key_spawn_offset: Vector3`
+- [x] PlayerCharacter enters chest area with enough items → chest hides → `PickupItem` key spawns at offset position
+- [x] PlayerCharacter enters chest area with not enough items → nothing happens (no message, no effect)
+- [x] Spawned key uses the `PickupItem` system from Slice 2 (has `@export target` pointing to a portal)
+- [x] Chest resets on level reload (death) — reappears, key despawns
+- [x] Works end-to-end: collect 3 items → approach chest → chest opens, key spawns → pick up key → portal opens
 
 ## Blocked by
 
 - `docs/issues/02-pickup-item-gate-unlocking.md`
 
-## Further notes
+## Status
 
-The chest does not need animation or sound — just hide the mesh. The key that spawns is a standard `PickupItem` with target wired to a portal, so no special chest-to-portal logic is needed.
+**COMPLETED**
+
+## Implementation notes
+
+- `chest.gd` — on collision with PlayerCharacter, checks `State.item_count() >= required_item_count`. If enough: hides, disables Area3D monitoring, spawns PickupItem key at `global_position + key_spawn_offset`. Uses `get_path_to()` to resolve `key_target` NodePath from the spawned key's perspective.
+- `chest.tscn` — scene with BoxMesh placeholder, Area3D + CollisionShape3D
+- Chest and spawned key both reset on scene reload (death)

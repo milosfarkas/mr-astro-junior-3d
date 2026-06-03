@@ -25,6 +25,7 @@ Mr. Astro Junior 3D — a Godot 4.4 3D platformer/adventure game. GDScript only,
 - **Portal** has `@export requires_key: bool`. If true, stays red until `State.has_item("key")` is true, then turns green automatically via `inventory_changed` signal.
 - **HUD** (`scene/hud.gd`) is an instanced `CanvasLayer` in each level scene. Shows item labels from `State.inventory`. Responds to `State.inventory_changed` signal. Currently uses text labels; icons to be added later.
 - **`diamond.gd`** is legacy — use `PickupItem` for new items.
+- **`Chest`** (`scene/chest.gd`) requires N items to open. Has `@export required_item_count: int`, `@export key_spawn_offset: Vector3`, `@export key_target: NodePath`. On player collision with enough items in inventory: hides itself, spawns a `PickupItem` (key) at offset position, wires key's target to `key_target`. Resets on level reload via scene reload.
 - **Character animations** go through `AnimationTree` with a `MoveStateMachine` and `AttackOneShot`. Set states via `skin.set_move_state("idle"/"running"/"jump")` and trigger attack via `skin.attack()`.
 - **World rotation mechanic**: `Ramp` emits `should_turn` → `Box.turn_the_whole_world()` rotates all `"level"` group nodes and counter-rotates `"player"` group nodes.
 - **Color palette** is in `mr-astro-junior-3d/notes.md` (dark orange #e76c21, orange #ea9335, dark blue #0a4a7b, blue #5377b3, light blue #b6cade, purple #4f2949).
