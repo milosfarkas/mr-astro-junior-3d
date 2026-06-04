@@ -9,63 +9,66 @@
 [node name="Room" type="Node3D"]
 script = ExtResource("0_script")
 
-[node name="floor" parent="." instance=ExtResource("3_fl")]
-transform = Transform3D(4.52, 0, 0, 0, 4.52, 0, 0, 0, 4.52, 0, -1.33538, 0)
-
-[node name="walls" type="Node3D" parent="."]
-
-[node name="NorthWall" parent="walls" instance=ExtResource("1_wc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, 0.3)
-
-[node name="SouthWall" parent="walls" instance=ExtResource("1_wc")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.3, 0, -0.3)
-
-[node name="WestWall" parent="walls" instance=ExtResource("1_wc")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.3, 0, -1.3)
-
-[node name="EastWall" parent="walls" instance=ExtResource("1_wc")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.3, 0, 1.3)
-
 [node name="Player" parent="." instance=ExtResource("4_player")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.0765026, 0)
 
-[node name="ceiling10" type="Node3D" parent="."]
+[node name="room" type="Node3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
 
-[node name="ceiling" parent="ceiling10" instance=ExtResource("3_bdfyo")]
+[node name="floor" parent="room" instance=ExtResource("3_fl")]
+transform = Transform3D(4.52, 0, 0, 0, 4.52, 0, 0, 0, 4.52, 0, -1.33538, 0)
+
+[node name="walls" type="Node3D" parent="room"]
+
+[node name="NorthWall" parent="room/walls" instance=ExtResource("1_wc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3, 0, 0.3)
+
+[node name="SouthWall" parent="room/walls" instance=ExtResource("1_wc")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.3, 0, -0.3)
+
+[node name="WestWall" parent="room/walls" instance=ExtResource("1_wc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.3, 0, -1.3)
+
+[node name="EastWall" parent="room/walls" instance=ExtResource("1_wc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.3, 0, 1.3)
+
+[node name="ceiling10" type="Node3D" parent="room"]
+
+[node name="ceiling" parent="room/ceiling10" instance=ExtResource("3_bdfyo")]
 transform = Transform3D(1.5, 0, 0, 0, -1.5, 2.26494e-07, 0, -2.26494e-07, -1.5, 0, 0.697456, 0)
 light_intensity = 0.1
 
-[node name="ceiling3" parent="ceiling10" instance=ExtResource("3_bdfyo")]
+[node name="ceiling3" parent="room/ceiling10" instance=ExtResource("3_bdfyo")]
 transform = Transform3D(1.5, 0, 0, 0, -1.5, 2.26494e-07, 0, -2.26494e-07, -1.5, 0, 0.697, -1.5)
 light_intensity = 0.1
 
-[node name="ceiling2" parent="ceiling10" instance=ExtResource("3_bdfyo")]
+[node name="ceiling2" parent="room/ceiling10" instance=ExtResource("3_bdfyo")]
 transform = Transform3D(1.5, 0, 0, 0, -1.5, 2.26494e-07, 0, -2.26494e-07, -1.5, 0, 0.697, 1.5)
 light_intensity = 0.1
 light_color = Color(0.87451, 0.996078, 0.25098, 1)
 
-[node name="ceiling4" parent="ceiling10" instance=ExtResource("3_bdfyo")]
+[node name="ceiling4" parent="room/ceiling10" instance=ExtResource("3_bdfyo")]
 transform = Transform3D(1.5, 0, 0, 0, -1.5, 2.26494e-07, 0, -2.26494e-07, -1.5, -1.5, 0.697456, 0)
 light_intensity = 0.1
 
-[node name="ceiling5" parent="ceiling10" instance=ExtResource("3_bdfyo")]
+[node name="ceiling5" parent="room/ceiling10" instance=ExtResource("3_bdfyo")]
 transform = Transform3D(1.5, 0, 0, 0, -1.5, 2.26494e-07, 0, -2.26494e-07, -1.5, -1.5, 0.697, -1.5)
 light_intensity = 0.1
 light_color = Color(0.973371, 0.338534, 0.355753, 1)
 
-[node name="ceiling6" parent="ceiling10" instance=ExtResource("3_bdfyo")]
+[node name="ceiling6" parent="room/ceiling10" instance=ExtResource("3_bdfyo")]
 transform = Transform3D(1.5, 0, 0, 0, -1.5, 2.26494e-07, 0, -2.26494e-07, -1.5, -1.5, 0.697, 1.5)
 light_intensity = 0.1
 
-[node name="ceiling7" parent="ceiling10" instance=ExtResource("3_bdfyo")]
+[node name="ceiling7" parent="room/ceiling10" instance=ExtResource("3_bdfyo")]
 transform = Transform3D(1.5, 0, 0, 0, -1.5, 2.26494e-07, 0, -2.26494e-07, -1.5, 1.5, 0.697456, 0)
 light_intensity = 0.1
 light_color = Color(0.666521, 0.725621, 0.986095, 1)
 
-[node name="ceiling8" parent="ceiling10" instance=ExtResource("3_bdfyo")]
+[node name="ceiling8" parent="room/ceiling10" instance=ExtResource("3_bdfyo")]
 transform = Transform3D(1.5, 0, 0, 0, -1.5, 2.26494e-07, 0, -2.26494e-07, -1.5, 1.5, 0.697, -1.5)
 light_intensity = 0.1
 
-[node name="ceiling9" parent="ceiling10" instance=ExtResource("3_bdfyo")]
+[node name="ceiling9" parent="room/ceiling10" instance=ExtResource("3_bdfyo")]
 transform = Transform3D(1.5, 0, 0, 0, -1.5, 2.26494e-07, 0, -2.26494e-07, -1.5, 1.5, 0.697, 1.5)
 light_intensity = 0.1
