@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=8 format=3 uid="uid://b8iug2nxp1p2a"]
 
-[ext_resource type="Script" path="res://scene/level_4.gd" id="1_script"]
-[ext_resource type="PackedScene" path="res://scene/character/Player.tscn" id="2_player"]
+[ext_resource type="Script" uid="uid://84gs6texfibb" path="res://scene/level_4.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://cfa445npw0jje" path="res://scene/character/Player.tscn" id="2_player"]
 [ext_resource type="PackedScene" path="res://scene/kill_plane.tscn" id="3_kill"]
 [ext_resource type="PackedScene" path="res://scene/hud.tscn" id="4_hud"]
 

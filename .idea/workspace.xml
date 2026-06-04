@@ -11,10 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/AGENTS.md" beforeDir="false" afterPath="$PROJECT_DIR$/AGENTS.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/issues/05-ui-overlay-level-select-credits.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/issues/05-ui-overlay-level-select-credits.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/project.godot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/state.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/state.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/chest.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/chest.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_3.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_3.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_4.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_4.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/pickup_item.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/pickup_item.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/portal.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/portal.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,23 +61,23 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0590902198157464" />
-      <entry key="MS500" value="1.7731254967848704" />
-      <entry key="S2" value="2.5414561936898927" />
-      <entry key="S5" value="2.7986957348903765" />
-      <entry key="S10" value="2.89611456305857" />
-      <entry key="S30" value="3.0394844265390635" />
-      <entry key="S60" value="3.52996533300538" />
-      <entry key="M2" value="4.725438373357353" />
-      <entry key="M5" value="8.20191065254042" />
-      <entry key="M10" value="14.595047313792534" />
-      <entry key="M15" value="19.634906883122103" />
-      <entry key="M30" value="27.972937617077633" />
-      <entry key="H1" value="34.06821917891034" />
-      <entry key="H2" value="37.77188773544023" />
-      <entry key="H4" value="39.8157878840111" />
-      <entry key="D1" value="41.6258034412037" />
-      <entry key="W1" value="41.94628887022509" />
+      <entry key="MS100" value="2.336892353773065" />
+      <entry key="MS500" value="3.761796914121886" />
+      <entry key="S2" value="6.316251352830811" />
+      <entry key="S5" value="9.127944000386591" />
+      <entry key="S10" value="11.043052486271536" />
+      <entry key="S30" value="12.862886791097132" />
+      <entry key="S60" value="13.409667598278363" />
+      <entry key="M2" value="13.699214941845566" />
+      <entry key="M5" value="13.936799036854117" />
+      <entry key="M10" value="14.976468271151639" />
+      <entry key="M15" value="17.29692078559382" />
+      <entry key="M30" value="26.238763343440635" />
+      <entry key="H1" value="38.63840204385984" />
+      <entry key="H2" value="49.330573409407776" />
+      <entry key="H4" value="56.41412558053834" />
+      <entry key="D1" value="63.45147191418852" />
+      <entry key="W1" value="64.77571264212816" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -97,23 +99,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.0234082373610447" />
-      <entry key="MS500" value="1.761659078804737" />
-      <entry key="S2" value="2.537356300790978" />
-      <entry key="S5" value="2.7968874052161925" />
-      <entry key="S10" value="2.8951783751131446" />
-      <entry key="S30" value="3.0391556075450255" />
-      <entry key="S60" value="3.5297713350953477" />
-      <entry key="M2" value="4.725304919263391" />
-      <entry key="M5" value="8.201804899575155" />
-      <entry key="M10" value="14.594938684610955" />
-      <entry key="M15" value="19.634804345132412" />
-      <entry key="M30" value="27.972861201761027" />
-      <entry key="H1" value="34.06817173498022" />
-      <entry key="H2" value="37.77186120170368" />
-      <entry key="H4" value="39.81577384058195" />
-      <entry key="D1" value="41.625800985954555" />
-      <entry key="W1" value="41.94628851657371" />
+      <entry key="MS100" value="1.6236103809817313" />
+      <entry key="MS500" value="3.3801875888810455" />
+      <entry key="S2" value="6.1853387306391365" />
+      <entry key="S5" value="9.058743102284966" />
+      <entry key="S10" value="11.001973531001218" />
+      <entry key="S30" value="12.847056652000763" />
+      <entry key="S60" value="13.40142647409172" />
+      <entry key="M2" value="13.695007718556484" />
+      <entry key="M5" value="13.93509410303437" />
+      <entry key="M10" value="14.975606330953847" />
+      <entry key="M15" value="17.29633484503814" />
+      <entry key="M30" value="26.238447611936834" />
+      <entry key="H1" value="38.6382277416601" />
+      <entry key="H2" value="49.33047902523431" />
+      <entry key="H4" value="56.41407596876354" />
+      <entry key="D1" value="63.45146324253546" />
+      <entry key="W1" value="64.77571139245393" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -124,31 +126,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "prd",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "D:/my-projects/godot/coolest-project-2024",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;prd&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/my-projects/godot/coolest-project-2024&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="GdScript Start and Debug.Player GDScript">
     <configuration name="Debug GDScript (Running session)" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory">
       <option name="json" value="{&#10;  // Launch: &quot;Launch a new instance of the game&quot;,&#10;  // Attach: &quot;Attach to an already running game, which was started from the Godot Editor&quot;&#10;  &quot;request&quot; : &quot;Attach&quot;,&#10;  &quot;debugServer&quot; : 6006, // port should match the Debug Adapter port in the Godot Editor project settings.&#10;  &quot;scene&quot; : &quot;main&quot;, // main, current, res://path/to/file.tscn&#10;  &#10;  // &quot;playArgs&quot; : [ &quot;--editor&quot; ], // debugging a tool script&#10;  // &quot;playArgs&quot;: [&quot;--debug-collisions&quot;,&quot;--debug-navigation&quot;], // different options&#10;  &#10;  // one click deploy and debug via Godot Editor:&#10;  // &quot;platform&quot;: &quot;Android&quot;, // including Android, iOS, Web and W4 consoles&#10;  // &quot;device&quot;: &quot;0&quot;, // index of the device of a &quot;platform&quot; type&#10;}" />
@@ -217,7 +219,9 @@
       <option name="presentableId" value="Default" />
       <updated>1743319046405</updated>
       <workItem from="1780513656677" duration="85000" />
-      <workItem from="1780513776436" duration="4489000" />
+      <workItem from="1780513776436" duration="7324000" />
+      <workItem from="1780551731642" duration="1977000" />
+      <workItem from="1780587765973" duration="491000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -347,7 +351,47 @@
       <option name="project" value="LOCAL" />
       <updated>1780518133898</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="issue 5">
+      <option name="closed" value="true" />
+      <created>1780518290156</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1780518290156</updated>
+    </task>
+    <task id="LOCAL-00018" summary="issue 6">
+      <option name="closed" value="true" />
+      <created>1780518454578</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1780518454578</updated>
+    </task>
+    <task id="LOCAL-00019" summary="issue 7">
+      <option name="closed" value="true" />
+      <created>1780519299233</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1780519299233</updated>
+    </task>
+    <task id="LOCAL-00020" summary="issue 7">
+      <option name="closed" value="true" />
+      <created>1780520126362</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1780520126362</updated>
+    </task>
+    <task id="LOCAL-00021" summary="level 1-3 are a kind of fine">
+      <option name="closed" value="true" />
+      <created>1780521157811</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1780521157811</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +439,11 @@
     <MESSAGE value="issue 2" />
     <MESSAGE value="issue 3" />
     <MESSAGE value="issue 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="issue 4" />
+    <MESSAGE value="issue 5" />
+    <MESSAGE value="issue 6" />
+    <MESSAGE value="issue 7" />
+    <MESSAGE value="level 1-3 are a kind of fine" />
+    <option name="LAST_COMMIT_MESSAGE" value="level 1-3 are a kind of fine" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
