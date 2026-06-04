@@ -12,11 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/chest.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/chest.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_3.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_3.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_4.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_4.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/pickup_item.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/pickup_item.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/portal.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/portal.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,23 +56,23 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.336892353773065" />
-      <entry key="MS500" value="3.761796914121886" />
-      <entry key="S2" value="6.316251352830811" />
-      <entry key="S5" value="9.127944000386591" />
-      <entry key="S10" value="11.043052486271536" />
-      <entry key="S30" value="12.862886791097132" />
-      <entry key="S60" value="13.409667598278363" />
-      <entry key="M2" value="13.699214941845566" />
-      <entry key="M5" value="13.936799036854117" />
-      <entry key="M10" value="14.976468271151639" />
-      <entry key="M15" value="17.29692078559382" />
-      <entry key="M30" value="26.238763343440635" />
-      <entry key="H1" value="38.63840204385984" />
-      <entry key="H2" value="49.330573409407776" />
-      <entry key="H4" value="56.41412558053834" />
-      <entry key="D1" value="63.45147191418852" />
-      <entry key="W1" value="64.77571264212816" />
+      <entry key="MS100" value="1.0274143611840827" />
+      <entry key="MS500" value="1.7156270840993377" />
+      <entry key="S2" value="3.2470524880950613" />
+      <entry key="S5" value="4.12783172288275" />
+      <entry key="S10" value="4.527911068605902" />
+      <entry key="S30" value="4.83406873629181" />
+      <entry key="S60" value="4.951088224643353" />
+      <entry key="M2" value="5.389111331165958" />
+      <entry key="M5" value="7.201889318894615" />
+      <entry key="M10" value="9.596040952709306" />
+      <entry key="M15" value="11.685578826851632" />
+      <entry key="M30" value="18.673047306608133" />
+      <entry key="H1" value="32.63114901837611" />
+      <entry key="H2" value="49.768640598129764" />
+      <entry key="H4" value="63.878391244431185" />
+      <entry key="D1" value="80.12396780345458" />
+      <entry key="W1" value="83.43183599919125" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -99,23 +94,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.6236103809817313" />
-      <entry key="MS500" value="3.3801875888810455" />
-      <entry key="S2" value="6.1853387306391365" />
-      <entry key="S5" value="9.058743102284966" />
-      <entry key="S10" value="11.001973531001218" />
-      <entry key="S30" value="12.847056652000763" />
-      <entry key="S60" value="13.40142647409172" />
-      <entry key="M2" value="13.695007718556484" />
-      <entry key="M5" value="13.93509410303437" />
-      <entry key="M10" value="14.975606330953847" />
-      <entry key="M15" value="17.29633484503814" />
-      <entry key="M30" value="26.238447611936834" />
-      <entry key="H1" value="38.6382277416601" />
-      <entry key="H2" value="49.33047902523431" />
-      <entry key="H4" value="56.41407596876354" />
-      <entry key="D1" value="63.45146324253546" />
-      <entry key="W1" value="64.77571139245393" />
+      <entry key="MS100" value="0.9922339422671267" />
+      <entry key="MS500" value="1.7028704148326297" />
+      <entry key="S2" value="3.241028772517354" />
+      <entry key="S5" value="4.124814388323192" />
+      <entry key="S10" value="4.526267032905335" />
+      <entry key="S30" value="4.833486472910895" />
+      <entry key="S60" value="4.950790185406184" />
+      <entry key="M2" value="5.388947681370131" />
+      <entry key="M5" value="7.201799029575248" />
+      <entry key="M10" value="9.595974546708636" />
+      <entry key="M15" value="11.68551028005771" />
+      <entry key="M30" value="18.67295723330584" />
+      <entry key="H1" value="32.63105508391074" />
+      <entry key="H2" value="49.768568222776786" />
+      <entry key="H4" value="63.87834556149095" />
+      <entry key="D1" value="80.12395847609577" />
+      <entry key="W1" value="83.43183461839955" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -221,7 +216,7 @@
       <workItem from="1780513656677" duration="85000" />
       <workItem from="1780513776436" duration="7324000" />
       <workItem from="1780551731642" duration="1977000" />
-      <workItem from="1780587765973" duration="491000" />
+      <workItem from="1780587765973" duration="4440000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -391,7 +386,55 @@
       <option name="project" value="LOCAL" />
       <updated>1780521157811</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fixes">
+      <option name="closed" value="true" />
+      <created>1780588518848</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1780588518848</updated>
+    </task>
+    <task id="LOCAL-00023" summary="north wall">
+      <option name="closed" value="true" />
+      <created>1780590728534</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1780590728534</updated>
+    </task>
+    <task id="LOCAL-00024" summary="4 walls">
+      <option name="closed" value="true" />
+      <created>1780590972476</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1780590972476</updated>
+    </task>
+    <task id="LOCAL-00025" summary="room 4">
+      <option name="closed" value="true" />
+      <created>1780591887797</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1780591887797</updated>
+    </task>
+    <task id="LOCAL-00026" summary="with floor">
+      <option name="closed" value="true" />
+      <created>1780592025200</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1780592025200</updated>
+    </task>
+    <task id="LOCAL-00027" summary="lights and ceiling">
+      <option name="closed" value="true" />
+      <created>1780592424847</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1780592424847</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +486,13 @@
     <MESSAGE value="issue 6" />
     <MESSAGE value="issue 7" />
     <MESSAGE value="level 1-3 are a kind of fine" />
-    <option name="LAST_COMMIT_MESSAGE" value="level 1-3 are a kind of fine" />
+    <MESSAGE value="fixes" />
+    <MESSAGE value="north wall" />
+    <MESSAGE value="4 walls" />
+    <MESSAGE value="room 4" />
+    <MESSAGE value="with floor" />
+    <MESSAGE value="lights and ceiling" />
+    <option name="LAST_COMMIT_MESSAGE" value="lights and ceiling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
