@@ -4,8 +4,8 @@
 
 [node name="LEDPanelLight" type="Node3D"]
 script = ExtResource("1_script")
-light_intensity = 1.46
-light_color = Color(0.310955, 0.88692, 0.288652, 1)
+light_intensity = 0.8
+light_color = Color(0.874578, 0.997436, 0.861925, 1)
 
 [node name="Panel" type="CSGBox3D" parent="."]
 size = Vector3(1, 0.01, 1)
