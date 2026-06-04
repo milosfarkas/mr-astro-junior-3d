@@ -1,7 +1,16 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://tjfdl30pulln"]
 
 [ext_resource type="PackedScene" uid="uid://b86da4vma3s5d" path="res://scene/wall_corner.tscn" id="1_wc"]
 
 [node name="Room" type="Node3D"]
 
 [node name="NorthWall" parent="." instance=ExtResource("1_wc")]
+
+[node name="SouthWall" parent="." instance=ExtResource("1_wc")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.6724, 0, -1.05998)
+
+[node name="WestWall" parent="." instance=ExtResource("1_wc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.02538, 0, -2.13092)
+
+[node name="WestWall2" parent="." instance=ExtResource("1_wc")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.73256, 0, 0.90119)
