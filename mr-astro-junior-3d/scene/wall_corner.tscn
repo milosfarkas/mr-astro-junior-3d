@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b86da4vma3s5d"]
+
+[ext_resource type="PackedScene" uid="uid://chca5odl5mgwx" path="res://assets/kenney-space-station/corridor_wall.glb" id="1_t32ye"]
+[ext_resource type="PackedScene" uid="uid://cf86s4bhaj2wp" path="res://assets/kenney-space-station/corridor_wallCorner.glb" id="2_wq2er"]
+[ext_resource type="PackedScene" uid="uid://d01ibm6klq5ic" path="res://assets/kenney-space-station/door-double-closed.glb" id="3_b3v8v"]
+
+[node name="wall_corner" type="Node3D"]
+
+[node name="corridor_wall2" parent="." instance=ExtResource("1_t32ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1, 0, -0.503)
+
+[node name="corridor_wall3" parent="." instance=ExtResource("1_t32ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.6, 0, -0.5)
+
+[node name="corridor_wallCorner2" parent="." instance=ExtResource("2_wq2er")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.491, 0, 0)
+
+[node name="door-double-closed2" parent="." instance=ExtResource("3_b3v8v")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.3, 0, 1.95)
