@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://tjfdl30pulln"]
+[gd_scene load_steps=6 format=3 uid="uid://tjfdl30pulln"]
 
+[ext_resource type="Script" uid="uid://cmuem2ur2oyrg" path="res://scene/room.gd" id="0_script"]
 [ext_resource type="PackedScene" uid="uid://b86da4vma3s5d" path="res://scene/wall_corner.tscn" id="1_wc"]
 [ext_resource type="PackedScene" uid="uid://dfur2bnrurao4" path="res://scene/led_panel_light.tscn" id="3_bdfyo"]
 [ext_resource type="PackedScene" uid="uid://hqj70igevusk" path="res://assets/kenney-space-station/floor-col.glb" id="3_fl"]
 [ext_resource type="PackedScene" uid="uid://cfa445npw0jje" path="res://scene/character/Player.tscn" id="4_player"]
 
 [node name="Room" type="Node3D"]
+script = ExtResource("0_script")
 
 [node name="floor" parent="." instance=ExtResource("3_fl")]
 transform = Transform3D(4.52, 0, 0, 0, 4.52, 0, 0, 0, 4.52, 0, -1.33538, 0)

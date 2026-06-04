@@ -73,3 +73,8 @@ text = "Level 3"
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Level 4"
+
+[node name="TestRoomButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Test Room"
