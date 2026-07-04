@@ -1,9 +1,24 @@
 extends Node3D
 
+const MODEL_PATHS: Dictionary = {
+	"key": "res://assets/kenney-space-station/pipe-ring-colored.glb",
+}
+
 @export var target: NodePath
 @export var item_type: String = "key"
 
 var _collected: bool = false
+
+func _ready() -> void:
+	_load_model()
+
+func _load_model() -> void:
+	var path: String = MODEL_PATHS.get(item_type, "res://assets/kenney-space-station/pipe-ring-colored.glb")
+	var scene: PackedScene = load(path)
+	if scene == null:
+		return
+	var model: Node3D = scene.instantiate()
+	add_child(model)
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if _collected:

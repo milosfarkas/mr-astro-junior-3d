@@ -24,12 +24,12 @@ func _refresh() -> void:
 		match item_type:
 			"key":
 				label.add_theme_color_override("font_color", Color.GOLD)
-			"hammer":
-				label.add_theme_color_override("font_color", Color(0.85, 0.2, 0.2))
-			"screwdriver":
-				label.add_theme_color_override("font_color", Color.CYAN)
-			"diamond":
-				label.add_theme_color_override("font_color", Color.DEEP_SKY_BLUE)
+			"diamond_green":
+				label.add_theme_color_override("font_color", Color(0.2, 0.85, 0.3))
+			"diamond_blue":
+				label.add_theme_color_override("font_color", Color(0.3, 0.5, 0.95))
+			"diamond_yellow":
+				label.add_theme_color_override("font_color", Color(0.95, 0.85, 0.2))
 			_:
 				label.add_theme_color_override("font_color", Color.WHITE)
 		grid.add_child(label)

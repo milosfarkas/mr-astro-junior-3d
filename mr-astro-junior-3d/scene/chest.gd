@@ -13,6 +13,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		_opened = true
 		visible = false
 		$Area3D.set_deferred("monitoring", false)
+		State.clear_inventory()
 		_spawn_key()
 
 func _spawn_key() -> void:

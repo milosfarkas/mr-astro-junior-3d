@@ -17,7 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://bqvrwckx3deuj" path="res://scene/chair_rigid_body_3d.tscn" id="14_c2ara"]
 [ext_resource type="PackedScene" uid="uid://b5rc0q8qkw28d" path="res://scene/ball.tscn" id="15_74vnk"]
 
-
 [node name="Box" type="Node3D" node_paths=PackedStringArray("ramp")]
 script = ExtResource("1_u52fe")
 ramp = NodePath("Objects/Ramp")
@@ -549,4 +548,4 @@ mass = 20.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.296123, 5.45029, -4.33512)
 mass = 1.0
 
-
+[node name="Node3D" type="Node3D" parent="."]

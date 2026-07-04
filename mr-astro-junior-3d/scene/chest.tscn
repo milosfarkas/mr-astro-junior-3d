@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://chy1hc3p0ijqj"]
+[gd_scene load_steps=6 format=3 uid="uid://cnadyjvigvx0r"]
 
 [ext_resource type="Script" uid="uid://c5ogt6250npy1" path="res://scene/chest.gd" id="1_script"]
-[ext_resource type="PackedScene" uid="uid://bjrv3lp1jjbol" path="res://assets/kenney-space-station/turret_single.glb" id="2_c0k1r"]
+[ext_resource type="PackedScene" uid="uid://p3c7o21cnbao" path="res://assets/KayKit_Platformer_Pack_1.0_FREE/Assets/gltf/yellow/platform_2x2x1_yellow.gltf" id="2_box"]
+[ext_resource type="PackedScene" uid="uid://cqw54u1yqwl8d" path="res://assets/KayKit_Platformer_Pack_1.0_FREE/Assets/gltf/yellow/bracing_medium_yellow.gltf" id="3_lid"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_chest"]
 size = Vector3(0.8, 0.5, 0.6)
@@ -23,7 +24,9 @@ mesh = SubResource("BoxMesh_chest")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 shape = SubResource("BoxShape3D_chest")
 
-[node name="turret_single2" parent="." instance=ExtResource("2_c0k1r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9708, 0, -1.50875)
+[node name="box" parent="." instance=ExtResource("2_box")]
+
+[node name="lid" parent="." instance=ExtResource("3_lid")]
+transform = Transform3D(3.2, 0, 0, 0, -1.39876e-07, 3.2, 0, -3.2, -1.39876e-07, 0, 1.3, 0)
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

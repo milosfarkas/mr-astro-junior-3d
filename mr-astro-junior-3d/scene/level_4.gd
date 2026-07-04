@@ -23,23 +23,21 @@ func _ready() -> void:
 	
 	var chest_scene: PackedScene = load("res://scene/chest.tscn")
 	var chest: Node3D = chest_scene.instantiate()
-	chest.position = Vector3(box2.position.x + 3, 0.5, 0)
+	chest.position = Vector3(box2.position.x + 3, 0, 0)
 	$Boxes.add_child(chest)
 	chest.key_target = chest.get_path_to(portal)
 	
-	var item_scene: PackedScene = load("res://scene/pickup_item.tscn")
+	var diamond_green_scene: PackedScene = load("res://scene/diamond_green.tscn")
+	var dg: Node3D = diamond_green_scene.instantiate()
+	dg.position = Vector3(box3.position.x + 5, 0.5, 5)
+	$Boxes.add_child(dg)
 	
-	var hammer: Node3D = item_scene.instantiate()
-	hammer.item_type = "hammer"
-	hammer.position = Vector3(box3.position.x + 5, 0.5, 5)
-	$Boxes.add_child(hammer)
+	var diamond_blue_scene: PackedScene = load("res://scene/diamond_blue.tscn")
+	var db: Node3D = diamond_blue_scene.instantiate()
+	db.position = Vector3(box3.position.x - 5, 0.5, 5)
+	$Boxes.add_child(db)
 	
-	var diamond: Node3D = item_scene.instantiate()
-	diamond.item_type = "diamond"
-	diamond.position = Vector3(box3.position.x - 5, 0.5, 5)
-	$Boxes.add_child(diamond)
-	
-	var screwdriver: Node3D = item_scene.instantiate()
-	screwdriver.item_type = "screwdriver"
-	screwdriver.position = Vector3(box3.position.x, 0.5, -5)
-	$Boxes.add_child(screwdriver)
+	var diamond_yellow_scene: PackedScene = load("res://scene/diamond_yellow.tscn")
+	var dy: Node3D = diamond_yellow_scene.instantiate()
+	dy.position = Vector3(box3.position.x, 0.5, -5)
+	$Boxes.add_child(dy)
