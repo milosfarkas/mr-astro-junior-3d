@@ -8,6 +8,9 @@ func _ready() -> void:
 	if requires_key:
 		$PortalDoor.material.albedo_color = Color.RED
 		State.inventory_changed.connect(_on_inventory_changed)
+		var hint_area = $HintKey.get_node_or_null("Area3D")
+		if hint_area:
+			hint_area.set_deferred("monitoring", false)
 	else:
 		open_portal()
 	State.open_portal_signal.connect(open_portal)
@@ -23,6 +26,9 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 func open_portal():
 	open = true
 	$PortalDoor.material.albedo_color = Color.GREEN
+	var hint = get_node_or_null("HintKey")
+	if hint:
+		hint.visible = false
 
 func unlock():
 	open_portal()
