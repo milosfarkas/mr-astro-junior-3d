@@ -89,6 +89,10 @@ func open_gate(
 func get_size() -> Vector3:
 	return $Walls/Floor.size
 
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body is PlayerCharacter:
+		State.reload_current_level()
+
 func unlock() -> void:
 	if unlock_gate_name == "":
 		return
