@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfur2bnrurao4"]
+
+[ext_resource type="Script" uid="uid://bstt5vossv0vv" path="res://scene/led_panel_light.gd" id="1_script"]
+
+[node name="LEDPanelLight" type="Node3D"]
+script = ExtResource("1_script")
+light_intensity = 0.8
+light_color = Color(0.874578, 0.997436, 0.861925, 1)
+
+[node name="Panel" type="CSGBox3D" parent="."]
+size = Vector3(1, 0.01, 1)
+
+[node name="Light" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://d01ibm6klq5ic"
-path="res://.godot/imported/door-double-closed.glb-a54cd0f819f1c442bf40e6c3eace6f25.scn"
+uid="uid://chca5odl5mgwx"
+path="res://.godot/imported/corridor_wall-col.glb-cccacde2e06dcc6a75a6df53c542cd1e.scn"
 
 [deps]
 
-source_file="res://assets/kenney-space-station/door-double-closed.glb"
-dest_files=["res://.godot/imported/door-double-closed.glb-a54cd0f819f1c442bf40e6c3eace6f25.scn"]
+source_file="res://assets/kenney-space-station/corridor_wall-col.glb"
+dest_files=["res://.godot/imported/corridor_wall-col.glb-cccacde2e06dcc6a75a6df53c542cd1e.scn"]
 
 [params]
 
@@ -34,7 +34,7 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:door-double-closed": {
+"PATH:tmpParent/corridor_wall": {
 "generate/physics": true,
 "physics/shape_type": 1
 }
