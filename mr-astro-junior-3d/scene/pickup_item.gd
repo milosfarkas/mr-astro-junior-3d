@@ -1,7 +1,7 @@
 extends Node3D
 
 const MODEL_PATHS: Dictionary = {
-	"key": "res://assets/kenney-space-station/pipe_ringHighEnd.glb",
+	"key": "res://scene/key_model.tscn",
 }
 
 @export var target: NodePath
@@ -25,7 +25,7 @@ func _check_overlapping_bodies() -> void:
 			return
 
 func _load_model() -> void:
-	var path: String = MODEL_PATHS.get(item_type, "res://assets/kenney-space-station/pipe_ringHighEnd.glb")
+	var path: String = MODEL_PATHS.get(item_type, "res://scene/key_model.tscn")
 	var scene: PackedScene = load(path)
 	if scene == null:
 		return

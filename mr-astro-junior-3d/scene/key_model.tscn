@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c35e77ebkmo0f"]
+
+[ext_resource type="PackedScene" uid="uid://b1g77yhw1fhtj" path="res://assets/kenney-space-station/pipe_ringHighEnd.glb" id="1_model"]
+
+[node name="KeyModel" type="Node3D"]
+
+[node name="model" parent="." instance=ExtResource("1_model")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.4, -1.5)
