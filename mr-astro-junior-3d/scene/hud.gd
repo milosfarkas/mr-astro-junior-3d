@@ -70,7 +70,7 @@ func _frame_model(model: Node3D, camera: Camera3D) -> void:
 	if aabb.size == Vector3.ZERO:
 		return
 	var center: Vector3 = aabb.get_center()
-	model.global_position -= Vector3(center.x, center.y, aabb.position.z)
+	model.transform.origin -= Vector3(center.x, center.y, aabb.position.z)
 	var framed: AABB = _compute_world_aabb(model)
 	var half_h: float = framed.size.y * 0.5
 	var half_w: float = framed.size.x * 0.5
@@ -86,7 +86,7 @@ func _compute_world_aabb(root: Node3D) -> AABB:
 		var local: AABB = node.get_aabb()
 		if local.size == Vector3.ZERO:
 			continue
-		var xf: Transform3D = node.global_transform
+		var xf: Transform3D = _accumulated_transform(root, node)
 		var corners: Array[Vector3] = [
 			Vector3(local.position.x, local.position.y, local.position.z),
 			Vector3(local.end.x, local.position.y, local.position.z),
@@ -105,6 +105,23 @@ func _compute_world_aabb(root: Node3D) -> AABB:
 			else:
 				result = result.expand(wp)
 	return result
+
+func _accumulated_transform(root: Node3D, target: Node3D) -> Transform3D:
+	if target == root:
+		return Transform3D.IDENTITY
+	var chain: Array[Node3D] = []
+	var node: Node3D = target
+	while node != null and node != root:
+		chain.append(node)
+		var parent: Node = node.get_parent()
+		if parent is Node3D:
+			node = parent
+		else:
+			break
+	var xf: Transform3D = Transform3D.IDENTITY
+	for n: Node3D in chain:
+		xf = n.transform * xf
+	return xf
 
 func _find_mesh_instances(node: Node) -> Array[MeshInstance3D]:
 	var result: Array[MeshInstance3D] = []
