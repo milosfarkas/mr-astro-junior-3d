@@ -14,7 +14,11 @@ func _ready() -> void:
 	var portal_scene: PackedScene = load("res://scene/portal.tscn")
 	var portal: Node3D = portal_scene.instantiate()
 	portal.requires_key = true
-	portal.position = Vector3(box2.position.x, 0, -9)
+	var placeholder: Node3D = box2.get_node_or_null("a_portal_placement_placeholder")
+	if placeholder:
+		portal.position = box2.position + placeholder.position
+	else:
+		portal.position = Vector3(box2.position.x, 0, -9)
 	$Boxes.add_child(portal)
 	
 	var key_scene: PackedScene = load("res://scene/pickup_item.tscn")

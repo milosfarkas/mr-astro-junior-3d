@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b86da4vma3s5d"]
 
-[ext_resource type="PackedScene" uid="uid://chca5odl5mgwx" path="res://assets/kenney-space-station/corridor_wall-col.glb" id="1_t32ye"]
+[ext_resource type="PackedScene" uid="uid://chca5odl5mgwx" path="res://assets/kenney-space-station/corridor_wall.glb" id="1_t32ye"]
 [ext_resource type="PackedScene" uid="uid://cf86s4bhaj2wp" path="res://assets/kenney-space-station/corridor_wallCorner.glb" id="2_wq2er"]
 [ext_resource type="PackedScene" uid="uid://d01ibm6klq5ic" path="res://assets/kenney-space-station/door-double-closed.glb" id="3_b3v8v"]
 
