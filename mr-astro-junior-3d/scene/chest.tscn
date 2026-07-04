@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cnadyjvigvx0r"]
+[gd_scene load_steps=7 format=3 uid="uid://cnadyjvigvx0r"]
 
 [ext_resource type="Script" uid="uid://c5ogt6250npy1" path="res://scene/chest.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://p3c7o21cnbao" path="res://assets/KayKit_Platformer_Pack_1.0_FREE/Assets/gltf/yellow/platform_2x2x1_yellow.gltf" id="2_box"]
@@ -6,6 +6,8 @@
 
 [sub_resource type="BoxMesh" id="BoxMesh_chest"]
 size = Vector3(0.8, 0.5, 0.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_body"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_chest"]
 size = Vector3(1, 0.8, 1)
@@ -18,10 +20,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 visible = false
 mesh = SubResource("BoxMesh_chest")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 0, 0.8, 0)
+shape = SubResource("BoxShape3D_body")
+
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+transform = Transform3D(1.985, 0, 0, 0, 1.985, 0, 0, 0, 1.985, 0, 0.7, 0)
 shape = SubResource("BoxShape3D_chest")
 
 [node name="box" parent="." instance=ExtResource("2_box")]
