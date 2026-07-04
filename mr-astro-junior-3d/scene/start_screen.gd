@@ -19,10 +19,9 @@ func _ready() -> void:
 	_update_buttons()
 
 func _update_buttons() -> void:
-	var highest: int = State.highest_unlocked_level()
-	level_2_button.disabled = highest < 2
-	level_3_button.disabled = highest < 3
-	level_4_button.disabled = highest < 4
+	level_2_button.disabled = false
+	level_3_button.disabled = false
+	level_4_button.disabled = false
 
 func _on_continue() -> void:
 	State.start_level(State.highest_unlocked_level())

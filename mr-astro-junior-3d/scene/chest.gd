@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var required_item_count: int = 3
-@export var key_spawn_offset: Vector3 = Vector3(0, 1, 0)
+@export var key_spawn_offset: Vector3 = Vector3(0, 0.5, 0)
 @export var key_target: NodePath
 
 var _opened: bool = false
@@ -11,10 +11,9 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		return
 	if body is PlayerCharacter and State.item_count() >= required_item_count:
 		_opened = true
-		visible = false
-		$Area3D.set_deferred("monitoring", false)
 		State.clear_inventory()
 		_spawn_key()
+		queue_free()
 
 func _spawn_key() -> void:
 	var key_scene: PackedScene = load("res://scene/pickup_item.tscn")

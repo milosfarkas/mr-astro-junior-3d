@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b01pkcauc0g46"]
+[gd_scene load_steps=4 format=3 uid="uid://bcjyrgkr4vbi"]
 
 [ext_resource type="Script" uid="uid://dnp7a7hbh51jb" path="res://scene/pickup_item.gd" id="1_script"]
 
@@ -6,7 +6,7 @@
 size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pickup"]
-size = Vector3(0.6, 0.8, 0.6)
+size = Vector3(0.8, 1, 0.8)
 
 [node name="PickupItem" type="Node3D"]
 script = ExtResource("1_script")
