@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cnadyjvigvx0r"]
+[gd_scene load_steps=8 format=3 uid="uid://cnadyjvigvx0r"]
 
 [ext_resource type="Script" uid="uid://c5ogt6250npy1" path="res://scene/chest.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://p3c7o21cnbao" path="res://assets/KayKit_Platformer_Pack_1.0_FREE/Assets/gltf/yellow/platform_2x2x1_yellow.gltf" id="2_box"]
 [ext_resource type="PackedScene" uid="uid://cqw54u1yqwl8d" path="res://assets/KayKit_Platformer_Pack_1.0_FREE/Assets/gltf/yellow/bracing_medium_yellow.gltf" id="3_lid"]
+[ext_resource type="AudioStream" uid="uid://bfdkcsj1p4f0v" path="res://assets/sounds/freesound_community-metallic-latch-release-43678.mp3" id="4_latch"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_chest"]
 size = Vector3(0.8, 0.5, 0.6)
@@ -46,5 +47,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="HintDiamondSpawn3" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 1.7, 0)
+
+[node name="OpenSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_latch")
+unit_size = 5.0
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

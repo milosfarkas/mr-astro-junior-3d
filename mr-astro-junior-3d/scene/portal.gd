@@ -4,6 +4,9 @@ extends Node3D
 
 var open: bool = false
 
+@onready var ambient_player: AudioStreamPlayer3D = $AudioStreamPlayer3D
+@onready var open_player: AudioStreamPlayer3D = $OpenSound
+
 func _ready() -> void:
 	if requires_key:
 		$PortalDoor.material.albedo_color = Color.RED
@@ -21,7 +24,18 @@ func _on_inventory_changed() -> void:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter and open:
+		_start_level_transition()
+
+func _start_level_transition() -> void:
+	var tree: SceneTree = get_tree()
+	if tree == null:
+		return
+	var scene: PackedScene = load("res://scene/level_transition.tscn")
+	if scene == null:
 		State.go_to_next_level()
+		return
+	var transition: CanvasLayer = scene.instantiate()
+	tree.current_scene.add_child(transition)
 
 func open_portal():
 	open = true
@@ -29,6 +43,10 @@ func open_portal():
 	var hint = get_node_or_null("HintKey")
 	if hint:
 		hint.visible = false
+	if ambient_player:
+		ambient_player.stop()
+	if open_player and not open_player.playing:
+		open_player.play()
 
 func unlock():
 	open_portal()

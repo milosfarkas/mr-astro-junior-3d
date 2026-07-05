@@ -6,6 +6,8 @@ const HINT_DIAMOND_SCENES: Array[String] = [
 	"res://scene/diamond_yellow.tscn",
 ]
 
+const OPEN_SOUND_PATH: String = "res://assets/sounds/freesound_community-metallic-latch-release-43678.mp3"
+
 @export var required_item_count: int = 3
 @export var key_spawn_offset: Vector3 = Vector3(0, 0.5, 0)
 @export var key_target: NodePath
@@ -38,7 +40,23 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		_opened = true
 		State.clear_inventory()
 		_spawn_key()
+		_play_open_sound()
 		queue_free()
+
+func _play_open_sound() -> void:
+	var scene_tree: SceneTree = get_tree()
+	if scene_tree == null:
+		return
+	var stream: AudioStream = load(OPEN_SOUND_PATH)
+	if stream == null:
+		return
+	var sound: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
+	sound.stream = stream
+	sound.global_position = global_position
+	sound.unit_size = 5.0
+	scene_tree.current_scene.add_child(sound)
+	sound.finished.connect(sound.queue_free)
+	sound.play()
 
 func _spawn_key() -> void:
 	var key_scene: PackedScene = load("res://scene/pickup_item.tscn")
