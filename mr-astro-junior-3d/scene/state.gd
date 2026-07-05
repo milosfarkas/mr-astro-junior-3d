@@ -47,6 +47,18 @@ func reload_current_level() -> void:
 	inventory_changed.emit()
 	get_tree().call_deferred("change_scene_to_file", "res://scene/start.tscn")
 
+func die_on_lava() -> void:
+	var tree: SceneTree = get_tree()
+	if tree == null:
+		reload_current_level()
+		return
+	var scene: PackedScene = load("res://scene/lava_death_transition.tscn")
+	if scene == null:
+		reload_current_level()
+		return
+	var overlay: CanvasLayer = scene.instantiate()
+	tree.current_scene.add_child(overlay)
+
 func start_level(level_index: int) -> void:
 	current_level = level_index
 	inventory.clear()

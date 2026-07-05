@@ -40,10 +40,10 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		_opened = true
 		State.clear_inventory()
 		_spawn_key()
-		_play_open_sound()
+		_play_open_sound(global_position)
 		queue_free()
 
-func _play_open_sound() -> void:
+func _play_open_sound(pos: Vector3) -> void:
 	var scene_tree: SceneTree = get_tree()
 	if scene_tree == null:
 		return
@@ -52,7 +52,7 @@ func _play_open_sound() -> void:
 		return
 	var sound: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
 	sound.stream = stream
-	sound.global_position = global_position
+	sound.global_position = pos
 	sound.unit_size = 5.0
 	scene_tree.current_scene.add_child(sound)
 	sound.finished.connect(sound.queue_free)

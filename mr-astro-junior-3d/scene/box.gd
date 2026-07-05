@@ -91,7 +91,7 @@ func get_size() -> Vector3:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
-		State.reload_current_level()
+		State.die_on_lava()
 
 func unlock() -> void:
 	if unlock_gate_name == "":

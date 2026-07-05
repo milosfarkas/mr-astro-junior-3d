@@ -6,6 +6,10 @@ class_name PlayerCharacter
 @export var jump_time_to_peak : float = 0.4
 @export var jump_time_to_descent : float = 0.3
 @onready var skin = $MrAstroJnr
+@onready var jump_sound: AudioStreamPlayer3D = $JumpSound
+@onready var land_sound: AudioStreamPlayer3D = $LandSound
+
+var _was_on_floor: bool = true
 
 
 @onready var jump_velocity : float = ((2.0 * jump_height) / jump_time_to_peak) * -1.0
@@ -67,9 +71,15 @@ func attack_logic() -> void:
 
 func jump_logic(delta) -> void:
 	if is_on_floor():
+		if not _was_on_floor:
+			if land_sound:
+				land_sound.play()
 		if Input.is_action_just_pressed("jump"):
 			velocity.y = -jump_velocity
+			if jump_sound and not jump_sound.playing:
+				jump_sound.play()
 	else:
 		skin.set_move_state(action_jump)
+	_was_on_floor = is_on_floor()
 	var gravity = jump_gravity if velocity.y > 0.0 else fall_gravity
 	velocity.y -= gravity * delta
