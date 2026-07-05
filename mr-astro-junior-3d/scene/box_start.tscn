@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b41j66np8pr6f"]
+[gd_scene load_steps=19 format=3 uid="uid://b41j66np8pr6f"]
 
 [ext_resource type="Script" uid="uid://cdrmbi4ydvh0g" path="res://scene/box.gd" id="1_u52fe"]
 [ext_resource type="PackedScene" uid="uid://c806ukktxv0e4" path="res://assets/kenney-space-station/computer-screen.glb" id="2_almh7"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://cxorktv2ivnjn" path="res://assets/blender/wall3.glb" id="13_bi3ky"]
 [ext_resource type="PackedScene" uid="uid://bqvrwckx3deuj" path="res://scene/chair_rigid_body_3d.tscn" id="14_c2ara"]
 [ext_resource type="PackedScene" uid="uid://b5rc0q8qkw28d" path="res://scene/ball.tscn" id="15_74vnk"]
+[ext_resource type="AudioStream" uid="uid://cb1qwpd1bwhpd" path="res://assets/sounds/u_7hpxkdroz2-space-461600.mp3" id="17_0jh1v"]
+[ext_resource type="AudioStream" uid="uid://bcjqlcof4faul" path="res://assets/sounds/liecio-space-sound-hi-109577.mp3" id="18_hs0sq"]
 
 [node name="Box" type="Node3D" node_paths=PackedStringArray("ramp")]
 script = ExtResource("1_u52fe")
@@ -549,3 +551,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.296123, 5.45029, -4.33512)
 mass = 1.0
 
 [node name="Node3D" type="Node3D" parent="."]
+
+[node name="sounds" type="Node3D" parent="."]
+
+[node name="space1" type="AudioStreamPlayer3D" parent="sounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6966, 0, -4.83378)
+stream = ExtResource("17_0jh1v")
+volume_db = -6.0
+autoplay = true
+parameters/looping = true
+
+[node name="space2" type="AudioStreamPlayer3D" parent="sounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.81901, 9.53674e-07, 7.77354)
+stream = ExtResource("18_hs0sq")
+volume_db = -8.827
+autoplay = true
+parameters/looping = true
+
+[node name="space3" type="AudioStreamPlayer3D" parent="sounds"]
+transform = Transform3D(0.140538, 0, -0.990075, 0, 1, 0, 0.990075, 0, 0.140538, 5.44637, 0, 8.86382)
+stream = ExtResource("17_0jh1v")
+volume_db = -9.392
+pitch_scale = 0.84
+autoplay = true
+parameters/looping = true
+
+[node name="space4" type="AudioStreamPlayer3D" parent="sounds"]
+transform = Transform3D(0.140538, 0, -0.990075, 0, 1, 0, 0.990075, 0, 0.140538, -9.21636, 9.53674e-07, -4.72599)
+stream = ExtResource("18_hs0sq")
+volume_db = -6.0
+autoplay = true
+parameters/looping = true

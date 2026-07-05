@@ -9,6 +9,8 @@ const MODEL_PATHS: Dictionary = {
 
 var _collected: bool = false
 
+@onready var collect_sound: AudioStreamPlayer3D = $CollectSound
+
 func _ready() -> void:
 	if not has_node("model"):
 		_load_model()
@@ -50,6 +52,21 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			var target_node = get_node_or_null(target)
 			if target_node and target_node.has_method("unlock"):
 				target_node.unlock()
+		_play_collect_sound(global_position)
 		visible = false
 		$Area3D.set_deferred("monitoring", false)
 		$Area3D/CollisionShape3D.set_deferred("disabled", true)
+
+func _play_collect_sound(pos: Vector3) -> void:
+	if collect_sound == null:
+		return
+	if not is_inside_tree():
+		return
+	var tree: SceneTree = get_tree()
+	var sound: AudioStreamPlayer3D = collect_sound.duplicate()
+	sound.stream = collect_sound.stream
+	sound.global_position = pos
+	sound.process_mode = Node.PROCESS_MODE_ALWAYS
+	tree.current_scene.add_child(sound)
+	sound.finished.connect(sound.queue_free)
+	sound.play()

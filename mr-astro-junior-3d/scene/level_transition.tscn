@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://diyc5a3gc5gfn"]
+
+[ext_resource type="Script" path="res://scene/level_transition.gd" id="1_script"]
+[ext_resource type="AudioStream" uid="uid://bccli5wd2h2xq" path="res://assets/sounds/freesound_community-the-portal-90750.mp3" id="2_portal"]
+
+[node name="LevelTransition" type="CanvasLayer"]
+script = ExtResource("1_script")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_portal")

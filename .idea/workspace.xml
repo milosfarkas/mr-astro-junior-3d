@@ -10,9 +10,11 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="wip">
+    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/pickup_item.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/pickup_item.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_challenge.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_challenge.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_end.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_end.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_start.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_start.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +44,17 @@
       <entry key="_/Users/arnold.farkas/RiderProjects/mr-astro-junior-3d" value="2v1iakSYUcm5z5DdBHIKkX4pBYO" />
     </persistenceIdMap>
   </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="10233" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="main" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="prd" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,23 +66,23 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0016424419465366" />
-      <entry key="MS500" value="1.3140434601804576" />
-      <entry key="S2" value="2.163271575722372" />
-      <entry key="S5" value="2.5981191641944674" />
-      <entry key="S10" value="2.785522274739507" />
-      <entry key="S30" value="2.9335317697398122" />
-      <entry key="S60" value="3.144338981214787" />
-      <entry key="M2" value="3.848573383372381" />
-      <entry key="M5" value="5.763410652468513" />
-      <entry key="M10" value="8.987381534297853" />
-      <entry key="M15" value="12.11362617479888" />
-      <entry key="M30" value="20.665562735864217" />
-      <entry key="H1" value="35.8925907595732" />
-      <entry key="H2" value="55.60403497628025" />
-      <entry key="H4" value="72.89448126503139" />
-      <entry key="D1" value="93.85040543154837" />
-      <entry key="W1" value="98.24174119592197" />
+      <entry key="MS100" value="1.5450494765467329" />
+      <entry key="MS500" value="3.9145980518604393" />
+      <entry key="S2" value="5.347437660989588" />
+      <entry key="S5" value="5.726135450086857" />
+      <entry key="S10" value="5.860825083807475" />
+      <entry key="S30" value="5.95310006797095" />
+      <entry key="S60" value="5.9764858661192015" />
+      <entry key="M2" value="5.988226843346786" />
+      <entry key="M5" value="5.995286869707654" />
+      <entry key="M10" value="5.997668894469183" />
+      <entry key="M15" value="6.001196138207152" />
+      <entry key="M30" value="6.348866780403778" />
+      <entry key="H1" value="10.977096091160492" />
+      <entry key="H2" value="28.049526285305586" />
+      <entry key="H4" value="55.258675927672385" />
+      <entry key="D1" value="105.53794436607542" />
+      <entry key="W1" value="118.64367187317005" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -95,23 +104,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9675118628174242" />
-      <entry key="MS500" value="1.3043336535256105" />
-      <entry key="S2" value="2.15851888097724" />
-      <entry key="S5" value="2.5956995688932962" />
-      <entry key="S10" value="2.7841984553035575" />
-      <entry key="S30" value="2.9329921862108166" />
-      <entry key="S60" value="3.1433294390830864" />
-      <entry key="M2" value="3.8466405633928265" />
-      <entry key="M5" value="5.761520273940661" />
-      <entry key="M10" value="8.98608808329136" />
-      <entry key="M15" value="12.112657659847622" />
-      <entry key="M30" value="20.664988782011616" />
-      <entry key="H1" value="35.8922452440332" />
-      <entry key="H2" value="55.60383062466052" />
-      <entry key="H4" value="72.89436657234738" />
-      <entry key="D1" value="93.85038394800003" />
-      <entry key="W1" value="98.24173805827424" />
+      <entry key="MS100" value="1.5042450011627113" />
+      <entry key="MS500" value="3.894246115013134" />
+      <entry key="S2" value="5.340383225960858" />
+      <entry key="S5" value="5.723101432001967" />
+      <entry key="S10" value="5.859270141551542" />
+      <entry key="S30" value="5.9525730729451825" />
+      <entry key="S60" value="5.976221267410069" />
+      <entry key="M2" value="5.988094267473114" />
+      <entry key="M5" value="5.9952337728368335" />
+      <entry key="M10" value="5.997642333925969" />
+      <entry key="M15" value="6.001178346318646" />
+      <entry key="M30" value="6.348852444055657" />
+      <entry key="H1" value="10.977056919790039" />
+      <entry key="H2" value="28.049457548672212" />
+      <entry key="H4" value="55.25860768373927" />
+      <entry key="D1" value="105.53792367803068" />
+      <entry key="W1" value="118.64366859054256" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -131,10 +140,14 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/arnold.farkas/Library/Application Support/JetBrains/Rider2026.1/plugins/Shell Script/shellcheck&quot;,
+    &quot;Shell Script.build_itchio.sh.executor&quot;: &quot;Run&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
     &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;prd&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;sounds&quot;,
+    &quot;git.auto.fetch.suggestion.counter&quot;: &quot;2&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/my-projects/godot/coolest-project-2024&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -147,7 +160,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Shell Script.build_itchio.sh">
     <configuration name="Debug GDScript (Running session)" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory">
       <option name="json" value="{&#10;  // Launch: &quot;Launch a new instance of the game&quot;,&#10;  // Attach: &quot;Attach to an already running game, which was started from the Godot Editor&quot;&#10;  &quot;request&quot; : &quot;Attach&quot;,&#10;  &quot;debugServer&quot; : 6006, // port should match the Debug Adapter port in the Godot Editor project settings.&#10;  &quot;scene&quot; : &quot;main&quot;, // main, current, res://path/to/file.tscn&#10;  &#10;  // &quot;playArgs&quot; : [ &quot;--editor&quot; ], // debugging a tool script&#10;  // &quot;playArgs&quot;: [&quot;--debug-collisions&quot;,&quot;--debug-navigation&quot;], // different options&#10;  &#10;  // one click deploy and debug via Godot Editor:&#10;  // &quot;platform&quot;: &quot;Android&quot;, // including Android, iOS, Web and W4 consoles&#10;  // &quot;device&quot;: &quot;0&quot;, // index of the device of a &quot;platform&quot; type&#10;}" />
       <method v="2" />
@@ -198,6 +211,26 @@
       <option name="MIXED_MODE_DEBUG" value="0" />
       <method v="2" />
     </configuration>
+    <configuration name="build_itchio.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/build_itchio.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/usr/bin/env" />
+      <option name="INTERPRETER_OPTIONS" value="bash" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Shell Script.build_itchio.sh" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -220,6 +253,7 @@
       <workItem from="1780587765973" duration="6450000" />
       <workItem from="1780597903967" duration="546000" />
       <workItem from="1780644302629" duration="17000" />
+      <workItem from="1783240507510" duration="7091000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -520,7 +554,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="prd" />
+                        <option value="lava" />
                       </list>
                     </value>
                   </entry>

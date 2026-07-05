@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://blal4set1jgjf"]
+[gd_scene load_steps=21 format=3 uid="uid://blal4set1jgjf"]
 
 [ext_resource type="Script" uid="uid://cdrmbi4ydvh0g" path="res://scene/box.gd" id="1_v1u0k"]
 [ext_resource type="PackedScene" uid="uid://c806ukktxv0e4" path="res://assets/kenney-space-station/computer-screen.glb" id="2_dqolx"]
@@ -15,6 +15,9 @@
 [ext_resource type="PackedScene" uid="uid://cxorktv2ivnjn" path="res://assets/blender/wall3.glb" id="13_o46yk"]
 [ext_resource type="PackedScene" uid="uid://bqvrwckx3deuj" path="res://scene/chair_rigid_body_3d.tscn" id="14_sa1nw"]
 [ext_resource type="PackedScene" uid="uid://b5rc0q8qkw28d" path="res://scene/ball.tscn" id="15_7orbf"]
+[ext_resource type="AudioStream" uid="uid://c6l65ho6uw0bi" path="res://assets/sounds/freesound_community-lava-loop-1-67307.mp3" id="16_thqna"]
+[ext_resource type="AudioStream" uid="uid://dvl44ka0f3glp" path="res://assets/sounds/freesound_community-lava-loop-2-67306.mp3" id="17_bc3x3"]
+[ext_resource type="AudioStream" uid="uid://bhwfqrwecf8rw" path="res://assets/sounds/freesound_community-lava-loop-3-28887.mp3" id="18_kkrxy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v1u0k"]
 albedo_color = Color(1, 0.525333, 0.11, 1)
@@ -573,5 +576,25 @@ sky_mode = 1
 
 [node name="a_portal_placement_placeholder" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0171843, 1.48552, 9.72662)
+
+[node name="sounds" type="Node3D" parent="."]
+
+[node name="lava1" type="AudioStreamPlayer3D" parent="sounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6966, 0, -4.83378)
+stream = ExtResource("16_thqna")
+autoplay = true
+parameters/looping = true
+
+[node name="lava2" type="AudioStreamPlayer3D" parent="sounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.83034, 9.53674e-07, -4.41623)
+stream = ExtResource("17_bc3x3")
+autoplay = true
+parameters/looping = true
+
+[node name="lava3" type="AudioStreamPlayer3D" parent="sounds"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10781, 0, 4.76237)
+stream = ExtResource("18_kkrxy")
+autoplay = true
+parameters/looping = true
 
 [connection signal="body_entered" from="Walls/Floor/Area3D" to="." method="_on_area_3d_body_entered"]

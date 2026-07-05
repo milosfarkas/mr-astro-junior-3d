@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cfa445npw0jje"]
+[gd_scene load_steps=7 format=3 uid="uid://cfa445npw0jje"]
 
 [ext_resource type="Script" uid="uid://bip8612jy06qs" path="res://scene/character/player.gd" id="1_d6bex"]
 [ext_resource type="PackedScene" uid="uid://co5v6b4s61sx" path="res://scene/character/camera_controller.tscn" id="1_gxxus"]
 [ext_resource type="PackedScene" uid="uid://dpngvxne0gcab" path="res://mr_astro_jnr_skin.tscn" id="4_3l4lg"]
+[ext_resource type="AudioStream" uid="uid://dw5fptbvolabg" path="res://assets/sounds/jofae-swing-whoosh-110410.mp3" id="5_jump"]
+[ext_resource type="AudioStream" uid="uid://d3cdoowh60qif" path="res://assets/sounds/freesound_community-land-81509.mp3" id="6_land"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3l4lg"]
 radius = 0.4
@@ -20,3 +22,11 @@ transform = Transform3D(0.4, 0, 0, 0, 0.35, 0, 0, 0, 0.4, 0, 0.3, 0)
 
 [node name="MrAstroJnr" parent="." instance=ExtResource("4_3l4lg")]
 transform = Transform3D(0.18, 0, 0, 0, 0.18, 0, 0, 0, 0.18, 0, 0, 0)
+
+[node name="JumpSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_jump")
+unit_size = 4.0
+
+[node name="LandSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_land")
+unit_size = 4.0
