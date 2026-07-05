@@ -11,9 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_challenge.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_challenge.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_end.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_end.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_start.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_start.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +43,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="10233" />
+    <option name="cachedIndexableFilesCount" value="10413" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Merge.Settings">
@@ -66,23 +64,23 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.5450494765467329" />
-      <entry key="MS500" value="3.9145980518604393" />
-      <entry key="S2" value="5.347437660989588" />
-      <entry key="S5" value="5.726135450086857" />
-      <entry key="S10" value="5.860825083807475" />
-      <entry key="S30" value="5.95310006797095" />
-      <entry key="S60" value="5.9764858661192015" />
-      <entry key="M2" value="5.988226843346786" />
-      <entry key="M5" value="5.995286869707654" />
-      <entry key="M10" value="5.997668894469183" />
-      <entry key="M15" value="6.001196138207152" />
-      <entry key="M30" value="6.348866780403778" />
-      <entry key="H1" value="10.977096091160492" />
-      <entry key="H2" value="28.049526285305586" />
-      <entry key="H4" value="55.258675927672385" />
-      <entry key="D1" value="105.53794436607542" />
-      <entry key="W1" value="118.64367187317005" />
+      <entry key="MS100" value="1.0081789711814715" />
+      <entry key="MS500" value="1.7387235813759667" />
+      <entry key="S2" value="3.0805786449841794" />
+      <entry key="S5" value="3.588218114098637" />
+      <entry key="S10" value="3.8142585813369214" />
+      <entry key="S30" value="5.69809721988343" />
+      <entry key="S60" value="8.942906714880277" />
+      <entry key="M2" value="12.33113121256097" />
+      <entry key="M5" value="15.377853193040812" />
+      <entry key="M10" value="16.621435156099473" />
+      <entry key="M15" value="17.067825844862146" />
+      <entry key="M30" value="17.86238000961525" />
+      <entry key="H1" value="22.652571865271245" />
+      <entry key="H2" value="39.73987297949097" />
+      <entry key="H4" value="66.9863670909456" />
+      <entry key="D1" value="117.45633359189208" />
+      <entry key="W1" value="130.63066327651015" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -104,23 +102,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="1.5042450011627113" />
-      <entry key="MS500" value="3.894246115013134" />
-      <entry key="S2" value="5.340383225960858" />
-      <entry key="S5" value="5.723101432001967" />
-      <entry key="S10" value="5.859270141551542" />
-      <entry key="S30" value="5.9525730729451825" />
-      <entry key="S60" value="5.976221267410069" />
-      <entry key="M2" value="5.988094267473114" />
-      <entry key="M5" value="5.9952337728368335" />
-      <entry key="M10" value="5.997642333925969" />
-      <entry key="M15" value="6.001178346318646" />
-      <entry key="M30" value="6.348852444055657" />
-      <entry key="H1" value="10.977056919790039" />
-      <entry key="H2" value="28.049457548672212" />
-      <entry key="H4" value="55.25860768373927" />
-      <entry key="D1" value="105.53792367803068" />
-      <entry key="W1" value="118.64366859054256" />
+      <entry key="MS100" value="0.9873980299353907" />
+      <entry key="MS500" value="1.7235549772181016" />
+      <entry key="S2" value="3.069038625459068" />
+      <entry key="S5" value="3.5822706087555676" />
+      <entry key="S10" value="3.811007792556308" />
+      <entry key="S30" value="5.69675076071556" />
+      <entry key="S60" value="8.942042428352138" />
+      <entry key="M2" value="12.330601025540368" />
+      <entry key="M5" value="15.37760604470663" />
+      <entry key="M10" value="16.621304437679676" />
+      <entry key="M15" value="17.06773692369453" />
+      <entry key="M30" value="17.8623294142891" />
+      <entry key="H1" value="22.652514840866196" />
+      <entry key="H2" value="39.73979553369486" />
+      <entry key="H4" value="66.9862944813539" />
+      <entry key="D1" value="117.45631214080143" />
+      <entry key="W1" value="130.6306598830559" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -254,6 +252,7 @@
       <workItem from="1780597903967" duration="546000" />
       <workItem from="1780644302629" duration="17000" />
       <workItem from="1783240507510" duration="7091000" />
+      <workItem from="1783274417788" duration="2166000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -535,7 +534,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783161236340</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="sound fx">
+      <option name="closed" value="true" />
+      <created>1783274530701</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1783274530701</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,7 +575,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix animation" />
     <MESSAGE value="ramp - day5" />
     <MESSAGE value="list issues" />
     <MESSAGE value="fix: rotation by hitting the ramp" />
@@ -593,7 +599,8 @@
     <MESSAGE value="test room" />
     <MESSAGE value="doubled room" />
     <MESSAGE value="wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+    <MESSAGE value="sound fx" />
+    <option name="LAST_COMMIT_MESSAGE" value="sound fx" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
