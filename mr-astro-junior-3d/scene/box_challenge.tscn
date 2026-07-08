@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cdrmbi4ydvh0g" path="res://scene/box.gd" id="1_v1u0k"]
 [ext_resource type="PackedScene" uid="uid://8eyel7615u2b" path="res://scene/computer_screen.tscn" id="2_dqolx"]
 [ext_resource type="PackedScene" uid="uid://da4gy24cr4ugu" path="res://scene/display_wall.tscn" id="3_kkqhe"]
-[ext_resource type="PackedScene" path="res://scene/table_display.tscn" id="4_thqna"]
+[ext_resource type="PackedScene" uid="uid://btbldisp00003" path="res://scene/table_display.tscn" id="4_thqna"]
 [ext_resource type="PackedScene" uid="uid://b4clibkc8cd11" path="res://assets/kenney-space-station/barrels.glb" id="5_bc3x3"]
 [ext_resource type="PackedScene" uid="uid://friwab1g8yuw" path="res://assets/kenney-space-station/container-tall.glb" id="6_kkrxy"]
 [ext_resource type="PackedScene" uid="uid://c8l76d0r5kiph" path="res://assets/kenney-space-station/rail-narrow.glb" id="7_0pwo8"]
