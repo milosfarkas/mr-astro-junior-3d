@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://8eyel7615u2b"]
+
+[ext_resource type="PackedScene" uid="uid://c806ukktxv0e4" path="res://assets/kenney-space-station/computer-screen.glb" id="1_model"]
+
+[node name="ComputerScreen" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

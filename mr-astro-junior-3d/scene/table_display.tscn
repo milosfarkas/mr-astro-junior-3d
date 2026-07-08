@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://btbldisp00003"]
+
+[ext_resource type="PackedScene" uid="uid://k5typy1xmvd6" path="res://assets/kenney-space-station/table-display.glb" id="1_model"]
+
+[node name="TableDisplay" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]

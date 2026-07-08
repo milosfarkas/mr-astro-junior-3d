@@ -37,7 +37,6 @@ states/running/position = Vector2(599, 100)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_ahggu"), "idle", "running", SubResource("AnimationNodeStateMachineTransition_a12fg"), "running", "idle", SubResource("AnimationNodeStateMachineTransition_f0x48"), "running", "jump", SubResource("AnimationNodeStateMachineTransition_ibp5v"), "jump", "running", SubResource("AnimationNodeStateMachineTransition_jhjgv"), "jump", "idle", SubResource("AnimationNodeStateMachineTransition_tp8cc"), "idle", "jump", SubResource("AnimationNodeStateMachineTransition_3vrf5")]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_1bfx3"]
-graph_offset = Vector2(-338.614, -21.9917)
 nodes/MoveStateMachine/node = SubResource("AnimationNodeStateMachine_2v517")
 nodes/MoveStateMachine/position = Vector2(-100, 140)
 node_connections = [&"output", 0, &"MoveStateMachine"]
@@ -50,12 +49,12 @@ transform = Transform3D(0.946629, 0, 0, 0, 1.20641, 0, 0, 0, 0.946629, 0, 0.5384
 
 [node name="Skeleton3D" parent="MrAstroJnr" index="0"]
 bones/0/position = Vector3(0, 0, 0)
-bones/0/rotation = Quaternion(0, 0, -0.0194137, 0.999812)
-bones/1/rotation = Quaternion(0, 0, 0.0185763, 0.999828)
-bones/2/rotation = Quaternion(-8.87224e-06, 0.013571, 2.90926e-11, 0.999908)
-bones/7/rotation = Quaternion(-3.05243e-08, -3.79574e-08, -0.686251, 0.727365)
+bones/0/rotation = Quaternion(0, 0, -0.00573759, 0.999984)
+bones/1/rotation = Quaternion(0, 0, 0.00566416, 0.999984)
+bones/2/rotation = Quaternion(-3.43997e-06, 0.00526178, 0, 0.999986)
+bones/7/rotation = Quaternion(-3.17109e-08, -3.69515e-08, -0.691245, 0.722621)
 bones/8/rotation = Quaternion(-1.03262e-08, 5.55968e-09, -0.638515, 0.76961)
-bones/10/rotation = Quaternion(-3.43573e-08, 3.46712e-08, 0.716413, 0.697676)
+bones/10/rotation = Quaternion(-3.11004e-08, 3.74668e-08, 0.703008, 0.711182)
 bones/11/rotation = Quaternion(-1.03262e-08, -5.55968e-09, 0.638515, 0.76961)
 bones/18/position = Vector3(0, 0, 0)
 bones/18/rotation = Quaternion(-0.452202, -0.543611, -0.452202, 0.543611)
@@ -65,37 +64,37 @@ bones/21/rotation = Quaternion(-0.452202, 0.543611, 0.452202, 0.543611)
 bones/22/rotation = Quaternion(0.543611, -0.452202, 0.543611, -0.452202)
 
 [node name="eye" parent="MrAstroJnr/Skeleton3D" index="0"]
-transform = Transform3D(0.00470445, 0.000227803, -0.17328, -4.80457e-06, 0.136017, 0.000290294, 0.17328, -2.41333e-06, 0.00470445, -0.263604, 2.30552, 0.830259)
+transform = Transform3D(0.00182417, 1.99697e-05, -0.173334, 9.24693e-07, 0.136017, 2.5461e-05, 0.173334, -9.35778e-07, 0.00182417, -0.3067, 2.30574, 0.825092)
 
 [node name="glasshelmet" parent="MrAstroJnr/Skeleton3D" index="1"]
-transform = Transform3D(0.0264138, 0.000941343, -0.972904, -2.6976e-05, 0.56206, 0.0016299, 0.972906, -9.97256e-06, 0.0264138, 0.0574057, 2.19206, 0.468383)
+transform = Transform3D(0.0102421, 8.25204e-05, -0.97321, 5.19182e-06, 0.562061, 0.000142955, 0.97321, -3.86689e-06, 0.0102421, 0.0204515, 2.19277, 0.468603)
 
 [node name="head" parent="MrAstroJnr/Skeleton3D" index="2"]
-transform = Transform3D(0.02781, 0.00134664, -1.02433, -2.84019e-05, 0.804055, 0.00171605, 1.02433, -1.42662e-05, 0.02781, 0.0447014, 2.05365, 0.00898686)
+transform = Transform3D(0.0107834, 0.00011805, -1.02465, 5.46625e-06, 0.804056, 0.000150511, 1.02465, -5.53178e-06, 0.0107834, 0.0155949, 2.05435, 0.00906091)
 
 [node name="helmet" parent="MrAstroJnr/Skeleton3D" index="3"]
-transform = Transform3D(0.0344911, 0.00167015, -1.27041, -3.52251e-05, 0.997221, 0.00212831, 1.27042, -1.76936e-05, 0.0344911, 0.0408333, 2.05366, 0.00909188)
+transform = Transform3D(0.013374, 0.00014641, -1.27081, 6.77946e-06, 0.997222, 0.00018667, 1.27081, -6.86073e-06, 0.013374, 0.0117256, 2.05435, 0.00910163)
 
 [node name="arm_l" parent="MrAstroJnr/Skeleton3D" index="4"]
-transform = Transform3D(-4.21244e-08, 0.276436, -0.303522, 1.83909e-08, 0.0574726, 1.4599, 0.35983, 2.94242e-08, -1.10148e-07, 0.602382, 2.73246, 0.00910647)
+transform = Transform3D(-4.14954e-08, 0.27563, -0.323315, 1.78933e-08, 0.0612205, 1.45564, 0.35983, 2.87412e-08, -1.0967e-07, 0.551453, 2.74064, 0.00910647)
 
 [node name="arm_r" parent="MrAstroJnr/Skeleton3D" index="5"]
-transform = Transform3D(1.28187e-07, -0.276831, -0.293308, 2.30424e-08, 0.0555386, -1.46199, 0.35983, 7.82337e-08, 1.09233e-07, -0.865773, 1.08895, 0.00910659)
+transform = Transform3D(1.30834e-07, -0.276221, -0.30894, 2.14021e-08, 0.0584986, -1.45876, 0.35983, 8.01251e-08, 1.10218e-07, -0.892106, 1.09931, 0.0091066)
 
 [node name="action-step" parent="MrAstroJnr/Skeleton3D" index="6"]
-transform = Transform3D(3.08629e-12, 0.0243628, -1.05558, 7.94425e-11, 0.627109, 0.0410088, 0.783464, -6.36842e-11, 0, 0.0144458, 0.272163, 0.00910651)
+transform = Transform3D(9.12289e-13, 0.00720149, -1.05631, 7.94972e-11, 0.62754, 0.0121219, 0.783464, -6.36842e-11, 0, 0.00699642, 0.272456, 0.00910651)
 
 [node name="backpack" parent="MrAstroJnr/Skeleton3D" index="7"]
-transform = Transform3D(0.609449, 0.0202208, 9.71793e-13, -0.0236767, 0.520492, 2.50144e-11, 0, -5.2857e-11, 0.246692, 0.0302262, 0.778036, -0.614706)
+transform = Transform3D(0.609868, 0.00597714, 2.87256e-13, -0.00699869, 0.52085, 2.50316e-11, 0, -5.2857e-11, 0.246692, 0.00893469, 0.778572, -0.614706)
 
 [node name="Cylinder" parent="MrAstroJnr/Skeleton3D" index="8"]
-transform = Transform3D(0.152538, 0.0210046, 6.01345e-13, -0.00592601, 0.540667, 1.54789e-11, 0, -5.49059e-11, 0.152653, 0.742711, 0.744566, -0.690736)
+transform = Transform3D(0.152643, 0.00620883, 1.77754e-13, -0.00175169, 0.54104, 1.54895e-11, 0, -5.49059e-11, 0.152653, 0.722068, 0.764601, -0.690736)
 
 [node name="flag" parent="MrAstroJnr/Skeleton3D" index="9"]
-transform = Transform3D(0.0603174, 0.00425625, -0.204255, -0.0023433, 0.109558, 0.00793517, 0.126017, -8.10209e-12, 0.097913, 0.517632, 0.900207, 0.511344)
+transform = Transform3D(0.060359, 0.00125812, -0.204395, -0.000692664, 0.109633, 0.00234559, 0.126017, -8.10209e-12, 0.097913, 0.492817, 0.914028, 0.511344)
 
 [node name="radio" parent="MrAstroJnr/Skeleton3D" index="10"]
-transform = Transform3D(-0.0816617, 0.00825185, -0.432767, 0.00317251, 0.212406, 0.0168127, 0.258279, -2.09086e-12, -0.137037, -0.293905, 0.840729, 0.447957)
+transform = Transform3D(-0.081718, 0.0024392, -0.433065, 0.000937774, 0.212552, 0.00496974, 0.258279, -2.09086e-12, -0.137037, -0.31679, 0.832375, 0.447957)
 
 [node name="leg_l" parent="MrAstroJnr/Skeleton3D" index="11"]
 transform = Transform3D(-0.554698, -2.25807e-07, 5.99643e-07, 1.48224e-07, -0.760246, 8.93512e-08, 4.84881e-07, 1.33491e-07, 0.592345, -0.635165, -0.409677, 0.26205)

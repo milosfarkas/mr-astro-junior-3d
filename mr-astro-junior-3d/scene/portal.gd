@@ -9,7 +9,7 @@ var open: bool = false
 
 func _ready() -> void:
 	if requires_key:
-		$PortalDoor.material.albedo_color = Color.RED
+		_set_door_color(Color.RED)
 		State.inventory_changed.connect(_on_inventory_changed)
 		var hint_area = $HintKey.get_node_or_null("Area3D")
 		if hint_area:
@@ -39,7 +39,7 @@ func _start_level_transition() -> void:
 
 func open_portal():
 	open = true
-	$PortalDoor.material.albedo_color = Color.GREEN
+	_set_door_color(Color.GREEN)
 	var hint = get_node_or_null("HintKey")
 	if hint:
 		hint.visible = false
@@ -50,6 +50,11 @@ func open_portal():
 
 func unlock():
 	open_portal()
+
+func _set_door_color(color: Color) -> void:
+	var mat: StandardMaterial3D = $PortalDoor.material
+	mat.albedo_color = color
+	mat.emission = color
 
 func _on_door_blink_timer_timeout() -> void:
 	$PortalDoor.visible = not $PortalDoor.visible
