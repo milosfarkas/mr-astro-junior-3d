@@ -11,8 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/mr_astro_jnr_skin.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/mr_astro_jnr_skin.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_challenge.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_challenge.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_end.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_end.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_start.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_start.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_1.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_1.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_2.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_2.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_3.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_3.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_4.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_4.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +52,7 @@
     </persistenceIdMap>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="10413" />
+    <option name="cachedIndexableFilesCount" value="10432" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Merge.Settings">
@@ -64,23 +73,23 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0081789711814715" />
-      <entry key="MS500" value="1.7387235813759667" />
-      <entry key="S2" value="3.0805786449841794" />
-      <entry key="S5" value="3.588218114098637" />
-      <entry key="S10" value="3.8142585813369214" />
-      <entry key="S30" value="5.69809721988343" />
-      <entry key="S60" value="8.942906714880277" />
-      <entry key="M2" value="12.33113121256097" />
-      <entry key="M5" value="15.377853193040812" />
-      <entry key="M10" value="16.621435156099473" />
-      <entry key="M15" value="17.067825844862146" />
-      <entry key="M30" value="17.86238000961525" />
-      <entry key="H1" value="22.652571865271245" />
-      <entry key="H2" value="39.73987297949097" />
-      <entry key="H4" value="66.9863670909456" />
-      <entry key="D1" value="117.45633359189208" />
-      <entry key="W1" value="130.63066327651015" />
+      <entry key="MS100" value="1.712756399218983" />
+      <entry key="MS500" value="5.561729421743724" />
+      <entry key="S2" value="12.94567029026501" />
+      <entry key="S5" value="18.398573836307236" />
+      <entry key="S10" value="21.56561820628984" />
+      <entry key="S30" value="24.346318040636906" />
+      <entry key="S60" value="25.14857829509536" />
+      <entry key="M2" value="25.567925638335005" />
+      <entry key="M5" value="25.825614127289285" />
+      <entry key="M10" value="25.91256443015715" />
+      <entry key="M15" value="25.943515462257853" />
+      <entry key="M30" value="26.15810835605697" />
+      <entry key="H1" value="28.305120728674165" />
+      <entry key="H2" value="38.70975200709855" />
+      <entry key="H4" value="63.89000499927523" />
+      <entry key="D1" value="132.81624759349393" />
+      <entry key="W1" value="154.87061149412847" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -102,23 +111,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9873980299353907" />
-      <entry key="MS500" value="1.7235549772181016" />
-      <entry key="S2" value="3.069038625459068" />
-      <entry key="S5" value="3.5822706087555676" />
-      <entry key="S10" value="3.811007792556308" />
-      <entry key="S30" value="5.69675076071556" />
-      <entry key="S60" value="8.942042428352138" />
-      <entry key="M2" value="12.330601025540368" />
-      <entry key="M5" value="15.37760604470663" />
-      <entry key="M10" value="16.621304437679676" />
-      <entry key="M15" value="17.06773692369453" />
-      <entry key="M30" value="17.8623294142891" />
-      <entry key="H1" value="22.652514840866196" />
-      <entry key="H2" value="39.73979553369486" />
-      <entry key="H4" value="66.9862944813539" />
-      <entry key="D1" value="117.45631214080143" />
-      <entry key="W1" value="130.6306598830559" />
+      <entry key="MS100" value="1.636014386189241" />
+      <entry key="MS500" value="5.492289275408255" />
+      <entry key="S2" value="12.896666088964299" />
+      <entry key="S5" value="18.369521647370167" />
+      <entry key="S10" value="21.548363036778866" />
+      <entry key="S30" value="24.33976853283376" />
+      <entry key="S60" value="25.145188473649075" />
+      <entry key="M2" value="25.566200653476105" />
+      <entry key="M5" value="25.824916740932807" />
+      <entry key="M10" value="25.912214489892747" />
+      <entry key="M15" value="25.943281880860503" />
+      <entry key="M30" value="26.157990900283117" />
+      <entry key="H1" value="28.3050563916039" />
+      <entry key="H2" value="38.7096979663792" />
+      <entry key="H4" value="63.88994929367896" />
+      <entry key="D1" value="132.816225646704" />
+      <entry key="W1" value="154.87060779798765" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -252,7 +261,10 @@
       <workItem from="1780597903967" duration="546000" />
       <workItem from="1780644302629" duration="17000" />
       <workItem from="1783240507510" duration="7091000" />
-      <workItem from="1783274417788" duration="2166000" />
+      <workItem from="1783274417788" duration="2193000" />
+      <workItem from="1783287120173" duration="3070000" />
+      <workItem from="1783351888041" duration="4804000" />
+      <workItem from="1783521578132" duration="942000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -542,7 +554,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783274530701</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="shadows">
+      <option name="closed" value="true" />
+      <created>1783286356811</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1783286356811</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -575,7 +595,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="ramp - day5" />
     <MESSAGE value="list issues" />
     <MESSAGE value="fix: rotation by hitting the ramp" />
     <MESSAGE value="PRD" />
@@ -600,7 +619,8 @@
     <MESSAGE value="doubled room" />
     <MESSAGE value="wip" />
     <MESSAGE value="sound fx" />
-    <option name="LAST_COMMIT_MESSAGE" value="sound fx" />
+    <MESSAGE value="shadows" />
+    <option name="LAST_COMMIT_MESSAGE" value="shadows" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -71,9 +71,11 @@ func _ready() -> void:
 	if ramp:
 		ramp.should_turn.connect(turn_the_whole_world)
 	
-	for light: DirectionalLight3D in get_node("lights").get_children():
-		light.light_color = random_color()
-		light.light_energy = light_energy
+	for child in get_node("lights").get_children():
+		if child is DirectionalLight3D:
+			var light: DirectionalLight3D = child
+			light.light_color = random_color()
+			light.light_energy = light_energy
 
 func open_gate(
 	front: bool = false, 
