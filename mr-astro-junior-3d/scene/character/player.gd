@@ -40,6 +40,17 @@ func _physics_process(delta: float) -> void:
 	jump_logic(delta)
 	attack_logic()
 	move_and_slide()
+	_push_rigid_bodies()
+
+
+func _push_rigid_bodies() -> void:
+	for i in get_slide_collision_count():
+		var collision: KinematicCollision3D = get_slide_collision(i)
+		var collider: Object = collision.get_collider()
+		if collider is RigidBody3D and not collider.sleeping:
+			var push_dir: Vector3 = -collision.get_normal()
+			var push_speed: float = velocity.length()
+			collider.apply_central_impulse(push_dir * push_speed * collider.mass * 2.0)
 	
 
 func move_logic(delta) -> void:

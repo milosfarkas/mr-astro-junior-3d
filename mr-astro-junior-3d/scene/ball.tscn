@@ -1,19 +1,29 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5rc0q8qkw28d"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_e7ngg"]
+friction = 0.1
+bounce = 0.95
 
 [sub_resource type="SphereMesh" id="SphereMesh_57cqm"]
+radius = 0.3
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wh1j1"]
 albedo_color = Color(0.668331, 0.882916, 1, 1)
+roughness = 0.4
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_kfasq"]
+radius = 0.3
 
 [node name="Node3D" type="RigidBody3D"]
-mass = 0.02
+mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_e7ngg")
+can_sleep = false
+continuous_cd = true
+linear_damp = 0.5
+angular_damp = 0.5
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.56546, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("SphereMesh_57cqm")
 surface_material_override/0 = SubResource("StandardMaterial3D_wh1j1")
 
