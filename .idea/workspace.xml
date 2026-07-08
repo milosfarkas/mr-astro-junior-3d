@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/lights.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/lights.gd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/lights.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/lights.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,22 +66,22 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0" />
-      <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000000032084828" />
-      <entry key="S60" value="1.000070286023358" />
-      <entry key="M2" value="1.0140095169137928" />
-      <entry key="M5" value="1.4088336902299776" />
-      <entry key="M10" value="2.714416199755629" />
-      <entry key="M15" value="4.646707320482395" />
-      <entry key="M30" value="11.031819103455595" />
-      <entry key="H1" value="20.144668338334508" />
-      <entry key="H2" value="34.448633522958986" />
-      <entry key="H4" value="61.44270834553377" />
-      <entry key="D1" value="137.6811992260264" />
-      <entry key="W1" value="163.17578760561986" />
+      <entry key="MS500" value="1.0000002693527257" />
+      <entry key="S2" value="1.0227813965440091" />
+      <entry key="S5" value="1.2203089483975884" />
+      <entry key="S10" value="1.4693708071696774" />
+      <entry key="S30" value="1.7808487551795529" />
+      <entry key="S60" value="1.9886378234642077" />
+      <entry key="M2" value="2.6122037410053576" />
+      <entry key="M5" value="4.8174817787632955" />
+      <entry key="M10" value="7.575543113807585" />
+      <entry key="M15" value="9.898225392954496" />
+      <entry key="M30" value="16.51874909584376" />
+      <entry key="H1" value="26.42068983595901" />
+      <entry key="H2" value="41.55442265697662" />
+      <entry key="H4" value="69.07345004327858" />
+      <entry key="D1" value="147.44686902414892" />
+      <entry key="W1" value="173.9671163961408" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -102,23 +103,23 @@
       <entry key="W1" value="0.0" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9526379980439373" />
-      <entry key="MS500" value="0.9903428719330246" />
-      <entry key="S2" value="0.9975769252644544" />
-      <entry key="S5" value="0.9990300646389034" />
-      <entry key="S10" value="0.9995149146655609" />
-      <entry key="S30" value="0.9998382819439766" />
-      <entry key="S60" value="0.9999894145394824" />
-      <entry key="M2" value="1.0139682869336657" />
-      <entry key="M5" value="1.408807803299757" />
-      <entry key="M10" value="2.7143864682961873" />
-      <entry key="M15" value="4.646669878713815" />
-      <entry key="M30" value="11.031770726223378" />
-      <entry key="H1" value="20.14462259538898" />
-      <entry key="H2" value="34.44858716058142" />
-      <entry key="H4" value="61.44265707202433" />
-      <entry key="D1" value="137.68117705036744" />
-      <entry key="W1" value="163.17578379643516" />
+      <entry key="MS100" value="0.9794202975869268" />
+      <entry key="MS500" value="0.9958500191074419" />
+      <entry key="S2" value="1.0216712679289515" />
+      <entry key="S5" value="1.2196184462138537" />
+      <entry key="S10" value="1.4688701664056316" />
+      <entry key="S30" value="1.7805124639012637" />
+      <entry key="S60" value="1.9871856998391764" />
+      <entry key="M2" value="2.6086985419829474" />
+      <entry key="M5" value="4.813290325496325" />
+      <entry key="M10" value="7.572310446935108" />
+      <entry key="M15" value="9.895698022880177" />
+      <entry key="M30" value="16.517240399935105" />
+      <entry key="H1" value="26.419849700447433" />
+      <entry key="H2" value="41.55396189769783" />
+      <entry key="H4" value="69.07318732966068" />
+      <entry key="D1" value="147.44681071769352" />
+      <entry key="W1" value="173.9671073866049" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -255,7 +256,7 @@
       <workItem from="1783274417788" duration="2193000" />
       <workItem from="1783287120173" duration="3070000" />
       <workItem from="1783351888041" duration="4804000" />
-      <workItem from="1783521578132" duration="4291000" />
+      <workItem from="1783521578132" duration="5065000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -577,7 +578,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783525570496</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="rotate lights">
+      <option name="closed" value="true" />
+      <created>1783525906948</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1783525906948</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +619,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="fix: rotation by hitting the ramp" />
     <MESSAGE value="PRD" />
     <MESSAGE value="issue 01" />
     <MESSAGE value="issue 2" />
@@ -635,7 +643,8 @@
     <MESSAGE value="shadows" />
     <MESSAGE value="lights wip" />
     <MESSAGE value="wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+    <MESSAGE value="rotate lights" />
+    <option name="LAST_COMMIT_MESSAGE" value="rotate lights" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
