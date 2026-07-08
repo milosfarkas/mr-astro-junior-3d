@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://cdrmbi4ydvh0g" path="res://scene/box.gd" id="1_sw5ix"]
 [ext_resource type="PackedScene" uid="uid://dq5kmwg3p6crb" path="res://scene/lights.tscn" id="2_i7car"]
-[ext_resource type="PackedScene" uid="uid://c806ukktxv0e4" path="res://assets/kenney-space-station/computer-screen.glb" id="2_tnacm"]
-[ext_resource type="PackedScene" uid="uid://cxmpkgtv4eqlb" path="res://assets/kenney-space-station/display-wall.glb" id="3_i7car"]
-[ext_resource type="PackedScene" uid="uid://k5typy1xmvd6" path="res://assets/kenney-space-station/table-display.glb" id="4_k053o"]
+[ext_resource type="PackedScene" path="res://scene/computer_screen.tscn" id="2_tnacm"]
+[ext_resource type="PackedScene" path="res://scene/display_wall.tscn" id="3_i7car"]
+[ext_resource type="PackedScene" path="res://scene/table_display.tscn" id="4_k053o"]
 [ext_resource type="PackedScene" uid="uid://b4clibkc8cd11" path="res://assets/kenney-space-station/barrels.glb" id="5_pbc0h"]
 [ext_resource type="PackedScene" uid="uid://friwab1g8yuw" path="res://assets/kenney-space-station/container-tall.glb" id="6_l0ktt"]
 [ext_resource type="PackedScene" uid="uid://c8l76d0r5kiph" path="res://assets/kenney-space-station/rail-narrow.glb" id="7_r40nf"]

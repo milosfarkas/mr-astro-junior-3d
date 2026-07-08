@@ -41,17 +41,33 @@ shadow_enabled = true
 sky_mode = 1
 
 [node name="LEDStrip" parent="." instance=ExtResource("1_wsi5u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9912, 0.297862, -8.99062)
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 8, 0.25, -8)
 visible = true
 
 [node name="LEDStrip2" parent="." instance=ExtResource("1_wsi5u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9912, 0.297862, 8.29073)
+transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 8, 0.25, 8)
 visible = true
 
 [node name="LEDStrip3" parent="." instance=ExtResource("1_wsi5u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90993, 0.297862, -8.99062)
+transform = Transform3D(-0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -8, 0.25, -8)
 visible = true
 
 [node name="LEDStrip4" parent="." instance=ExtResource("1_wsi5u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.90993, 0.297862, 8.29073)
+transform = Transform3D(-0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, -0.707107, -8, 0.25, 8)
+visible = true
+
+[node name="LEDStrip5" parent="." instance=ExtResource("1_wsi5u")]
+transform = Transform3D(0.984829, 0, 0, 0, 1, 0, 0, 0, 0.443365, 0, 4, -8)
+visible = true
+
+[node name="LEDStrip6" parent="." instance=ExtResource("1_wsi5u")]
+transform = Transform3D(0, 0, 0.443365, 0, 1, 0, -0.984829, 0, 0, 8, 4, 0)
+visible = true
+
+[node name="LEDStrip7" parent="." instance=ExtResource("1_wsi5u")]
+transform = Transform3D(0, 0, 0.443365, 0, 1, 0, -0.984829, 0, 0, -8, 4, 0)
+visible = true
+
+[node name="LEDStrip8" parent="." instance=ExtResource("1_wsi5u")]
+transform = Transform3D(0.984829, 0, 0, 0, 1, 0, 0, 0, 0.443365, 0, 4, 8)
 visible = true

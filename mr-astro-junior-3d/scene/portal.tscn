@@ -3,17 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://dmref1ix8l6sp" path="res://assets/neutral/signage_finish.gltf" id="1_0ahy5"]
 [ext_resource type="Script" uid="uid://bmagqy7k4cdu6" path="res://scene/portal.gd" id="1_pno75"]
 [ext_resource type="PackedScene" uid="uid://bcjyrgkr4vbi" path="res://scene/pickup_item.tscn" id="2_hintkey"]
+[ext_resource type="PackedScene" uid="uid://deoe4dr1at775" path="res://scene/shiny_plate.tscn" id="3_u3hp6"]
 [ext_resource type="AudioStream" uid="uid://de3hxhgvxh8f" path="res://assets/sounds/coghezzi-biomechanical-alien-spaceship-interior-organic-heartbeat-ambient-526953.mp3" id="4_vtg32"]
 [ext_resource type="AudioStream" uid="uid://b1rhfc7wr1cxj" path="res://assets/sounds/freesound_community-lonely-winter-breeze-36867.mp3" id="5_breeze"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cfsmh"]
 size = Vector3(1.2, 1, 0.2)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pno75"]
-albedo_color = Color(1, 0.119879, 0.12406, 1)
-emission_enabled = true
-emission = Color(1, 0.119879, 0.12406, 1)
-emission_energy_multiplier = 2.0
 
 [node name="Portal" type="Node3D"]
 script = ExtResource("1_pno75")
@@ -27,10 +22,8 @@ transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.98023e-08)
 shape = SubResource("BoxShape3D_cfsmh")
 
-[node name="PortalDoor" type="CSGBox3D" parent="."]
+[node name="PortalDoor" parent="." instance=ExtResource("3_u3hp6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.05)
-size = Vector3(1.2, 1, 0.1)
-material = SubResource("StandardMaterial3D_pno75")
 
 [node name="DoorBlinkTimer" type="Timer" parent="."]
 wait_time = 0.2

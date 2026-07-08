@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://da4gy24cr4ugu"]
+
+[ext_resource type="PackedScene" uid="uid://cxmpkgtv4eqlb" path="res://assets/kenney-space-station/display-wall.glb" id="1_model"]
+[ext_resource type="PackedScene" uid="uid://deoe4dr1at775" path="res://scene/shiny_plate.tscn" id="2_aqrmo"]
+
+[node name="DisplayWall" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_model")]
+
+[node name="PortalDoor" parent="." instance=ExtResource("2_aqrmo")]
+transform = Transform3D(0.321618, 0, 0, 0, 1.00325, -0.0289082, 0, 0.204842, 0.141583, 0.00396528, 0.227401, 0.0522062)
+size = Vector3(1.06772, 0.367432, 0.1)
