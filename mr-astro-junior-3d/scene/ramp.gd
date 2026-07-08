@@ -16,6 +16,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		$Timer.start()
 		ramp_visible(false)
 		should_turn.emit()
+		$WhooshSound.play()
   
 
 

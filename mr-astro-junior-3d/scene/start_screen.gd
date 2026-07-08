@@ -6,6 +6,7 @@ extends Control
 @onready var level_2_button: Button = $VBoxContainer/LevelSelect/Level2Button
 @onready var level_3_button: Button = $VBoxContainer/LevelSelect/Level3Button
 @onready var level_4_button: Button = $VBoxContainer/LevelSelect/Level4Button
+@onready var level_5_button: Button = $VBoxContainer/LevelSelect/Level5Button
 @onready var test_room_button: Button = $VBoxContainer/TestRoomButton
 
 func _ready() -> void:
@@ -15,6 +16,7 @@ func _ready() -> void:
 	level_2_button.pressed.connect(func(): State.start_level(2))
 	level_3_button.pressed.connect(func(): State.start_level(3))
 	level_4_button.pressed.connect(func(): State.start_level(4))
+	level_5_button.pressed.connect(func(): State.start_level(5))
 	test_room_button.pressed.connect(_on_test_room)
 	_update_buttons()
 
@@ -22,6 +24,7 @@ func _update_buttons() -> void:
 	level_2_button.disabled = false
 	level_3_button.disabled = false
 	level_4_button.disabled = false
+	level_5_button.disabled = false
 
 func _on_continue() -> void:
 	State.start_level(State.highest_unlocked_level())

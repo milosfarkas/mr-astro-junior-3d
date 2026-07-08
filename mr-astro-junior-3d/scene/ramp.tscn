@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://b267puy52keyl"]
+[gd_scene load_steps=5 format=3 uid="uid://b267puy52keyl"]
 
 [ext_resource type="Script" uid="uid://cu2nsyjtc05ds" path="res://scene/ramp.gd" id="1_6ujuh"]
 [ext_resource type="PackedScene" uid="uid://m152m5tiff6i" path="res://scene/monorail.tscn" id="1_mmxue"]
+[ext_resource type="AudioStream" uid="uid://c6f6gjorldkwm" path="res://assets/sounds/floraphonic-swing-whoosh-in-room-13-234267.mp3" id="2_whoosh"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v84vt"]
 size = Vector3(2.8, 0.8, 0.8)
@@ -20,6 +21,9 @@ shape = SubResource("BoxShape3D_v84vt")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.1
 one_shot = true
+
+[node name="WhooshSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_whoosh")
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

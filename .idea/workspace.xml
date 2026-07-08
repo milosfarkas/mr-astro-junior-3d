@@ -12,8 +12,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_challenge.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_challenge.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/lights.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/lights.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/ramp.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/ramp.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/ramp.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/ramp.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/start.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/start.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/start_screen.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/start_screen.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/state.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/state.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,61 +68,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0000000376052198" />
-      <entry key="S5" value="1.0010832247159431" />
-      <entry key="S10" value="1.0381420151258405" />
-      <entry key="S30" value="1.860341130984485" />
-      <entry key="S60" value="3.654824550812381" />
-      <entry key="M2" value="6.03178120710196" />
-      <entry key="M5" value="8.557235798627644" />
-      <entry key="M10" value="9.688827393892247" />
-      <entry key="M15" value="10.156142255885054" />
-      <entry key="M30" value="11.772001961374029" />
-      <entry key="H1" value="18.031553605825575" />
-      <entry key="H2" value="32.778510781209704" />
-      <entry key="H4" value="61.1995223341707" />
-      <entry key="D1" value="151.43517775852303" />
-      <entry key="W1" value="184.58610622396384" />
+      <entry key="MS100" value="1.0346740460021202" />
+      <entry key="MS500" value="1.5105060628535965" />
+      <entry key="S2" value="1.8452792851356157" />
+      <entry key="S5" value="1.935081877826372" />
+      <entry key="S10" value="1.9961440856330552" />
+      <entry key="S30" value="3.2205468034662377" />
+      <entry key="S60" value="5.13908415108845" />
+      <entry key="M2" value="7.246104496082394" />
+      <entry key="M5" value="10.981121689775497" />
+      <entry key="M10" value="14.359519712227602" />
+      <entry key="M15" value="16.114953794309823" />
+      <entry key="M30" value="19.243315323076875" />
+      <entry key="H1" value="26.065179068708858" />
+      <entry key="H2" value="40.99652473891882" />
+      <entry key="H4" value="69.54124626853746" />
+      <entry key="D1" value="160.75137971943747" />
+      <entry key="W1" value="194.4669711479868" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="3.848370207724807E-80" />
-      <entry key="S2" value="1.4006164119933865E-20" />
-      <entry key="S5" value="1.144267819599882E-8" />
-      <entry key="S10" value="1.069704547807422E-4" />
-      <entry key="S30" value="0.047470223965266435" />
-      <entry key="S60" value="0.21787662555966503" />
-      <entry key="M2" value="0.4667725629893696" />
-      <entry key="M5" value="0.7372964249495965" />
-      <entry key="M10" value="0.8586596677086893" />
-      <entry key="M15" value="0.903401296213012" />
-      <entry key="M30" value="0.9504742480535768" />
-      <entry key="H1" value="0.9749226882443431" />
-      <entry key="H2" value="0.9873817338012402" />
-      <entry key="H4" value="0.9936708377532469" />
-      <entry key="D1" value="0.998942346991439" />
-      <entry key="W1" value="0.9998488381806434" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="7.671187707012265E-105" />
+      <entry key="S5" value="2.2591498766602415E-42" />
+      <entry key="S10" value="1.5030468644258033E-21" />
+      <entry key="S30" value="1.1454887826086566E-7" />
+      <entry key="S60" value="3.3845070285178276E-4" />
+      <entry key="M2" value="0.018397029729056342" />
+      <entry key="M5" value="0.20225491493228448" />
+      <entry key="M10" value="0.4497276008121856" />
+      <entry key="M15" value="0.5869931429790888" />
+      <entry key="M30" value="0.7661547774301803" />
+      <entry key="H1" value="0.8753026776093972" />
+      <entry key="H2" value="0.9355761206921636" />
+      <entry key="H4" value="0.9672518393325301" />
+      <entry key="D1" value="0.9944659721627889" />
+      <entry key="W1" value="0.9992075431172472" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9592641193252643" />
-      <entry key="MS500" value="0.9917167307382933" />
-      <entry key="S2" value="0.9979227564871567" />
-      <entry key="S5" value="1.0002504579966045" />
-      <entry key="S10" value="1.0378026050637221" />
-      <entry key="S30" value="1.9058575247126794" />
-      <entry key="S60" value="3.868035794810427" />
-      <entry key="M2" value="6.493264029822804" />
-      <entry key="M5" value="9.29105207964297" />
-      <entry key="M10" value="10.54543025069091" />
-      <entry key="M15" value="11.05808228100406" />
-      <entry key="M30" value="12.72160464250298" />
-      <entry key="H1" value="19.005860092431654" />
-      <entry key="H2" value="33.76545567546545" />
-      <entry key="H4" value="62.192904082411964" />
-      <entry key="D1" value="152.43404805296663" />
-      <entry key="W1" value="185.58594370817772" />
+      <entry key="MS100" value="1.006380829803049" />
+      <entry key="MS500" value="1.502153219107929" />
+      <entry key="S2" value="1.8427229571888406" />
+      <entry key="S5" value="1.9340090769004898" />
+      <entry key="S10" value="1.9955823540890916" />
+      <entry key="S30" value="3.220131849293993" />
+      <entry key="S60" value="5.139028530743327" />
+      <entry key="M2" value="7.26401170101146" />
+      <entry key="M5" value="11.182278903182883" />
+      <entry key="M10" value="14.808092422896276" />
+      <entry key="M15" value="16.700944269046598" />
+      <entry key="M30" value="20.00874020882449" />
+      <entry key="H1" value="26.939914647884848" />
+      <entry key="H2" value="41.93167996088304" />
+      <entry key="H4" value="70.50821320276481" />
+      <entry key="D1" value="161.7457733766218" />
+      <entry key="W1" value="195.466167260763" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -130,35 +133,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/arnold.farkas/Library/Application Support/JetBrains/Rider2026.1/plugins/Shell Script/shellcheck&quot;,
-    &quot;Shell Script.build_itchio.sh.executor&quot;: &quot;Run&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;sounds&quot;,
-    &quot;git.auto.fetch.suggestion.counter&quot;: &quot;2&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/my-projects/godot/coolest-project-2024&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHELLCHECK.PATH": "/Users/arnold.farkas/Library/Application Support/JetBrains/Rider2026.1/plugins/Shell Script/shellcheck",
+    "Shell Script.build_itchio.sh.executor": "Run",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "copilot.chat.legacySessionMetadata.migrated": "true",
+    "git-widget-placeholder": "fx",
+    "git.auto.fetch.suggestion.counter": "2",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/my-projects/godot/coolest-project-2024",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Shell Script.build_itchio.sh">
     <configuration name="Debug GDScript (Running session)" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory">
       <option name="json" value="{&#10;  // Launch: &quot;Launch a new instance of the game&quot;,&#10;  // Attach: &quot;Attach to an already running game, which was started from the Godot Editor&quot;&#10;  &quot;request&quot; : &quot;Attach&quot;,&#10;  &quot;debugServer&quot; : 6006, // port should match the Debug Adapter port in the Godot Editor project settings.&#10;  &quot;scene&quot; : &quot;main&quot;, // main, current, res://path/to/file.tscn&#10;  &#10;  // &quot;playArgs&quot; : [ &quot;--editor&quot; ], // debugging a tool script&#10;  // &quot;playArgs&quot;: [&quot;--debug-collisions&quot;,&quot;--debug-navigation&quot;], // different options&#10;  &#10;  // one click deploy and debug via Godot Editor:&#10;  // &quot;platform&quot;: &quot;Android&quot;, // including Android, iOS, Web and W4 consoles&#10;  // &quot;device&quot;: &quot;0&quot;, // index of the device of a &quot;platform&quot; type&#10;}" />
