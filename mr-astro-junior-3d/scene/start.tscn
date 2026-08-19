@@ -74,7 +74,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Level 4"
 
-[node name="TestRoomButton" type="Button" parent="VBoxContainer"]
+[node name="Level5Button" type="Button" parent="VBoxContainer/LevelSelect"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-text = "Test Room"
+theme_override_font_sizes/font_size = 20
+text = "Level 5"
