@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_dice.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_dice.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -611,7 +612,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="lava" />
+                        <option value="ramps" />
                       </list>
                     </value>
                   </entry>
@@ -625,7 +626,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="issue 01" />
     <MESSAGE value="issue 2" />
     <MESSAGE value="issue 3" />
     <MESSAGE value="issue 4" />
@@ -650,7 +650,8 @@
     <MESSAGE value="rotate lights" />
     <MESSAGE value="wip" />
     <MESSAGE value="one good rotated ramp" />
-    <option name="LAST_COMMIT_MESSAGE" value="one good rotated ramp" />
+    <MESSAGE value="2 good" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 good" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

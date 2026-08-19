@@ -30,13 +30,17 @@ func _dice_edges() -> Array:
 	back_floor_basis = Basis(Quaternion(Vector3.RIGHT, PI)) * back_floor_basis
 	edges.append(_edge(Vector3(0, RAMP_INSET, z_neg + WALL_INSET), back_floor_basis))
 	# Front floor edge: Y=0, Z=z_pos, runs along X
-	edges.append(_edge(Vector3(0, RAMP_INSET, z_pos - WALL_INSET), _basis_for(Vector3.UP, Vector3.FORWARD)))
+	var front_floor_basis := _basis_for(Vector3.UP, Vector3.FORWARD)
+	front_floor_basis = Basis(Quaternion(Vector3.RIGHT, PI)) * front_floor_basis
+	edges.append(_edge(Vector3(0, RAMP_INSET, z_pos - WALL_INSET), front_floor_basis))
 	# Left floor edge: Y=0, X=x_neg, runs along Z
 	var left_floor_basis := _basis_for(Vector3.UP, Vector3.LEFT)
 	left_floor_basis = Basis(Quaternion(Vector3.BACK, PI / 2)) * left_floor_basis
 	edges.append(_edge(Vector3(x_neg + WALL_INSET, RAMP_INSET, 0), left_floor_basis))
 	# Right floor edge: Y=0, X=x_pos, runs along Z
-	edges.append(_edge(Vector3(x_pos - WALL_INSET, RAMP_INSET, 0), _basis_for(Vector3.UP, Vector3.RIGHT)))
+	var right_floor_basis := _basis_for(Vector3.UP, Vector3.RIGHT)
+	right_floor_basis = Basis(Quaternion(Vector3.BACK, PI * 1.5)) * right_floor_basis
+	edges.append(_edge(Vector3(x_pos - WALL_INSET, RAMP_INSET, 0), right_floor_basis))
 
 	# Ceiling edges (XZ face = ceiling, XY face = wall)
 	# Back ceiling edge: Y=y_ceil, Z=z_neg, runs along X. Ramp hangs upside-down.
