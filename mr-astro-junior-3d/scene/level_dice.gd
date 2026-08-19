@@ -27,7 +27,7 @@ func _dice_edges() -> Array:
 	# Floor edges (XZ face = floor, XY face = wall)
 	# Back floor edge: Y=0, Z=z_neg, runs along X
 	var back_floor_basis := _basis_for(Vector3.UP, Vector3.BACK)
-	back_floor_basis = Basis(Quaternion(Vector3.UP, PI / 2)) * back_floor_basis
+	back_floor_basis = Basis(Quaternion(Vector3.RIGHT, PI)) * back_floor_basis
 	edges.append(_edge(Vector3(0, RAMP_INSET, z_neg + WALL_INSET), back_floor_basis))
 	# Front floor edge: Y=0, Z=z_pos, runs along X
 	edges.append(_edge(Vector3(0, RAMP_INSET, z_pos - WALL_INSET), _basis_for(Vector3.UP, Vector3.FORWARD)))
