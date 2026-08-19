@@ -626,7 +626,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="issue 2" />
     <MESSAGE value="issue 3" />
     <MESSAGE value="issue 4" />
     <MESSAGE value="issue 5" />
@@ -651,7 +650,8 @@
     <MESSAGE value="wip" />
     <MESSAGE value="one good rotated ramp" />
     <MESSAGE value="2 good" />
-    <option name="LAST_COMMIT_MESSAGE" value="2 good" />
+    <MESSAGE value="all good on the floor" />
+    <option name="LAST_COMMIT_MESSAGE" value="all good on the floor" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
