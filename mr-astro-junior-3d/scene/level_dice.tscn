@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b41j66np8pr6j"]
+
+[ext_resource type="Script" uid="uid://csnxfvhe100f" path="res://scene/level_dice.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://cfa445npw0jje" path="res://scene/character/Player.tscn" id="2_player"]
+[ext_resource type="PackedScene" path="res://scene/kill_plane.tscn" id="3_kill"]
+[ext_resource type="PackedScene" path="res://scene/hud.tscn" id="4_hud"]
+
+[sub_resource type="Environment" id="Env_dice"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_color = Color(0.4, 0.46, 0.55, 1)
+ambient_light_energy = 0.6
+tonemap_mode = 3
+
+[node name="Level" type="Node3D" unique_id=755180719 groups=["level"]]
+script = ExtResource("1_script")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2043892432]
+environment = SubResource("Env_dice")
+
+[node name="Player" parent="." unique_id=1002945216 instance=ExtResource("2_player")]
+
+[node name="KillPlane" parent="." unique_id=129517681 instance=ExtResource("3_kill")]
+
+[node name="HUD" parent="." unique_id=317713540 instance=ExtResource("4_hud")]

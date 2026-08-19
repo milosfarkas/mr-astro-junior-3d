@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://b41j66np8pr6i"]
+
+[node name="DiceCube" type="Node3D" unique_id=1880804836]
+
+[node name="Lights" type="Node3D" parent="." unique_id=576594787]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights" unique_id=299305496]
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0, 8, 4)
+light_energy = 1.2
+shadow_enabled = true
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="Lights" unique_id=1104732799]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, -0.642788, 0.766044, 8.74228e-08, 0.766044, 0.642788, 0, 8, -4)
+light_color = Color(1, 0.95, 0.9, 1)
+light_energy = 0.6
+light_indirect_energy = 0.8
+
+[node name="Walls" type="Node3D" parent="." unique_id=1388793528]
+
+[node name="Floor" type="CSGBox3D" parent="Walls" unique_id=1897651775]
+use_collision = true
+size = Vector3(6, 0.1, 6)
+
+[node name="Ceiling" type="CSGBox3D" parent="Walls" unique_id=1070652697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+use_collision = true
+size = Vector3(6, 0.1, 6)
+
+[node name="WallLeft" type="CSGBox3D" parent="Walls" unique_id=1292173444]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -3, 3, 0)
+use_collision = true
+size = Vector3(6, 0.1, 6)
+
+[node name="WallRight" type="CSGBox3D" parent="Walls" unique_id=751199502]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 3, 3, 0)
+use_collision = true
+size = Vector3(6, 0.1, 6)
+
+[node name="WallFront" type="CSGBox3D" parent="Walls" unique_id=1667737935]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 4.37114e-07, 3, 3)
+use_collision = true
+size = Vector3(6, 0.1, 6)
+
+[node name="WallBack" type="CSGBox3D" parent="Walls" unique_id=1635933799]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.37114e-07, 3, -3)
+use_collision = true
+size = Vector3(6, 0.1, 6)
+
+[node name="Dots" type="Node3D" parent="." unique_id=1006863676]
+
+[node name="Side1" type="Node3D" parent="Dots" unique_id=221044279]
+
+[node name="Dot" type="CSGSphere3D" parent="Dots/Side1" unique_id=1282217417]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.65, 0)
+radius = 0.25
+
+[node name="Side2" type="Node3D" parent="Dots" unique_id=51176506]
+
+[node name="Dot1" type="CSGSphere3D" parent="Dots/Side2" unique_id=167626264]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, 2.65)
+radius = 0.25
+
+[node name="Dot2" type="CSGSphere3D" parent="Dots/Side2" unique_id=821653415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 4.5, 2.65)
+radius = 0.25
+
+[node name="Side3" type="Node3D" parent="Dots" unique_id=309044656]
+
+[node name="Dot1" type="CSGSphere3D" parent="Dots/Side3" unique_id=1660741818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65, 1.5, -1.5)
+radius = 0.25
+
+[node name="Dot2" type="CSGSphere3D" parent="Dots/Side3" unique_id=282323275]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65, 3, 0)
+radius = 0.25
+
+[node name="Dot3" type="CSGSphere3D" parent="Dots/Side3" unique_id=617529209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.65, 4.5, 1.5)
+radius = 0.25
+
+[node name="Side4" type="Node3D" parent="Dots" unique_id=1353909437]
+
+[node name="Dot1" type="CSGSphere3D" parent="Dots/Side4" unique_id=45961738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65, 1.5, -1.5)
+radius = 0.25
+
+[node name="Dot2" type="CSGSphere3D" parent="Dots/Side4" unique_id=1547143035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65, 1.5, 1.5)
+radius = 0.25
+
+[node name="Dot3" type="CSGSphere3D" parent="Dots/Side4" unique_id=1471555438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65, 4.5, -1.5)
+radius = 0.25
+
+[node name="Dot4" type="CSGSphere3D" parent="Dots/Side4" unique_id=289317662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.65, 4.5, 1.5)
+radius = 0.25
+
+[node name="Side5" type="Node3D" parent="Dots" unique_id=1195244651]
+
+[node name="Dot1" type="CSGSphere3D" parent="Dots/Side5" unique_id=511174920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, -2.65)
+radius = 0.25
+
+[node name="Dot2" type="CSGSphere3D" parent="Dots/Side5" unique_id=286159420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, -2.65)
+radius = 0.25
+
+[node name="Dot3" type="CSGSphere3D" parent="Dots/Side5" unique_id=40303481]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -2.65)
+radius = 0.25
+
+[node name="Dot4" type="CSGSphere3D" parent="Dots/Side5" unique_id=1311858518]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 4.5, -2.65)
+radius = 0.25
+
+[node name="Dot5" type="CSGSphere3D" parent="Dots/Side5" unique_id=967241833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 4.5, -2.65)
+radius = 0.25
+
+[node name="Side6" type="Node3D" parent="Dots" unique_id=354452037]
+
+[node name="Dot1" type="CSGSphere3D" parent="Dots/Side6" unique_id=1224907519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.35, -1.5)
+radius = 0.25
+
+[node name="Dot2" type="CSGSphere3D" parent="Dots/Side6" unique_id=876724057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.35, -1.5)
+radius = 0.25
+
+[node name="Dot3" type="CSGSphere3D" parent="Dots/Side6" unique_id=1487534732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.35, 0)
+radius = 0.25
+
+[node name="Dot4" type="CSGSphere3D" parent="Dots/Side6" unique_id=399521013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.35, 0)
+radius = 0.25
+
+[node name="Dot5" type="CSGSphere3D" parent="Dots/Side6" unique_id=1086072791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0.35, 1.5)
+radius = 0.25
+
+[node name="Dot6" type="CSGSphere3D" parent="Dots/Side6" unique_id=1309382559]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0.35, 1.5)
+radius = 0.25
