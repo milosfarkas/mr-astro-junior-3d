@@ -52,7 +52,9 @@ func _dice_edges() -> Array:
 	left_ceil_basis = Basis(Quaternion(Vector3.BACK, PI / 2 + PI)) * left_ceil_basis
 	edges.append(_edge(Vector3(x_neg + WALL_INSET, y_ceil - RAMP_INSET, 0), left_ceil_basis))
 	# Right ceiling edge: Y=y_ceil, X=x_pos, runs along Z.
-	edges.append(_edge(Vector3(x_pos - WALL_INSET, y_ceil - RAMP_INSET, 0), _basis_for(Vector3.DOWN, Vector3.RIGHT)))
+	var right_ceil_basis := _basis_for(Vector3.DOWN, Vector3.RIGHT)
+	right_ceil_basis = Basis(Quaternion(Vector3.BACK, PI / 2)) * right_ceil_basis
+	edges.append(_edge(Vector3(x_pos - WALL_INSET, y_ceil - RAMP_INSET, 0), right_ceil_basis))
 
 	# Vertical edges (ramp stands on a wall, runs along Y axis)
 	# Back-left: XZ=LEFT, XY=BACK
