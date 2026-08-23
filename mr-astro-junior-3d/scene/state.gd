@@ -14,6 +14,7 @@ const LEVEL_PATHS: Dictionary = {
 	3: "res://scene/level_3.tscn",
 	4: "res://scene/level_4.tscn",
 	5: "res://scene/level_5.tscn",
+	6: "res://scene/level_6.tscn",
 }
 
 func open_portal():

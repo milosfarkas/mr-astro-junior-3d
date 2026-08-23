@@ -1,4 +1,5 @@
 extends Node3D
+class_name Ramp
 
 @export var faces: Array[Box.Face] = []
 @export var box: Box
