@@ -1,6 +1,7 @@
-extends Node3D
+extends LevelBase
 
 func _ready() -> void:
+	super._ready()
 	var box1: Box = Box.create("res://scene/box_start.tscn")
 	$Boxes.add_child(box1)
 	box1.unlock_gate_name = "WallRight"
