@@ -62,61 +62,61 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000000020659463" />
-      <entry key="MS500" value="1.0337538395012758" />
-      <entry key="S2" value="2.3685064506497024" />
-      <entry key="S5" value="4.252339775981287" />
-      <entry key="S10" value="5.401214325448364" />
-      <entry key="S30" value="6.406693730340993" />
-      <entry key="S60" value="6.695036543871251" />
-      <entry key="M2" value="6.851974345784933" />
-      <entry key="M5" value="7.793616888393311" />
-      <entry key="M10" value="11.71582030637704" />
-      <entry key="M15" value="15.560714794965255" />
-      <entry key="M30" value="23.240520918776312" />
-      <entry key="H1" value="33.303749676156585" />
-      <entry key="H2" value="50.05519888690119" />
-      <entry key="H4" value="79.68823712137697" />
-      <entry key="D1" value="173.94342336406365" />
-      <entry key="W1" value="209.15565698331497" />
+      <entry key="MS100" value="1.0009122873732548" />
+      <entry key="MS500" value="1.4008516511552835" />
+      <entry key="S2" value="3.166948960004329" />
+      <entry key="S5" value="4.490550674605915" />
+      <entry key="S10" value="5.159409686564554" />
+      <entry key="S30" value="5.697829450587575" />
+      <entry key="S60" value="5.856079938962296" />
+      <entry key="M2" value="6.1887127492257" />
+      <entry key="M5" value="8.095306565001383" />
+      <entry key="M10" value="12.104248620122439" />
+      <entry key="M15" value="16.082346288031335" />
+      <entry key="M30" value="24.711801276098026" />
+      <entry key="H1" value="35.88482296260282" />
+      <entry key="H2" value="53.41710088178285" />
+      <entry key="H4" value="83.56029487620101" />
+      <entry key="D1" value="179.16065597283125" />
+      <entry key="W1" value="215.02093917608002" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
-      <entry key="S2" value="6.241639919097947E-307" />
-      <entry key="S5" value="3.297004077302677E-123" />
-      <entry key="S10" value="5.741954438431805E-62" />
-      <entry key="S30" value="3.857920264220261E-21" />
-      <entry key="S60" value="6.211215874706227E-11" />
-      <entry key="M2" value="7.881126743496914E-6" />
-      <entry key="M5" value="0.009091495429519415" />
-      <entry key="M10" value="0.09534933366059471" />
-      <entry key="M15" value="0.20871088914199518" />
-      <entry key="M30" value="0.45684886903876143" />
-      <entry key="H1" value="0.6759059616831036" />
-      <entry key="H2" value="0.822135002103124" />
-      <entry key="H4" value="0.9067166051766798" />
-      <entry key="D1" value="0.983811575637192" />
-      <entry key="W1" value="0.9976711604729068" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="4.7308876416372436E-157" />
+      <entry key="S10" value="6.878144838281055E-79" />
+      <entry key="S30" value="8.827216375547092E-27" />
+      <entry key="S60" value="9.395326697644474E-14" />
+      <entry key="M2" value="3.065179717022228E-7" />
+      <entry key="M5" value="0.002480746442487456" />
+      <entry key="M10" value="0.04980709229103277" />
+      <entry key="M15" value="0.13537156791564392" />
+      <entry key="M30" value="0.36792875385819473" />
+      <entry key="H1" value="0.6065713097882183" />
+      <entry key="H2" value="0.7788268804992661" />
+      <entry key="H4" value="0.8825116885907318" />
+      <entry key="D1" value="0.9793849161944466" />
+      <entry key="W1" value="0.9970286317218717" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9526380000254489" />
-      <entry key="MS500" value="1.0237961243140858" />
-      <entry key="S2" value="2.362899525366177" />
-      <entry key="S5" value="4.248310555454135" />
-      <entry key="S10" value="5.398651884014176" />
-      <entry key="S30" value="6.405679369307817" />
-      <entry key="S60" value="6.694506363543209" />
-      <entry key="M2" value="6.851710753307417" />
-      <entry key="M5" value="7.802541826395579" />
-      <entry key="M10" value="11.810852394281145" />
-      <entry key="M15" value="15.769013118073081" />
-      <entry key="M30" value="23.69690001908311" />
-      <entry key="H1" value="33.979198079246046" />
-      <entry key="H2" value="50.87695348306566" />
-      <entry key="H4" value="80.59468118319091" />
-      <entry key="D1" value="174.92716245884185" />
-      <entry key="W1" value="210.15331659590854" />
+      <entry key="MS100" value="0.9735300719559623" />
+      <entry key="MS500" value="1.3920037140604484" />
+      <entry key="S2" value="3.1611318763840157" />
+      <entry key="S5" value="4.487167106946832" />
+      <entry key="S10" value="5.157453256872625" />
+      <entry key="S30" value="5.697106582773009" />
+      <entry key="S60" value="5.855707994619866" />
+      <entry key="M2" value="6.188514428287544" />
+      <entry key="M5" value="8.097666027409852" />
+      <entry key="M10" value="12.153851974085203" />
+      <entry key="M15" value="16.21742489253581" />
+      <entry key="M30" value="25.079338999755347" />
+      <entry key="H1" value="36.49097729931223" />
+      <entry key="H2" value="54.19556421901533" />
+      <entry key="H4" value="84.44253970872542" />
+      <entry key="D1" value="180.1399684695555" />
+      <entry key="W1" value="216.01795622953935" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -625,7 +625,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="issue 3" />
     <MESSAGE value="issue 4" />
     <MESSAGE value="issue 5" />
     <MESSAGE value="issue 6" />
@@ -650,7 +649,8 @@
     <MESSAGE value="ramp" />
     <MESSAGE value="level 6 with multiple ramps" />
     <MESSAGE value="upside down box" />
-    <option name="LAST_COMMIT_MESSAGE" value="upside down box" />
+    <MESSAGE value="upside ramp rotation fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="upside ramp rotation fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

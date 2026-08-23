@@ -30,6 +30,13 @@ func _ready() -> void:
 	portal.position = Vector3(0, 0, -9)
 	box2.get_node("Objects").add_child(portal)
 
+	var box2_ceiling_ramp: Ramp = RAMP_SCENE.instantiate()
+	box2.get_node("Objects").add_child(box2_ceiling_ramp)
+	box2_ceiling_ramp.transform = Transform3D(Basis.IDENTITY.rotated(Vector3(0, 0, 1), PI), Vector3(5.39032, 9.652115, -9.44743))
+	var box2_ceiling_faces: Array[Box.Face] = [Box.Face.TOP, Box.Face.BACK]
+	box2_ceiling_ramp.faces = box2_ceiling_faces
+	box2_ceiling_ramp.box = box2
+
 	box2.transform = Transform3D(Basis.IDENTITY.rotated(Vector3(1, 0, 0), PI), Vector3(0, 20, 0))
 
 	var box2_floor_ramp: Ramp = box2.get_node("Objects/Ramp")
