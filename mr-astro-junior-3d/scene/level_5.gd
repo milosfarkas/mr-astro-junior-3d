@@ -1,9 +1,10 @@
-extends Node3D
+extends LevelBase
 
 const KEY_SPAWN_HEIGHT: float = 8.0
 const KEY_SPAWN_Z: float = -9.0
 
 func _ready() -> void:
+	super._ready()
 	var box1: Box = Box.create("res://scene/box_start.tscn")
 	$Boxes.add_child(box1)
 	box1.open_gate(false, true, false, false)

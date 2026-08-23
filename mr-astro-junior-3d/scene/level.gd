@@ -1,6 +1,7 @@
-extends Node3D
+extends LevelBase
 
 func _ready() -> void:
+	super._ready()
 	var box_start: Box = Box.create("res://scene/box_start.tscn")
 	$Boxes.add_child(box_start)
 	box_start.open_gate(false, true, false, false)

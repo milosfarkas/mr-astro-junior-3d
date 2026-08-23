@@ -1,12 +1,22 @@
 extends Node3D
 class_name Box
 
+enum Face { FRONT, BACK, LEFT, RIGHT, BOTTOM, TOP }
+
+const FACE_NORMALS: Dictionary = {
+	Face.FRONT: Vector3(0, 0, 1),
+	Face.BACK: Vector3(0, 0, -1),
+	Face.LEFT: Vector3(-1, 0, 0),
+	Face.RIGHT: Vector3(1, 0, 0),
+	Face.BOTTOM: Vector3(0, -1, 0),
+	Face.TOP: Vector3(0, 1, 0),
+}
+
 @onready var gate_front: Node3D = $Walls/WallFront/Gate
 @onready var gate_right: Node3D = $Walls/WallRight/Gate
 @onready var gate_back: Node3D = $Walls/WallBack/Gate
 @onready var gate_left: Node3D = $Walls/WallLeft/Gate
 
-@export var ramp: Node3D
 @export var unlock_gate_name: String = ""
 
 var light_energy = .1
@@ -25,52 +35,14 @@ func random_color():
 		rng.randf_range(min_value, 1.0)
 	)
 
-var default_state = true
-
-func world_is_turning(t: float):
-	var all_levels = get_tree().get_nodes_in_group("level")
-	if not all_levels.is_empty():
-		var level: Node3D = all_levels[0]
-		var angle = t * PI/2
-		level.rotate(rotationVector, angle)
-		var nodes = get_tree().get_nodes_in_group("player").filter(func(n: Node): return typeof(n) == typeof(Node3D))
-		var mr_astro: Node3D = nodes[0] if nodes else null
-		if mr_astro:
-			mr_astro.rotate(-rotationVector, angle)
-	
-	
-var rotationVector: Vector3 = Vector3.ZERO
-var duration = 0.1
-var elapsed = 0.0
-var rotating: bool = false
-func _process(delta: float) -> void:
-	if rotating:
-		if elapsed < duration:
-			elapsed += delta
-			var t = clamp(elapsed / duration, 0, 1)
-			world_is_turning(t)
-		else: 
-			rotating = false
-
-func turn_the_whole_world():
-	var r = Vector3(-1, 0, 0) if default_state else  Vector3(1, 0, 0)
-	default_state = not default_state
-	
-	var all_levels = get_tree().get_nodes_in_group("level")
-	if not all_levels.is_empty():
-		var level: Node3D = all_levels[0]
-		var angle = PI/2
-		level.rotate(r, angle)
-		var nodes = get_tree().get_nodes_in_group("player").filter(func(n: Node): return typeof(n) == typeof(Node3D))
-		var mr_astro: Node3D = nodes[0] if nodes else null
-		if mr_astro:
-			mr_astro.rotate(-r, angle)
+func roll_basis(from_face: Face, to_face: Face) -> Dictionary:
+	var n_from: Vector3 = FACE_NORMALS[from_face]
+	var n_to: Vector3 = FACE_NORMALS[to_face]
+	var axis: Vector3 = n_to.cross(n_from).normalized()
+	var angle: float = n_to.angle_to(n_from)
+	return {"axis": axis, "angle": angle}
 
 func _ready() -> void:
-	
-	if ramp:
-		ramp.should_turn.connect(turn_the_whole_world)
-	
 	for child in get_node("lights").get_children():
 		if child is DirectionalLight3D:
 			var light: DirectionalLight3D = child
