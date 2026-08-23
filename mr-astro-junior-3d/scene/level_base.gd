@@ -13,8 +13,8 @@ func _connect_ramps() -> void:
 	for r in get_tree().get_nodes_in_group("ramp"):
 		r.should_turn.connect(_on_should_turn)
 
-func _current_floor_face() -> Box.Face:
-	var basis: Basis = global_transform.basis
+func _current_floor_face(box: Box) -> Box.Face:
+	var basis: Basis = box.global_transform.basis
 	var best_dot: float = -2.0
 	var best_face: Box.Face = Box.Face.BOTTOM
 	for face in Box.FACE_NORMALS.keys():
@@ -32,7 +32,7 @@ func _on_should_turn(edge: Array[Box.Face], box: Box) -> void:
 	if edge.size() < 2:
 		push_warning("Ramp edge has fewer than 2 faces, ignoring.")
 		return
-	var current_floor: Box.Face = _current_floor_face()
+	var current_floor: Box.Face = _current_floor_face(box)
 	var target_face: Box.Face = edge[1] if edge[0] == current_floor else edge[0]
 	if target_face == current_floor:
 		push_warning("Ramp edge does not include current floor face, ignoring.")

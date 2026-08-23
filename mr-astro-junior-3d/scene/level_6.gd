@@ -23,10 +23,15 @@ func _ready() -> void:
 	box2.open_gate(false, false, false, false)
 	box2.get_node("Walls/Ceiling").visible = true
 	box2.get_node("Walls/Ceiling/Gate").visible = true
-	box2.transform = Transform3D(Basis.IDENTITY.rotated(Vector3(1, 0, 0), PI), Vector3(0, 20, 0))
 
 	var portal_scene: PackedScene = load("res://scene/portal.tscn")
 	var portal: Node3D = portal_scene.instantiate()
 	portal.requires_key = false
 	portal.position = Vector3(0, 0, -9)
-	$Boxes.add_child(portal)
+	box2.get_node("Objects").add_child(portal)
+
+	box2.transform = Transform3D(Basis.IDENTITY.rotated(Vector3(1, 0, 0), PI), Vector3(0, 20, 0))
+
+	var box2_floor_ramp: Ramp = box2.get_node("Objects/Ramp")
+	var remapped_faces: Array[Box.Face] = [Box.Face.BOTTOM, Box.Face.BACK]
+	box2_floor_ramp.faces = remapped_faces
