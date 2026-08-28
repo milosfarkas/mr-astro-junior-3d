@@ -33,16 +33,24 @@ func _on_should_turn(edge: Array[Box.Face], box: Box) -> void:
 		push_warning("Ramp edge has fewer than 2 faces, ignoring.")
 		return
 	var current_floor: Box.Face = _current_floor_face(box)
-	var target_face: Box.Face = edge[1] if edge[0] == current_floor else edge[0]
-	if target_face == current_floor:
+	var target_face: Box.Face
+	if edge[0] == current_floor:
+		target_face = edge[1]
+	elif edge[1] == current_floor:
+		target_face = edge[0]
+	else:
 		push_warning("Ramp edge does not include current floor face, ignoring.")
 		return
 	print("[RAMP] box=", box.name, " before=", _face_name(current_floor), " edge=[", _face_name(edge[0]), ", ", _face_name(edge[1]), "] target=", _face_name(target_face))
-	var r: Dictionary = box.roll_basis(current_floor, target_face)
+	var basis: Basis = box.global_transform.basis
+	var n_from: Vector3 = (basis * Box.FACE_NORMALS[current_floor]).normalized()
+	var n_to: Vector3 = (basis * Box.FACE_NORMALS[target_face]).normalized()
+	var axis: Vector3 = n_to.cross(n_from).normalized()
+	var angle: float = n_to.angle_to(n_from)
 	turning = true
-	rotate(r["axis"], r["angle"])
+	rotate(axis, angle)
 	if player:
-		player.rotate(-r["axis"], r["angle"])
+		player.rotate(-axis, angle)
 	turning = false
 	var after_floor: Box.Face = _current_floor_face(box)
 	print("[RAMP] box=", box.name, " after=", _face_name(after_floor))
