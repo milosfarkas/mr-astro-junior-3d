@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://b6level6xxxxx"]
+[gd_scene load_steps=8 format=3 uid="uid://b6level6xxxxx"]
 
-[ext_resource type="Script" path="res://scene/level_6.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://ccepnc74tcxlp" path="res://scene/level_6.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://cfa445npw0jje" path="res://scene/character/Player.tscn" id="2_player"]
 [ext_resource type="PackedScene" path="res://scene/kill_plane.tscn" id="3_kill"]
 [ext_resource type="PackedScene" path="res://scene/hud.tscn" id="4_hud"]

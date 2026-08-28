@@ -11,8 +11,9 @@ const BOX_F := "res://scene/box_f.tscn"
 const BOX_G := "res://scene/box_g.tscn"
 const BOX_H := "res://scene/box_h.tscn"
 
-const SPACING_XZ := 20.0
-const SPACING_Y := 20.0
+const BOX_GAP := 0.001
+const SPACING_XZ := 20.0 + BOX_GAP
+const SPACING_Y := 20.0 + BOX_GAP
 
 var box_a: Box
 var box_b: Box

@@ -1,12 +1,12 @@
-[gd_scene format=3 uid="uid://dq5kmwg3p6crb"]
+[gd_scene load_steps=3 format=3 uid="uid://dq5kmwg3p6crb"]
 
 [ext_resource type="Script" uid="uid://7bmui8opcg52" path="res://scene/lights.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://dc06tdru055jt" path="res://scene/led_strip.tscn" id="1_wsi5u"]
 
-[node name="lights" type="Node3D" unique_id=74517763]
+[node name="lights" type="Node3D"]
 script = ExtResource("1_script")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1207898118]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0, 10.5, 7.7)
 visible = false
 light_color = Color(0.25098, 0.54902, 1, 1)
@@ -15,7 +15,7 @@ light_indirect_energy = 0.5
 shadow_enabled = true
 sky_mode = 1
 
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="." unique_id=1515705953]
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-1, -6.69697e-08, 5.61943e-08, 0, 0.642788, 0.766044, -8.74228e-08, 0.766044, -0.642788, 0, 10.5, -9.3)
 visible = false
 light_color = Color(0.25098, 0.54902, 1, 1)
@@ -24,7 +24,7 @@ light_indirect_energy = 0.5
 shadow_enabled = true
 sky_mode = 1
 
-[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="." unique_id=1861243917]
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-4.37114e-08, -0.766044, 0.642788, 0, 0.642788, 0.766044, -1, 3.34849e-08, -2.80971e-08, 8.5, 10.5, -0.8)
 visible = false
 light_color = Color(0.25098, 0.54902, 1, 1)
@@ -33,7 +33,7 @@ light_indirect_energy = 0.5
 shadow_enabled = true
 sky_mode = 1
 
-[node name="DirectionalLight3D4" type="DirectionalLight3D" parent="." unique_id=915931467]
+[node name="DirectionalLight3D4" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-4.37114e-08, 0.766044, -0.642788, 0, 0.642788, 0.766044, 1, 3.34849e-08, -2.80971e-08, -8.5, 10.5, -0.799999)
 visible = false
 light_color = Color(0.25098, 0.54902, 1, 1)
@@ -42,48 +42,48 @@ light_indirect_energy = 0.5
 shadow_enabled = true
 sky_mode = 1
 
-[node name="sides" type="Node3D" parent="." unique_id=744095670]
+[node name="sides" type="Node3D" parent="."]
 
-[node name="LEDStrip5" parent="sides" unique_id=92040763 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip5" parent="sides" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0.984829, 0, 0, 0, 1, 0, 0, 0, 0.443365, 0, 4, -8)
 
-[node name="LEDStrip6" parent="sides" unique_id=931396285 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip6" parent="sides" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0, 0, 0.443365, 0, 1, 0, -0.984829, 0, 0, 8, 4, 0)
 
-[node name="LEDStrip7" parent="sides" unique_id=1210574320 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip7" parent="sides" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0, 0, 0.443365, 0, 1, 0, -0.984829, 0, 0, -8, 4, 0)
 
-[node name="LEDStrip8" parent="sides" unique_id=219977461 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip8" parent="sides" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0.984829, 0, 0, 0, 1, 0, 0, 0, 0.443365, 0, 4, 8)
 
-[node name="sides2" type="Node3D" parent="." unique_id=773851522]
+[node name="sides2" type="Node3D" parent="."]
 
-[node name="LEDStrip5" parent="sides2" unique_id=699721489 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip5" parent="sides2" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0.984829, 0, 0, 0, 1, 0, 0, 0, 0.443365, 0, 4, -4)
 visible = true
 
-[node name="LEDStrip6" parent="sides2" unique_id=1573141686 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip6" parent="sides2" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0, 0, 0.443365, 0, 1, 0, -0.984829, 0, 0, 4, 4, 0)
 
-[node name="LEDStrip7" parent="sides2" unique_id=123868443 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip7" parent="sides2" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0, 0, 0.443365, 0, 1, 0, -0.984829, 0, 0, -4, 4, 0)
 
-[node name="LEDStrip8" parent="sides2" unique_id=374973905 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip8" parent="sides2" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0.984829, 0, 0, 0, 1, 0, 0, 0, 0.443365, 0, 4, 4)
 visible = true
 
-[node name="corners" type="Node3D" parent="." unique_id=1971135106]
+[node name="corners" type="Node3D" parent="."]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 0)
 
-[node name="LEDStrip5" parent="corners" unique_id=2014543607 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip5" parent="corners" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0.984829, 0, 0, 0, 1, 0, 0, 0, 0.443365, 0, 4, -8)
 
-[node name="LEDStrip6" parent="corners" unique_id=1471965705 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip6" parent="corners" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0, 0, 0.443365, 0, 1, 0, -0.984829, 0, 0, 8, 4, 0)
 
-[node name="LEDStrip7" parent="corners" unique_id=443107452 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip7" parent="corners" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0, 0, 0.443365, 0, 1, 0, -0.984829, 0, 0, -8, 4, 0)
 
-[node name="LEDStrip8" parent="corners" unique_id=1894622897 instance=ExtResource("1_wsi5u")]
+[node name="LEDStrip8" parent="corners" instance=ExtResource("1_wsi5u")]
 transform = Transform3D(0.984829, 0, 0, 0, 1, 0, 0, 0, 0.443365, 0, 4, 8)
 visible = true

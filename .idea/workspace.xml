@@ -10,10 +10,7 @@
     <configurations />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_f.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_f.tscn" afterDir="false" />
-    </list>
+    <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="ligths" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,23 +61,23 @@
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0032813908261964" />
-      <entry key="MS500" value="1.525628599680499" />
-      <entry key="S2" value="2.869611295754095" />
-      <entry key="S5" value="3.4750503108963464" />
-      <entry key="S10" value="3.7234528000782077" />
-      <entry key="S30" value="3.904484036828828" />
-      <entry key="S60" value="3.9518296788945833" />
-      <entry key="M2" value="3.980041901150674" />
-      <entry key="M5" value="4.114488797615956" />
-      <entry key="M10" value="4.544719773090043" />
-      <entry key="M15" value="5.084059899286596" />
-      <entry key="M30" value="6.543433873209026" />
-      <entry key="H1" value="9.409523815286532" />
-      <entry key="H2" value="20.870077083794303" />
-      <entry key="H4" value="52.318839728080576" />
-      <entry key="D1" value="189.7287272388399" />
-      <entry key="W1" value="253.0201422837899" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000444924664" />
+      <entry key="S10" value="1.000665463079272" />
+      <entry key="S30" value="1.4050188121829614" />
+      <entry key="S60" value="3.012374931241657" />
+      <entry key="M2" value="5.487774078725763" />
+      <entry key="M5" value="8.34679104961078" />
+      <entry key="M10" value="9.986773165167115" />
+      <entry key="M15" value="10.963345296373221" />
+      <entry key="M30" value="12.892210574841927" />
+      <entry key="H1" value="16.004009869861477" />
+      <entry key="H2" value="27.513884172027176" />
+      <entry key="H4" value="58.930786090618305" />
+      <entry key="D1" value="196.5109844118268" />
+      <entry key="W1" value="259.97895648147147" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
@@ -88,37 +85,37 @@
       <entry key="S2" value="0.0" />
       <entry key="S5" value="0.0" />
       <entry key="S10" value="0.0" />
-      <entry key="S30" value="1.388125044980519E-241" />
-      <entry key="S60" value="3.725755017416634E-121" />
-      <entry key="M2" value="6.103896310895708E-61" />
-      <entry key="M5" value="8.208104160782181E-25" />
-      <entry key="M10" value="9.059858807278519E-13" />
-      <entry key="M15" value="9.362984109814967E-9" />
-      <entry key="M30" value="9.676251397010612E-5" />
-      <entry key="H1" value="0.00983679388673495" />
-      <entry key="H2" value="0.09918061245392144" />
-      <entry key="H4" value="0.3149295356963543" />
-      <entry key="D1" value="0.8248384525628646" />
-      <entry key="W1" value="0.9728652697727829" />
+      <entry key="S30" value="5.623469068644469E-243" />
+      <entry key="S60" value="7.498979309642401E-122" />
+      <entry key="M2" value="2.73842642947412E-61" />
+      <entry key="M5" value="5.956627347672735E-25" />
+      <entry key="M10" value="7.717918986146952E-13" />
+      <entry key="M15" value="8.413954200271855E-9" />
+      <entry key="M30" value="9.172760871336321E-5" />
+      <entry key="H1" value="0.009577453143365576" />
+      <entry key="H2" value="0.09786446312817328" />
+      <entry key="H4" value="0.31283296362143986" />
+      <entry key="D1" value="0.8239207076852006" />
+      <entry key="W1" value="0.9727105610095853" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9360726763177116" />
-      <entry key="MS500" value="1.5034254654818147" />
-      <entry key="S2" value="2.858438505362658" />
-      <entry key="S5" value="3.4695603658295324" />
-      <entry key="S10" value="3.7204980552468228" />
-      <entry key="S30" value="3.903448127568528" />
-      <entry key="S60" value="3.951305049794969" />
-      <entry key="M2" value="3.9797771402832054" />
-      <entry key="M5" value="4.114374409987907" />
-      <entry key="M10" value="4.544651809891964" />
-      <entry key="M15" value="5.084007678461307" />
-      <entry key="M30" value="6.543496584456021" />
-      <entry key="H1" value="9.41933033242578" />
-      <entry key="H2" value="20.96919089488749" />
-      <entry key="H4" value="52.63365655146374" />
-      <entry key="D1" value="190.5534994557746" />
-      <entry key="W1" value="253.99299541808523" />
+      <entry key="MS100" value="0.8827029962906549" />
+      <entry key="MS500" value="0.9753554615276419" />
+      <entry key="S2" value="0.9937810933225548" />
+      <entry key="S5" value="0.9975078253119103" />
+      <entry key="S10" value="0.9994179816862121" />
+      <entry key="S30" value="1.4044810645703538" />
+      <entry key="S60" value="3.0118632537538823" />
+      <entry key="M2" value="5.487330772086341" />
+      <entry key="M5" value="8.346523854453267" />
+      <entry key="M10" value="9.986610801455946" />
+      <entry key="M15" value="10.963225667066858" />
+      <entry key="M30" value="12.892232060061799" />
+      <entry key="H1" value="16.013538443565192" />
+      <entry key="H2" value="27.61167291282455" />
+      <entry key="H4" value="59.24350216154994" />
+      <entry key="D1" value="197.33483813201622" />
+      <entry key="W1" value="260.951654790903" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -129,35 +126,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHELLCHECK.PATH": "/Users/arnold.farkas/Library/Application Support/JetBrains/Rider2026.1/plugins/Shell Script/shellcheck",
-    "Shell Script.build_itchio.sh.executor": "Run",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "copilot.chat.legacySessionMetadata.migrated": "true",
-    "git-widget-placeholder": "level7",
-    "git.auto.fetch.suggestion.counter": "3",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "D:/my-projects/godot/coolest-project-2024",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/arnold.farkas/Library/Application Support/JetBrains/Rider2026.1/plugins/Shell Script/shellcheck&quot;,
+    &quot;Shell Script.build_itchio.sh.executor&quot;: &quot;Run&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;copilot.chat.legacySessionMetadata.migrated&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;level7&quot;,
+    &quot;git.auto.fetch.suggestion.counter&quot;: &quot;3&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/my-projects/godot/coolest-project-2024&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Shell Script.build_itchio.sh">
     <configuration name="Debug GDScript (Running session)" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory">
       <option name="json" value="{&#10;  // Launch: &quot;Launch a new instance of the game&quot;,&#10;  // Attach: &quot;Attach to an already running game, which was started from the Godot Editor&quot;&#10;  &quot;request&quot; : &quot;Attach&quot;,&#10;  &quot;debugServer&quot; : 6006, // port should match the Debug Adapter port in the Godot Editor project settings.&#10;  &quot;scene&quot; : &quot;main&quot;, // main, current, res://path/to/file.tscn&#10;  &#10;  // &quot;playArgs&quot; : [ &quot;--editor&quot; ], // debugging a tool script&#10;  // &quot;playArgs&quot;: [&quot;--debug-collisions&quot;,&quot;--debug-navigation&quot;], // different options&#10;  &#10;  // one click deploy and debug via Godot Editor:&#10;  // &quot;platform&quot;: &quot;Android&quot;, // including Android, iOS, Web and W4 consoles&#10;  // &quot;device&quot;: &quot;0&quot;, // index of the device of a &quot;platform&quot; type&#10;}" />
