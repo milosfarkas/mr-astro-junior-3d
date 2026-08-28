@@ -4,7 +4,7 @@ class_name Ramp
 @export var faces: Array[Box.Face] = []
 @export var box: Box
 
-signal should_turn(edge: Array[Box.Face], box: Box)
+signal should_turn(edge: Array[Box.Face], box: Box, ramp: Ramp)
 
 var emittable = true
 
@@ -18,7 +18,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if emittable and "player" in body.get_groups():
 		$Timer.start()
 		ramp_visible(false)
-		should_turn.emit(faces, box)
+		should_turn.emit(faces, box, self)
 		$WhooshSound.play()
 
 func _on_timer_timeout() -> void:

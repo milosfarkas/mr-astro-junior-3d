@@ -26,7 +26,7 @@ func _current_floor_face(box: Box) -> Box.Face:
 			best_face = face
 	return best_face
 
-func _on_should_turn(edge: Array[Box.Face], box: Box) -> void:
+func _on_should_turn(edge: Array[Box.Face], box: Box, ramp: Ramp) -> void:
 	if turning:
 		return
 	if edge.size() < 2:
@@ -41,7 +41,7 @@ func _on_should_turn(edge: Array[Box.Face], box: Box) -> void:
 	else:
 		push_warning("Ramp edge does not include current floor face, ignoring.")
 		return
-	print("[RAMP] box=", box.name, " before=", _face_name(current_floor), " edge=[", _face_name(edge[0]), ", ", _face_name(edge[1]), "] target=", _face_name(target_face))
+	print("[RAMP] ramp=", ramp.name, " box=", box.name, " before=", _face_name(current_floor), " edge=[", _face_name(edge[0]), ", ", _face_name(edge[1]), "] target=", _face_name(target_face))
 	var basis: Basis = box.global_transform.basis
 	var n_from: Vector3 = (basis * Box.FACE_NORMALS[current_floor]).normalized()
 	var n_to: Vector3 = (basis * Box.FACE_NORMALS[target_face]).normalized()
@@ -53,7 +53,7 @@ func _on_should_turn(edge: Array[Box.Face], box: Box) -> void:
 		player.rotate(-axis, angle)
 	turning = false
 	var after_floor: Box.Face = _current_floor_face(box)
-	print("[RAMP] box=", box.name, " after=", _face_name(after_floor))
+	print("[RAMP] ramp=", ramp.name, " box=", box.name, " after=", _face_name(after_floor))
 
 func _face_name(face: Box.Face) -> String:
 	match face:
