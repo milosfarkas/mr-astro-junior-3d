@@ -52,7 +52,7 @@ func _ready() -> void:
 	$Boxes.add_child(box_e)
 	box_e.transform = Transform3D(Basis.IDENTITY.rotated(Vector3(1, 0, 0), PI), Vector3(0, SPACING_Y, 0))
 	box_e.open_gate(false, true, false, false)
-	_add_ceiling_ramp(box_e)
+	_add_ceiling_ramp(box_e, [Box.Face.BACK, Box.Face.BOTTOM])
 
 	box_f = Box.create(BOX_F)
 	$Boxes.add_child(box_f)
@@ -70,12 +70,11 @@ func _ready() -> void:
 	box_h.open_gate(true, false, false, false)
 	_add_ceiling_ramp(box_h)
 
-func _add_ceiling_ramp(box: Box) -> void:
+func _add_ceiling_ramp(box: Box, faces: Array[Box.Face] = [Box.Face.TOP, Box.Face.BACK]) -> void:
 	box.get_node("Walls/Ceiling").visible = true
 	box.get_node("Walls/Ceiling/Gate").visible = true
 	var ceiling_ramp: Ramp = RAMP_SCENE.instantiate()
 	box.get_node("Objects").add_child(ceiling_ramp)
 	ceiling_ramp.transform = Transform3D(Basis.IDENTITY.rotated(Vector3(0, 0, 1), PI), Vector3(5.39032, 9.652115, -9.44743))
-	var ceiling_faces: Array[Box.Face] = [Box.Face.TOP, Box.Face.BACK]
-	ceiling_ramp.faces = ceiling_faces
+	ceiling_ramp.faces = faces
 	ceiling_ramp.box = box

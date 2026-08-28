@@ -46,7 +46,6 @@ size = Vector3(4, 0.2, 4)
 
 [node name="Ceiling" type="CSGBox3D" parent="Walls" unique_id=865434655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
-visible = false
 use_collision = true
 size = Vector3(20, 0.1, 20)
 
@@ -117,9 +116,26 @@ transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -39.65979, -3.9540176, -25
 [node name="rock_ceiling3" parent="Objects" unique_id=1703535984 instance=ExtResource("3_rock")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.295779, -1.3502326, -7.7282677)
 
-[node name="Ramp" parent="Objects" unique_id=1900000001 node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.71275187, 9.743006)
-faces = Array[int]([4, 1])
+[node name="Ramp1" parent="Objects" unique_id=1900000001 node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0.7113998, 0.47195148, 8.860366)
+faces = Array[int]([0, 4])
+box = NodePath("../..")
+
+[node name="Objects2" type="Node3D" parent="." unique_id=48628026]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.354613, 0.3495841, 9.923262)
+
+[node name="rock_ceiling1" parent="Objects2" unique_id=1878538145 instance=ExtResource("3_rock")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -39.297615, -5.6804256, -22.978008)
+
+[node name="rock_ceiling2" parent="Objects2" unique_id=1937648904 instance=ExtResource("3_rock")]
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -39.65979, -3.9540176, -25.493113)
+
+[node name="rock_ceiling3" parent="Objects2" unique_id=1051006613 instance=ExtResource("3_rock")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.295779, -1.3502326, -7.7282677)
+
+[node name="Ramp2" parent="Objects2" unique_id=934421521 node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.44447803, 9.538884)
+faces = Array[int]([0, 5])
 box = NodePath("../..")
 
 [node name="sounds" type="Node3D" parent="." unique_id=564974769]

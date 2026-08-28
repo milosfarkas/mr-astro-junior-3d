@@ -37,9 +37,22 @@ func _on_should_turn(edge: Array[Box.Face], box: Box) -> void:
 	if target_face == current_floor:
 		push_warning("Ramp edge does not include current floor face, ignoring.")
 		return
+	print("[RAMP] box=", box.name, " before=", _face_name(current_floor), " edge=[", _face_name(edge[0]), ", ", _face_name(edge[1]), "] target=", _face_name(target_face))
 	var r: Dictionary = box.roll_basis(current_floor, target_face)
 	turning = true
 	rotate(r["axis"], r["angle"])
 	if player:
 		player.rotate(-r["axis"], r["angle"])
 	turning = false
+	var after_floor: Box.Face = _current_floor_face(box)
+	print("[RAMP] box=", box.name, " after=", _face_name(after_floor))
+
+func _face_name(face: Box.Face) -> String:
+	match face:
+		Box.Face.FRONT: return "FRONT(2)"
+		Box.Face.BACK: return "BACK(5)"
+		Box.Face.LEFT: return "LEFT(4)"
+		Box.Face.RIGHT: return "RIGHT(3)"
+		Box.Face.BOTTOM: return "BOTTOM(1)"
+		Box.Face.TOP: return "TOP(6)"
+		_: return "UNKNOWN"
