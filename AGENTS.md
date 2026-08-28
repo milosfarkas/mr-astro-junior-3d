@@ -44,6 +44,83 @@ Mr. Astro Junior 3D — a Godot 4.4 3D platformer/adventure game. GDScript only,
 - Physics: JoltPhysics3D (not default Godot physics)
 - Input: WASD + arrows (left/right/forward/backward), Space (jump), Left click (attack), Shift (sprint)
 
+## Level 7 — 2x2x2 Cube (Die-Roll Level)
+
+Level 7 (`scene/level_7.tscn`, `scene/level_7.gd`) is a 2×2×2 cube of 8 boxes forming a giant die. Boxes are 20×20×10 (floor size 20×20, ceiling at y=10), spaced 20 in X/Z and 20 in Y (so ceilings/floors meet).
+
+### Box layout
+
+Ground floor (y=0):
+```
+a(0,0,0)  b(20,0,0)
+c(0,0,20) d(20,0,20)
+```
+Top floor (y=20, all flipped 180° X so they hang upside down):
+```
+e(0,20,0)   f(20,20,0)
+g(0,20,20)  h(20,20,20)
+```
+- `box_a` and `box_e` use `box_start.tscn` (same as level 6 start/end box).
+- `box_b`, `box_c`, `box_d`, `box_g` are plain boxes (`box_b/c/d/g.tscn`).
+- `box_f` is a lava challenge box (`box_f.tscn`) — lava on faces 1 (Floor) and 2 (WallFront).
+- `box_h` is a plain box (`box_h.tscn`).
+- Top boxes (e,f,g,h) are placed via `Transform3D(Basis.IDENTITY.rotated(Vector3(1, 0, 0), PI), position)` — rotated 180° X, so local TOP points down.
+
+### Dice face mapping
+
+The 2×2×2 cube is named like a die. Opposite faces sum to 7.
+
+| Dice # | Side of the 2×2×2 cube | `Box.Face` enum | enum value |
+|--------|------------------------|-----------------|------------|
+| 1 | floor (a,b,c,d bottom) | `BOTTOM` | 4 |
+| 2 | front (+Z, c,d,g,h side) | `FRONT` | 0 |
+| 3 | right (+X, b,d,f,h side) | `RIGHT` | 3 |
+| 4 | left (−X, a,c,e,g side) | `LEFT` | 2 |
+| 5 | back (−Z, a,b,e,f side) | `BACK` | 1 |
+| 6 | ceiling (a,b,c,d top) | `TOP` | 5 |
+
+Opposite pairs: 1↔6 (BOTTOM↔TOP), 2↔5 (FRONT↔BACK), 3↔4 (RIGHT↔LEFT). Opposite faces cannot form a ramp edge (no shared edge to roll across).
+
+### Doors (open gates between boxes)
+
+- A↔E: ceiling gate on both (vertical shaft, face 6)
+- E↔F: e's right (+X) + f's left (−X)
+- F↔H: f's back (−Z, local "front" under flip) + h's front (+Z, local "back" under flip)
+- H↔D: ceiling gate on both (vertical shaft, face 6)
+- D↔C: d's left (−X) + c's right (+X)
+- D↔B: d's front (−Z) + b's back (−Z)
+- Box G is closed (no doors).
+
+### Ramps
+
+Each ramp has `faces = Array[int]([faceA, faceB])` using `Box.Face` enum values. The `_on_should_turn` handler in `level_base.gd` requires one of the two faces to be the player's current floor face; it rolls the level from current floor → the other face. Ramp edges must be adjacent faces (not opposite).
+
+- **Box A ceiling ramp**: `[TOP, BACK]` = `[5, 1]` (dice 6→5)
+- **Box D ceiling ramp**: `[TOP, BACK]` = `[5, 1]` (dice 6→5)
+- **Box E ceiling ramp**: `[BACK, BOTTOM]` = `[1, 4]` (dice 5→1)
+- **Box H ceiling ramp**: `[TOP, BACK]` = `[5, 1]` (dice 6→5)
+- **Box F Ramp1**: `[FRONT, BOTTOM]` = `[0, 4]` (dice 2→1)
+- **Box F Ramp2**: `[FRONT, TOP]` = `[0, 5]` (dice 2→6)
+
+### Flipped boxes (top floor)
+
+Top boxes (e,f,g,h) are rotated 180° X. This means:
+- Local `TOP` (dice 6) points DOWN → player stands on local TOP
+- Local `FRONT` (+Z) points to world −Z, local `BACK` (−Z) points to world +Z
+- Left/right are unchanged
+- `open_gate(front, right, back, left)` calls use LOCAL axes; world directions are swapped for front/back
+
+### Lava in Box F
+
+`box_f.tscn` has lava (orange emissive material + `Area3D` trigger → `State.die_on_lava()`) on:
+- Face 1 (Floor / `BOTTOM`) — the floor CSG box has the lava material, Area3D covers it
+- Face 2 (WallFront / `FRONT`) — the front wall CSG box has lava material, Area3D covers it
+Rocks and lava sound emitters are placed in-scene for editor adjustment.
+
+### Debug logging
+
+`level_base.gd` `_on_should_turn` prints `[RAMP]` logs with before/after floor face and the declared edge, using `_face_name()` which includes dice numbers (e.g. `TOP(6)`, `BOTTOM(1)`).
+
 ## No Build/Test/Lint CLI
 
 This is a Godot project — run and test via the Godot editor. No CI, no CLI test runner, no linter configured.
