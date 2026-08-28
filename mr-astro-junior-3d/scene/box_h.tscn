@@ -1,0 +1,77 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://cdrmbi4ydvh0g" path="res://scene/box.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://dq5kmwg3p6crb" path="res://scene/lights.tscn" id="2_lights"]
+
+[node name="Box" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="lights" parent="." instance=ExtResource("2_lights")]
+
+[node name="Walls" type="Node3D" parent="."]
+
+[node name="Floor" type="CSGBox3D" parent="Walls"]
+use_collision = true
+size = Vector3(20, 0.1, 20)
+
+[node name="Gate" type="CSGBox3D" parent="Walls/Floor"]
+visible = false
+operation = 2
+size = Vector3(4, 0.2, 4)
+
+[node name="Ceiling" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+visible = false
+use_collision = true
+size = Vector3(20, 0.1, 20)
+
+[node name="Gate" type="CSGBox3D" parent="Walls/Ceiling"]
+visible = false
+operation = 2
+size = Vector3(4, 0.2, 4)
+
+[node name="WallLeft" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -10, 5, 0)
+use_collision = true
+size = Vector3(10, 0.1, 20)
+
+[node name="Gate" type="CSGBox3D" parent="Walls/WallLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+visible = false
+operation = 2
+size = Vector3(4, 0.1, 4)
+
+[node name="WallRight" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 10, 5, 0)
+use_collision = true
+size = Vector3(10, 0.1, 20)
+
+[node name="Gate" type="CSGBox3D" parent="Walls/WallRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+visible = false
+operation = 2
+size = Vector3(4, 0.1, 4)
+
+[node name="WallFront" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 4.37114e-07, 5, 10)
+use_collision = true
+size = Vector3(10, 0.1, 20)
+
+[node name="Gate" type="CSGBox3D" parent="Walls/WallFront"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+visible = false
+operation = 2
+size = Vector3(4, 0.1, 4)
+
+[node name="WallBack" type="CSGBox3D" parent="Walls"]
+transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.37114e-07, 5, -10)
+use_collision = true
+size = Vector3(10, 0.1, 20)
+
+[node name="Gate" type="CSGBox3D" parent="Walls/WallBack"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+visible = false
+operation = 2
+size = Vector3(4, 0.1, 4)
+
+[node name="Objects" type="Node3D" parent="."]
