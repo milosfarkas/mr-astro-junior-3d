@@ -115,7 +115,7 @@ transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -39.297615, -5.6804256, -2
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -38.107147, -5.680422, -40.226265)
 
 [node name="rock_ceiling2" parent="Objects" unique_id=1851130615 instance=ExtResource("3_rock")]
-transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -39.65979, -3.9540176, -25.493113)
+transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -40.198402, -3.9540176, -24.523613)
 
 [node name="rock_ceiling3" parent="Objects" unique_id=1703535984 instance=ExtResource("3_rock")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.295779, -1.3502326, -7.7282677)
@@ -162,11 +162,15 @@ stream = ExtResource("6_lava3")
 autoplay = true
 parameters/looping = true
 
-[node name="Ramp3" parent="." unique_id=539291574 instance=ExtResource("7_ramp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.954357, 0, -9.597502)
+[node name="Ramp_F3" parent="." unique_id=539291574 node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.398245, 0.5623715, -9.581935)
+faces = Array[int]([1, 4])
+box = NodePath("..")
 
-[node name="Ramp4" parent="." unique_id=1815430833 instance=ExtResource("7_ramp")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 4.954357, 9.214109, -10.196557)
+[node name="Ramp_F4" parent="." unique_id=1815430833 node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 4.954357, 9.727444, -9.724912)
+faces = Array[int]([1, 5])
+box = NodePath("..")
 
 [connection signal="body_entered" from="Walls/Floor/Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_entered" from="Walls/WallFront/Area3D" to="." method="_on_area_3d_body_entered"]
