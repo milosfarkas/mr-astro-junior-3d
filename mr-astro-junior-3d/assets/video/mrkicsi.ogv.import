@@ -1,0 +1,14 @@
+[remap]
+
+importer="video"
+importer_version=1
+type="VideoStream"
+uid="uid://3rcvmk6mb2g1"
+path="res://assets/video/mrkicsi.ogv"
+
+[deps]
+
+source_file="res://assets/video/mrkicsi.ogv"
+dest_files=[]
+
+[params]

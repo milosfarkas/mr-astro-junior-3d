@@ -1,7 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://8eyel7615u2b"]
+[gd_scene format=3 uid="uid://8eyel7615u2b"]
 
 [ext_resource type="PackedScene" uid="uid://c806ukktxv0e4" path="res://assets/kenney-space-station/computer-screen.glb" id="1_model"]
+[ext_resource type="Script" uid="uid://ctwhed751p7mu" path="res://scene/computer_screen.gd" id="2_script"]
 
-[node name="ComputerScreen" type="Node3D"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_screen"]
+size = Vector2(0.6, 0.4)
 
-[node name="Model" parent="." instance=ExtResource("1_model")]
+[node name="ComputerScreen" type="Node3D" unique_id=1271347051]
+script = ExtResource("2_script")
+
+[node name="Model" parent="." unique_id=1604805352 instance=ExtResource("1_model")]
+
+[node name="ScreenMesh" type="MeshInstance3D" parent="." unique_id=1585523165]
+transform = Transform3D(1.1649473, 0, 0, 0, 0.20151782, -0.97948486, 0, 0.97948486, 0.20151782, 0, 0.43, 0.0058323387)
+mesh = SubResource("PlaneMesh_screen")
+
+[node name="VideoViewport" type="SubViewport" parent="." unique_id=2025279945]
+transparent_bg = true
+size = Vector2i(242, 136)
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="VideoViewport" unique_id=2081715262]
+autoplay = true
+loop = true
