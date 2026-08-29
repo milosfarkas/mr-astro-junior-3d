@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dnp7a7hbh51jb" path="res://scene/pickup_item.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://he3u7tcv08fw" path="res://assets/KayKit_Platformer_Pack_1.0_FREE/Assets/gltf/green/diamond_green.gltf" id="2_model"]
 [ext_resource type="AudioStream" uid="uid://b6jfwu117ie0l" path="res://assets/sounds/litupsubway-key-collect-sfx-522219.mp3" id="3_collect"]
-[ext_resource type="PackedScene" uid="uid://glowpulsenode01" path="res://scene/glow_pulse.tscn" id="4_glow"]
+[ext_resource type="PackedScene" uid="uid://bwsbg2qel5xoo" path="res://scene/glow_pulse.tscn" id="4_glow"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pickup"]
 size = Vector3(0.6, 0.8, 0.6)
@@ -25,6 +25,9 @@ stream = ExtResource("3_collect")
 unit_size = 4.0
 
 [node name="GlowPulse" parent="." instance=ExtResource("4_glow")]
+pulse_frequency = 5.2
 glow_color = Color(0.3, 1, 0.4, 1)
+glow_amount_min = 0.01
+glow_amount_max = 0.02
 
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
