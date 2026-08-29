@@ -63,6 +63,8 @@ func _ready() -> void:
 	$Boxes.add_child(box_d)
 	box_d.position = Vector3(SPACING_XZ, 0, SPACING_XZ)
 	box_d.open_gate(false, false, true, true)
+	box_d.get_node("Walls/Ceiling").visible = true
+	box_d.get_node("Walls/Ceiling/Gate").visible = true
 	_rename_ramp(box_d, "Ramp", "Ramp_D1")
 	_rename_ramp(box_d, "Ramp2", "Ramp_D2")
 	_rename_ramp(box_d, "Ramp3", "Ramp_D3")
