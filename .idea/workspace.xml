@@ -12,7 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/chest.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/chest.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -625,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="maybe collision" />
     <MESSAGE value="start" />
     <MESSAGE value="test room" />
     <MESSAGE value="doubled room" />
@@ -650,7 +648,8 @@
     <MESSAGE value="music" />
     <MESSAGE value="music from jukeboxes" />
     <MESSAGE value="move diamonds on level 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="move diamonds on level 5" />
+    <MESSAGE value="fixcollectible sounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixcollectible sounds" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
