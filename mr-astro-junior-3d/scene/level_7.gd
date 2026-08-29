@@ -24,7 +24,7 @@ const BOX_D := "res://scene/box_d.tscn"
 const BOX_E := "res://scene/box_start.tscn"
 const BOX_F := "res://scene/box_f.tscn"
 const BOX_G := "res://scene/box_g.tscn"
-const BOX_H := "res://scene/box_h.tscn"
+const BOX_H := "res://scene/box_start.tscn"
 
 const BOX_GAP := 0.001
 const SPACING_XZ := 20.0 + BOX_GAP
@@ -88,7 +88,8 @@ func _ready() -> void:
 	$Boxes.add_child(box_h)
 	box_h.transform = Transform3D(Basis.IDENTITY.rotated(Vector3(1, 0, 0), PI), Vector3(SPACING_XZ, SPACING_Y, SPACING_XZ))
 	box_h.open_gate(true, false, false, false)
-	_add_ceiling_ramp(box_h, "Ramp_H")
+	_rename_ramp(box_h, "Ramp", "Ramp_H_floor")
+	_add_ceiling_ramp(box_h, "Ramp_H_ceiling", [Box.Face.TOP, Box.Face.BACK])
 
 	_decorate_boxes()
 
@@ -125,13 +126,7 @@ func _decorate_boxes() -> void:
 	_add_floor_obj(box_g, COMPUTER_SCREEN, "computer_screen", Vector3(-6, 10, -5), 2.0, -PI / 4.0, true)
 	_add_floor_obj(box_g, BALL, "ball", Vector3(0, 9.5, 0), 1.0, 0.0, true)
 
-	# Box H (flipped) — display wall on back, floor: container, barrels, rigid chair, dish, table
-	_add_display_wall(box_h, SIDE_BACK, 3.0, true)
-	_add_floor_obj(box_h, CONTAINER_TALL, "container_tall", Vector3(-5, 9.9, -4), 2.0, 0.0, true)
-	_add_floor_obj(box_h, BARRELS, "barrels", Vector3(4, 10, 4), 2.0, 0.0, true)
-	_add_floor_obj(box_h, CHAIR_RIGID, "chair_rigid", Vector3(-2, 10, 6), 1.0, PI / 2.0, true)
-	_add_floor_obj(box_h, SATELLITE_DISH, "satellite_dish", Vector3(-6, 10, 6), 2.0, 0.0, true)
-	_add_floor_obj(box_h, TABLE_DISPLAY, "table_display", Vector3(-7, 9.4, 3), 2.0, PI / 4.0, true)
+	# Box H uses box_start.tscn (same as A/E) — objects are baked into the scene.
 
 func _add_display_wall(box: Box, side: int, offset: float, flipped: bool) -> void:
 	var wall: Node3D = DISPLAY_WALL.instantiate()

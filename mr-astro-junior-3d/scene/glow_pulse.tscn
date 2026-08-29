@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://bwsbg2qel5xoo"]
+[gd_scene format=3 uid="uid://bwsbg2qel5xoo"]
 
 [ext_resource type="Script" uid="uid://bh6m7e8of1kqg" path="res://scene/glow_pulse.gd" id="1_script"]
 

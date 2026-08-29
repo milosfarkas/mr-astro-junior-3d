@@ -1,7 +1,7 @@
 extends LevelBase
 
 const KEY_SPAWN_HEIGHT: float = 8.0
-const KEY_SPAWN_Z: float = -9.0
+const KEY_SPAWN_Z: float = -10.0
 
 func _ready() -> void:
 	super._ready()
@@ -27,11 +27,11 @@ func _ready() -> void:
 
 	var chest_scene: PackedScene = load("res://scene/chest.tscn")
 	var chest: Node3D = chest_scene.instantiate()
-	chest.position = Vector3(box2.position.x + 3, 0, 0)
+	chest.position = Vector3(box1.position.x, KEY_SPAWN_HEIGHT, KEY_SPAWN_Z)
+	chest.rotation_degrees.x = 90.0
 	$Boxes.add_child(chest)
 	chest.key_target = chest.get_path_to(portal)
-	var key_world_pos: Vector3 = Vector3(box1.position.x, KEY_SPAWN_HEIGHT, KEY_SPAWN_Z)
-	chest.key_spawn_offset = key_world_pos - chest.position
+	chest.key_spawn_offset = Vector3(0, 0.5, 0)
 
 	var diamond_green_scene: PackedScene = load("res://scene/diamond_green.tscn")
 	var dg: Node3D = diamond_green_scene.instantiate()
