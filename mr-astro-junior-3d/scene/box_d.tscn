@@ -16,7 +16,7 @@ emission_enabled = true
 emission = Color(0.930544, 0.649563, 0.344215, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lava_floor"]
-size = Vector3(20, 1, 20)
+size = Vector3(20, 0.2, 20)
 
 [node name="Box" type="Node3D" unique_id=272689040]
 script = ExtResource("1_script")
@@ -33,7 +33,7 @@ material = SubResource("StandardMaterial3D_lava")
 [node name="Area3D" type="Area3D" parent="Walls/Floor" unique_id=58193202]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Floor/Area3D" unique_id=225949004]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.405522, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.04, 0)
 shape = SubResource("BoxShape3D_lava_floor")
 
 [node name="Gate" type="CSGBox3D" parent="Walls/Floor" unique_id=809097773]
