@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cvfqxmt1wa0h1"]
+
+[ext_resource type="Script" uid="uid://bqijqid4h2uif" path="res://scene/juke_box.gd" id="1"]
+
+[node name="JukeBox" type="AudioStreamPlayer3D" unique_id=643852891]
+volume_db = 5.895
+script = ExtResource("1")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

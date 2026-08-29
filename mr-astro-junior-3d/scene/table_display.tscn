@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://btbldisp00003"]
+[gd_scene format=3 uid="uid://btbldisp00003"]
 
 [ext_resource type="PackedScene" uid="uid://k5typy1xmvd6" path="res://assets/kenney-space-station/table-display.glb" id="1_model"]
+[ext_resource type="PackedScene" uid="uid://cvfqxmt1wa0h1" path="res://scene/juke_box.tscn" id="2_w8ap3"]
 
-[node name="TableDisplay" type="Node3D"]
+[node name="TableDisplay" type="Node3D" unique_id=333382556]
 
-[node name="Model" parent="." instance=ExtResource("1_model")]
+[node name="Model" parent="." unique_id=1687723778 instance=ExtResource("1_model")]
+
+[node name="JukeBox" parent="." unique_id=607583543 instance=ExtResource("2_w8ap3")]
+volume_db = -12.0
+autoplay = true
+max_distance = 30.0

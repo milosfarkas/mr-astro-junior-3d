@@ -12,9 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_b.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_b.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_c.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_c.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_d.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_d.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +43,6 @@
   </component>
   <component name="EmbeddingIndexingInfo">
     <option name="cachedIndexableFilesCount" value="10520" />
-    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="Git.Merge.Settings">
     <option name="BRANCH" value="main" />
@@ -170,9 +166,9 @@
       <method v="2" />
     </configuration>
     <configuration name="Editor" type="RunExe" factoryName=".NET Executable">
-      <option name="EXE_PATH" value="/Applications/Godot.app/Contents/MacOS/Godot" />
+      <option name="EXE_PATH" value="C:\apps\godot\Godot_v4.7.2-stable_win64.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;mr-astro-junior-3d&quot; --editor" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\farka\Documents\my-projects\mr-astro-junior-3d" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -186,9 +182,9 @@
       </method>
     </configuration>
     <configuration name="Player" type="RunExe" factoryName=".NET Executable">
-      <option name="EXE_PATH" value="/Applications/Godot.app/Contents/MacOS/Godot" />
+      <option name="EXE_PATH" value="C:\apps\godot\Godot_v4.7.2-stable_win64.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;mr-astro-junior-3d&quot;" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\farka\Documents\my-projects\mr-astro-junior-3d" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -202,9 +198,9 @@
       </method>
     </configuration>
     <configuration name="Editor" type="RunNativeExe" factoryName="Native Executable">
-      <option name="EXE_PATH" value="/Applications/Godot.app/Contents/MacOS/Godot" />
+      <option name="EXE_PATH" value="C:\apps\godot\Godot_v4.7.2-stable_win64.exe" />
       <option name="PROGRAM_PARAMETERS" value="--path &quot;mr-astro-junior-3d&quot; --editor" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\farka\Documents\my-projects\mr-astro-junior-3d" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="ENV_FILE_PATHS" value="" />
       <option name="REDIRECT_INPUT_PATH" value="" />
@@ -628,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="with floor" />
     <MESSAGE value="lights and ceiling" />
     <MESSAGE value="scene default" />
     <MESSAGE value="maybe collision" />
@@ -653,7 +648,8 @@
     <MESSAGE value="WIP BCD boxes" />
     <MESSAGE value="wip" />
     <MESSAGE value="ramps in box d level 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="ramps in box d level 7" />
+    <MESSAGE value="music" />
+    <option name="LAST_COMMIT_MESSAGE" value="music" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
