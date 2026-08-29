@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwsbg2qel5xoo"]
+
+[ext_resource type="Script" uid="uid://bh6m7e8of1kqg" path="res://scene/glow_pulse.gd" id="1_script"]
+
+[node name="GlowPulse" type="Node3D"]
+script = ExtResource("1_script")
+pulse_frequency = 1.0
+glow_color = Color(1, 1, 1, 1)
+glow_amount_min = 0.1
+glow_amount_max = 0.2
