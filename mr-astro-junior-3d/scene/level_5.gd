@@ -40,10 +40,15 @@ func _ready() -> void:
 
 	var diamond_blue_scene: PackedScene = load("res://scene/diamond_blue.tscn")
 	var db: Node3D = diamond_blue_scene.instantiate()
-	db.position = Vector3(box3.position.x - 5, 0.5, 5)
+	db.position = Vector3(box2.position.x + 3, 0.7, 0)
 	$Boxes.add_child(db)
-
+	
 	var diamond_yellow_scene: PackedScene = load("res://scene/diamond_yellow.tscn")
 	var dy: Node3D = diamond_yellow_scene.instantiate()
-	dy.position = Vector3(box3.position.x, 0.5, -5)
+	var portal_placeholder: Node3D = box2.get_node_or_null("a_portal_placement_placeholder")
+	if portal_placeholder:
+		dy.position = box2.position + portal_placeholder.position
+		dy.position.y += 0.5
+	else:
+		dy.position = Vector3(box2.position.x, 2.5, -9)
 	$Boxes.add_child(dy)

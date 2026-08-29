@@ -12,6 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_5.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_5.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -624,7 +625,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="lights and ceiling" />
     <MESSAGE value="scene default" />
     <MESSAGE value="maybe collision" />
     <MESSAGE value="start" />
@@ -649,7 +649,8 @@
     <MESSAGE value="wip" />
     <MESSAGE value="ramps in box d level 7" />
     <MESSAGE value="music" />
-    <option name="LAST_COMMIT_MESSAGE" value="music" />
+    <MESSAGE value="music from jukeboxes" />
+    <option name="LAST_COMMIT_MESSAGE" value="music from jukeboxes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
