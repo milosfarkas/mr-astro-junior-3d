@@ -6,13 +6,13 @@ const HINT_DIAMOND_SCENES: Array[String] = [
 	"res://scene/diamond_yellow.tscn",
 ]
 
-const OPEN_SOUND_PATH: String = "res://assets/sounds/freesound_community-metallic-latch-release-43678.mp3"
-
 @export var required_item_count: int = 3
 @export var key_spawn_offset: Vector3 = Vector3(0, 0.5, 0)
 @export var key_target: NodePath
 
 var _opened: bool = false
+
+@onready var open_sound: AudioStreamPlayer = $OpenSound
 
 func _ready() -> void:
 	_spawn_hint_diamonds()
@@ -40,21 +40,21 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		_opened = true
 		State.clear_inventory()
 		_spawn_key()
-		_play_open_sound(global_position)
+		_play_open_sound()
 		queue_free()
 
-func _play_open_sound(pos: Vector3) -> void:
-	var scene_tree: SceneTree = get_tree()
-	if scene_tree == null:
+func _play_open_sound() -> void:
+	if open_sound == null:
 		return
-	var stream: AudioStream = load(OPEN_SOUND_PATH)
-	if stream == null:
+	if not is_inside_tree():
 		return
-	var sound: AudioStreamPlayer3D = AudioStreamPlayer3D.new()
-	sound.stream = stream
-	sound.global_position = pos
-	sound.unit_size = 5.0
-	scene_tree.current_scene.add_child(sound)
+	var tree: SceneTree = get_tree()
+	if tree == null:
+		return
+	var sound: AudioStreamPlayer = open_sound.duplicate()
+	sound.stream = open_sound.stream
+	sound.process_mode = Node.PROCESS_MODE_ALWAYS
+	tree.current_scene.add_child(sound)
 	sound.finished.connect(sound.queue_free)
 	sound.play()
 
