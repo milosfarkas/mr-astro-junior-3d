@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://c35e77ebkmo0f"]
+[gd_scene load_steps=3 format=3 uid="uid://c35e77ebkmo0f"]
 
 [ext_resource type="PackedScene" uid="uid://b1g77yhw1fhtj" path="res://assets/kenney-space-station/pipe_ringHighEnd.glb" id="1_model"]
+[ext_resource type="Script" uid="uid://dquy6l8qwg3sm" path="res://scene/key_model.gd" id="2_script"]
 
 [node name="KeyModel" type="Node3D"]
+script = ExtResource("2_script")
+pulse_frequency = 0.2
+glow_amount_min = 0.2
+glow_amount_max = 2.5
 
 [node name="model" parent="." instance=ExtResource("1_model")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -0.4, -1.5)
