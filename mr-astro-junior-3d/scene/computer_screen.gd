@@ -24,4 +24,5 @@ func _setup_material() -> void:
 	mat.albedo_texture = _viewport.get_texture()
 	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	mat.cull_mode = BaseMaterial3D.CULL_DISABLED
+	mat.albedo_color = Color(0.2, 0.2, 0.4, 1.0)
 	_screen_mesh.material_override = mat
