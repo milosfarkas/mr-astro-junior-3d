@@ -10,4 +10,4 @@
 [node name="JukeBox" parent="." unique_id=607583543 instance=ExtResource("2_w8ap3")]
 volume_db = -12.0
 autoplay = true
-max_distance = 30.0
+max_distance = 10.0
