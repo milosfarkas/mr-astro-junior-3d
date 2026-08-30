@@ -1,14 +1,14 @@
 extends Control
 
-@onready var continue_button: Button = $VBoxContainer/ContinueButton
-@onready var level_select: VBoxContainer = $VBoxContainer/LevelSelect
-@onready var level_1_button: Button = $VBoxContainer/LevelSelect/Level1Button
-@onready var level_2_button: Button = $VBoxContainer/LevelSelect/Level2Button
-@onready var level_3_button: Button = $VBoxContainer/LevelSelect/Level3Button
-@onready var level_4_button: Button = $VBoxContainer/LevelSelect/Level4Button
-@onready var level_5_button: Button = $VBoxContainer/LevelSelect/Level5Button
-@onready var level_6_button: Button = $VBoxContainer/LevelSelect/Level6Button
-@onready var level_7_button: Button = $VBoxContainer/LevelSelect/Level7Button
+@onready var continue_button: Button = $MarginContainer/VBoxContainer/ContinueButton
+@onready var level_select: VBoxContainer = $MarginContainer/VBoxContainer/LevelSelect
+@onready var level_1_button: Button = $MarginContainer/VBoxContainer/LevelSelect/Level1Button
+@onready var level_2_button: Button = $MarginContainer/VBoxContainer/LevelSelect/Level2Button
+@onready var level_3_button: Button = $MarginContainer/VBoxContainer/LevelSelect/Level3Button
+@onready var level_4_button: Button = $MarginContainer/VBoxContainer/LevelSelect/Level4Button
+@onready var level_5_button: Button = $MarginContainer/VBoxContainer/LevelSelect/Level5Button
+@onready var level_6_button: Button = $MarginContainer/VBoxContainer/LevelSelect/Level6Button
+@onready var level_7_button: Button = $MarginContainer/VBoxContainer/LevelSelect/Level7Button
 
 
 func _ready() -> void:
