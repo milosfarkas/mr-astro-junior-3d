@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://csspn2i7qghus" path="res://assets/kenney-space-station/rock.glb" id="3_rock"]
 [ext_resource type="AudioStream" uid="uid://c6l65ho6uw0bi" path="res://assets/sounds/freesound_community-lava-loop-1-67307.mp3" id="4_lava1"]
 [ext_resource type="PackedScene" uid="uid://b267puy52keyl" path="res://scene/ramp.tscn" id="4_vsca6"]
+[ext_resource type="PackedScene" uid="uid://b0480xdan5e57" path="res://scene/steps.tscn" id="5_8grpb"]
 [ext_resource type="AudioStream" uid="uid://dvl44ka0f3glp" path="res://assets/sounds/freesound_community-lava-loop-2-67306.mp3" id="5_lava2"]
+[ext_resource type="PackedScene" uid="uid://cnadyjvigvx0r" path="res://scene/chest.tscn" id="6_h032d"]
 [ext_resource type="AudioStream" uid="uid://bhwfqrwecf8rw" path="res://assets/sounds/freesound_community-lava-loop-3-28887.mp3" id="6_lava3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lava"]
@@ -53,6 +55,7 @@ size = Vector3(4, 0.2, 4)
 
 [node name="WallLeft" type="CSGBox3D" parent="Walls" unique_id=426592490]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -10, 5, 0)
+visible = false
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
@@ -64,6 +67,7 @@ size = Vector3(4, 0.1, 4)
 
 [node name="WallRight" type="CSGBox3D" parent="Walls" unique_id=1819430025]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 10, 5, 0)
+visible = false
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
@@ -75,6 +79,7 @@ size = Vector3(4, 0.1, 4)
 
 [node name="WallFront" type="CSGBox3D" parent="Walls" unique_id=1151806712]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 4.37114e-07, 5, 10)
+visible = false
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
@@ -86,6 +91,7 @@ size = Vector3(4, 0.1, 4)
 
 [node name="WallBack" type="CSGBox3D" parent="Walls" unique_id=1291779354]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.37114e-07, 5, -10)
+visible = false
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
@@ -115,6 +121,11 @@ box = NodePath("../..")
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 5.39032, 9.652115, -9.44743)
 faces = Array[int]([1, 5])
 box = NodePath("../..")
+
+[node name="steps" parent="Objects" unique_id=1863953072 instance=ExtResource("5_8grpb")]
+
+[node name="Chest" parent="Objects" unique_id=487179099 instance=ExtResource("6_h032d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.011131406, 0)
 
 [node name="sounds" type="Node3D" parent="." unique_id=1042651660]
 

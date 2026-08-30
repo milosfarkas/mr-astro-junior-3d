@@ -65,7 +65,26 @@ func get_size() -> Vector3:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
+		var wall: Node3D = _find_lava_wall_owner()
+		var trigger_path: String = str(wall.get_path()) if wall else str(get_path())
+		var is_floor: bool = _is_lava_floor(wall)
+		print("[LAVA-KILL] box=", name, " trigger=", trigger_path, " is_floor=", is_floor, " player_global=", body.global_position)
+		if not is_floor:
+			print("[LAVA-KILL] ignored — lava face is not the current floor")
+			return
 		State.die_on_lava()
+
+func _find_lava_wall_owner() -> Node3D:
+	var n: Node = self
+	while n and not (n is CSGBox3D):
+		n = n.get_parent()
+	return n as Node3D
+
+func _is_lava_floor(wall: Node3D) -> bool:
+	if wall == null:
+		return true
+	var world_up: Vector3 = (wall.global_transform.basis * Vector3.UP).normalized()
+	return world_up.dot(Vector3.UP) > 0.5
 
 func unlock() -> void:
 	if unlock_gate_name == "":

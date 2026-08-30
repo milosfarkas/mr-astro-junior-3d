@@ -8,6 +8,7 @@ const TABLE_DISPLAY: PackedScene = preload("res://scene/table_display.tscn")
 const CHAIR: PackedScene = preload("res://scene/chair.tscn")
 const CHAIR_RIGID: PackedScene = preload("res://scene/chair_rigid_body_3d.tscn")
 const BALL: PackedScene = preload("res://scene/ball.tscn")
+const DIAMOND_GREEN: PackedScene = preload("res://scene/diamond_green.tscn")
 const BARRELS: PackedScene = preload("res://assets/kenney-space-station/barrels.glb")
 const CONTAINER_TALL: PackedScene = preload("res://assets/kenney-space-station/container-tall.glb")
 const SATELLITE_DISH: PackedScene = preload("res://assets/kenney-space-station/satelliteDish_detailed.glb")
@@ -130,6 +131,12 @@ func _decorate_boxes() -> void:
 	_add_floor_obj(box_g, BALL, "ball", Vector3(0, 9.5, 0), 1.0, 0.0, true)
 
 	# Box H uses box_start.tscn (same as A/E) — objects are baked into the scene.
+
+	# Box H (flipped) — green diamond just inside the front door (entered from Box F).
+	var diamond_green: Node3D = DIAMOND_GREEN.instantiate()
+	box_h.get_node("Objects").add_child(diamond_green)
+	diamond_green.name = "diamond_green"
+	diamond_green.transform = Transform3D(Basis.IDENTITY.rotated(Vector3(0, 0, 0), PI), Vector3(0, 0.8, 8))
 
 func _add_display_wall(box: Box, side: int, offset: float, flipped: bool) -> void:
 	var wall: Node3D = DISPLAY_WALL.instantiate()

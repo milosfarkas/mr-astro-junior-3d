@@ -54,6 +54,10 @@ func _on_should_turn(edge: Array[Box.Face], box: Box, ramp: Ramp) -> void:
 	turning = false
 	var after_floor: Box.Face = _current_floor_face(box)
 	print("[RAMP] ramp=", ramp.name, " box=", box.name, " after=", _face_name(after_floor))
+	if player:
+		print("[RAMP] player_global=", player.global_position, " box_d_global=", box.global_position if box.name == "Box" else box.global_transform.origin)
+		var local_pos: Vector3 = box.global_transform.affine_inverse() * player.global_position
+		print("[RAMP] player_local_in_box=", local_pos)
 
 func _face_name(face: Box.Face) -> String:
 	match face:
