@@ -65,10 +65,16 @@ func get_size() -> Vector3:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
-		var area: Area3D = _find_lava_area_overlapping_player(body)
-		var trigger_path: String = str(area.get_path()) if area else str(get_path())
-		print("[LAVA-KILL] box=", name, " trigger=", trigger_path, " player_global=", body.global_position)
+		var inside: bool = _is_player_inside_box(body)
+		print("[LAVA-KILL] box=", name, " inside=", inside, " player_global=", body.global_position)
+		if not inside:
+			print("[LAVA-KILL] ignored — player is not inside this box")
+			return
 		State.die_on_lava()
+
+func _is_player_inside_box(body: Node3D) -> bool:
+	var local_pos: Vector3 = global_transform.affine_inverse() * body.global_position
+	return abs(local_pos.x) < 10.0 and local_pos.y > -1.0 and local_pos.y < 11.0 and abs(local_pos.z) < 10.0
 
 func _find_lava_area_overlapping_player(player_body: Node3D) -> Area3D:
 	for area in _lava_areas():
@@ -83,12 +89,6 @@ func _lava_areas() -> Array[Area3D]:
 		if area:
 			out.append(area)
 	return out
-
-func _is_lava_floor(wall: Node3D) -> bool:
-	if wall == null:
-		return false
-	var world_up: Vector3 = (wall.global_transform.basis * Vector3.UP).normalized()
-	return world_up.dot(Vector3.UP) > 0.5
 
 func unlock() -> void:
 	if unlock_gate_name == "":

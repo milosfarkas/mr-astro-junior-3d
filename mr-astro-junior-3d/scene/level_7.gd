@@ -121,17 +121,17 @@ func _spawn_diamonds(box_blue: Box, box_yellow: Box, box_green: Box) -> void:
 	var diamond_b: Node3D = DIAMOND_BLUE.instantiate()
 	box_blue.get_node("Objects").add_child(diamond_b)
 	diamond_b.name = "diamond_blue"
-	diamond_b.transform = Transform3D(Basis.IDENTITY, Vector3(0, 0.8, 0))
+	diamond_b.transform = Transform3D(Vector3(1, 0, 0), Vector3(0, -1, 8.742278e-08), Vector3(0, -8.742278e-08, -1), Vector3(0, 9.427974, 0))
 
 	var diamond_c: Node3D = DIAMOND_YELLOW.instantiate()
 	box_yellow.get_node("Objects").add_child(diamond_c)
 	diamond_c.name = "diamond_yellow"
-	diamond_c.transform = Transform3D(Basis.IDENTITY, Vector3(0, 0.8, 0))
+	diamond_c.transform = Transform3D(Vector3(1, 0, 0), Vector3(0, -4.371138e-08, 1), Vector3(0, -1, -4.371138e-08), Vector3(7.7824183, 1.3878198, -9.42954))
 
 	var diamond_h: Node3D = DIAMOND_GREEN.instantiate()
 	box_green.get_node("Objects").add_child(diamond_h)
 	diamond_h.name = "diamond_green"
-	diamond_h.transform = Transform3D(Basis.IDENTITY, Vector3(0, 9.2, 8))
+	diamond_h.transform = Transform3D(Basis.IDENTITY.rotated(Vector3(0, 0, 0), PI), Vector3(0, 0.8, 8))
 
 func _on_inventory_changed() -> void:
 	if State.has_item("key"):

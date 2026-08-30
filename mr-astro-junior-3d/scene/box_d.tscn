@@ -54,7 +54,6 @@ size = Vector3(4, 0.2, 4)
 
 [node name="WallLeft" type="CSGBox3D" parent="Walls" unique_id=426592490]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -10, 5, 0)
-visible = false
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
@@ -66,7 +65,6 @@ size = Vector3(4, 0.1, 4)
 
 [node name="WallRight" type="CSGBox3D" parent="Walls" unique_id=1819430025]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 10, 5, 0)
-visible = false
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
@@ -78,7 +76,6 @@ size = Vector3(4, 0.1, 4)
 
 [node name="WallFront" type="CSGBox3D" parent="Walls" unique_id=1151806712]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 4.37114e-07, 5, 10)
-visible = false
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
@@ -90,7 +87,6 @@ size = Vector3(4, 0.1, 4)
 
 [node name="WallBack" type="CSGBox3D" parent="Walls" unique_id=1291779354]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.37114e-07, 5, -10)
-visible = false
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
