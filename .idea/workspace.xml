@@ -11,8 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/export_presets.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/export_presets.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/computer_screen.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/computer_screen.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/computer_screen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/computer_screen.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -625,7 +625,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="sound fx" />
     <MESSAGE value="shadows" />
     <MESSAGE value="lights wip" />
     <MESSAGE value="rotate lights" />
@@ -650,7 +649,8 @@
     <MESSAGE value="mrkicsi video" />
     <MESSAGE value="screen works" />
     <MESSAGE value="blue screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="blue screen" />
+    <MESSAGE value="music only close" />
+    <option name="LAST_COMMIT_MESSAGE" value="music only close" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
