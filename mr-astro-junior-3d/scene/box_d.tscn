@@ -87,6 +87,7 @@ size = Vector3(4, 0.1, 4)
 
 [node name="WallBack" type="CSGBox3D" parent="Walls" unique_id=1291779354]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.37114e-07, 5, -10)
+visible = false
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
@@ -108,7 +109,7 @@ transform = Transform3D(16.809301, 0, 6.437966, 0, 18, 0, -6.437966, 0, 16.80930
 transform = Transform3D(20.73718, 0, -3.312008, 0, 21, 0, 3.312008, 0, 20.73718, -37.27024, -6.0744514, -38.84014)
 
 [node name="Ramp" parent="Objects" unique_id=1400473582 node_paths=PackedStringArray("box") instance=ExtResource("4_vsca6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.151917, 0.8482835, -9.7562895)
+transform = Transform3D(0.90848124, 0, 0, 0, 1, 0, 0, 0, 1, 3.544536, 0.8482835, -9.7562895)
 faces = Array[int]([4, 1])
 box = NodePath("../..")
 

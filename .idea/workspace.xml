@@ -11,12 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box.gd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_b.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_b.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_c.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_c.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_d.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_d.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_f.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/box_f.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_7.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/level_7.gd" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -629,7 +624,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="lights wip" />
     <MESSAGE value="rotate lights" />
     <MESSAGE value="removed rocks" />
     <MESSAGE value="lava on good place in box f" />
@@ -654,7 +648,8 @@
     <MESSAGE value="music only close" />
     <MESSAGE value="screen works only close" />
     <MESSAGE value="wip" />
-    <option name="LAST_COMMIT_MESSAGE" value="wip" />
+    <MESSAGE value="ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ok" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
