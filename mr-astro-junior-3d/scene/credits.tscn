@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene load_steps=4 format=3]
 
 [ext_resource type="Script" path="res://scene/credits.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://dqmqijatucwb6" path="res://assets/images/mr-astro-start-v2.jpg" id="2_bg"]
+
+[sub_resource type="CanvasItemMaterial" id="sparkle_mat"]
+blend_mode = 0
+
+[sub_resource type="Curve" id="sparkle_scale"]
+_data = [Vector2(0, 0.8), 0.0, 0.0, 0, 0, Vector2(1, 0.8), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -33,6 +40,30 @@ grow_vertical = 2
 color = Color(0, 0, 0, 0.5)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
+
+[node name="Sparkles" type="CPUParticles2D" parent="."]
+material = SubResource("sparkle_mat")
+emitting = false
+amount = 10
+lifetime = 4.0
+local_coords = true
+fixed_fps = 30
+fract_delta = true
+emission_shape = 0
+straightness = 0.0
+spread = 180.0
+flatness = 0.0
+gravity = Vector2(0, 30)
+initial_velocity_min = 30.0
+initial_velocity_max = 120.0
+angular_velocity_min = -360.0
+angular_velocity_max = 360.0
+scale_amount_min = 0.8
+scale_amount_max = 2.5
+scale_curve = SubResource("sparkle_scale")
+hue_variation_min = -0.5
+hue_variation_max = 0.5
+color = Color(1, 1, 1, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1

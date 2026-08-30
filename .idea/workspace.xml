@@ -12,8 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f967ac52-8efc-47f2-bb05-7b1eb5d3780f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/start.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/start.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/start_screen.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/start_screen.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/credits.gd" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/credits.gd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mr-astro-junior-3d/scene/credits.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/mr-astro-junior-3d/scene/credits.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -626,7 +626,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="removed rocks" />
     <MESSAGE value="lava on good place in box f" />
     <MESSAGE value="lava fine" />
     <MESSAGE value="before ramps" />
@@ -648,10 +647,11 @@
     <MESSAGE value="blue screen" />
     <MESSAGE value="music only close" />
     <MESSAGE value="screen works only close" />
-    <MESSAGE value="wip" />
     <MESSAGE value="ok" />
     <MESSAGE value="menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu" />
+    <MESSAGE value="wip" />
+    <MESSAGE value="end credit" />
+    <option name="LAST_COMMIT_MESSAGE" value="end credit" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
