@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b0480xdan5e57"]
+
+[ext_resource type="PackedScene" uid="uid://csspn2i7qghus" path="res://assets/kenney-space-station/rock.glb" id="1_4dqhi"]
+
+[node name="steps" type="Node3D" unique_id=1863953072]
+
+[node name="rock_steps" parent="." unique_id=445672011 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.371139e-07, 0, -4.371139e-07, -5, 0, 0, 0, 5, 8.110466, 10.032988, -10.825845)
+
+[node name="rock_steps2" parent="." unique_id=1442580321 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.371139e-07, 0, -4.371139e-07, -5, 0, 0, 0, 5, 8.110466, 8.894045, -13.779274)
+
+[node name="rock_steps3" parent="." unique_id=716206479 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.371139e-07, 0, -4.371139e-07, -5, 0, 0, 0, 5, 8.110466, 7.6275606, -16.423927)
+
+[node name="rock_steps4" parent="." unique_id=1496146663 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.371139e-07, 0, -4.371139e-07, -5, 0, 0, 0, 5, 9.125781, 9.851768, -13.779274)
+
+[node name="rock_steps5" parent="." unique_id=2059094070 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.371139e-07, 0, -4.371139e-07, -5, 0, 0, 0, 5, 6.6274395, 10.022998, -13.156605)
+
+[node name="rock_steps6" parent="." unique_id=483288078 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.371139e-07, 0, -4.371139e-07, -5, 0, 0, 0, 5, 9.629794, 9.851768, -16.228565)
+
+[node name="rock_steps7" parent="." unique_id=1159717317 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.371139e-07, 0, -4.371139e-07, -5, 0, 0, 0, 5, 6.047304, 10.022334, -15.605896)
+
+[node name="rock_steps8" parent="." unique_id=412453926 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.371139e-07, 0, -4.371139e-07, -5, 0, 0, 0, 5, 6.6994324, 8.486632, -16.226112)
+
+[node name="rock_steps9" parent="." unique_id=1180997738 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.371139e-07, 0, -4.371139e-07, -5, 0, 0, 0, 5, 8.508493, 8.486632, -16.226112)
+
+[node name="rock_steps10" parent="." unique_id=798146727 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.3711393e-07, 0, 1.9106856e-14, 2.1855695e-07, -5, -4.3711393e-07, -5, -2.1855695e-07, 6.1474285, 15.682457, -9.957222)
+
+[node name="rock_steps11" parent="." unique_id=1642366636 instance=ExtResource("1_4dqhi")]
+transform = Transform3D(-5, 4.3711393e-07, 0, 1.9106856e-14, 2.1855695e-07, -5, -4.3711393e-07, -5, -2.1855695e-07, 9.137926, 15.682457, -9.957222)

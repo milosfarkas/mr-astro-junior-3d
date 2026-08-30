@@ -113,7 +113,7 @@ transform = Transform3D(-1, -7.642742e-15, -8.742278e-08, 0, -1, 8.742278e-08, -
 transform = Transform3D(-4.669251, 0, -1.7883235, 0, 5.0000005, 0, 1.7883235, 0, -4.669251, 18.808788, -0.022771835, 3.745555)
 
 [node name="rock2" parent="Objects" unique_id=1405183036 instance=ExtResource("3_rock")]
-transform = Transform3D(-4.669251, 0, -1.7883235, 0, 5.0000005, 0, 1.7883235, 0, -4.669251, 12.266243, -0.022771835, 6.8640285)
+transform = Transform3D(-6.53695, 0, -2.503653, 0, 7, 0, 2.503653, 0, -6.53695, 17.11805, -0.022773743, 7.6795726)
 
 [node name="rock3" parent="Objects" unique_id=2117022975 instance=ExtResource("3_rock")]
 transform = Transform3D(-5.5437355, 0, 2.2949924, 0, 5.9999995, 0, -2.2949924, 0, -5.5437355, 11.69633, -0.032547712, 16.759335)
@@ -121,8 +121,10 @@ transform = Transform3D(-5.5437355, 0, 2.2949924, 0, 5.9999995, 0, -2.2949924, 0
 [node name="rock4" parent="Objects" unique_id=1480895314 instance=ExtResource("3_rock")]
 transform = Transform3D(-5.5437355, 0, 2.2949924, 0, 5.9999995, 0, -2.2949924, 0, -5.5437355, 3.9578495, -0.032547712, 13.042386)
 
-[node name="Ramp" parent="Objects" unique_id=486626686 instance=ExtResource("6_vfxph")]
-transform = Transform3D(-0.6436803, 8.742278e-08, -3.821371e-15, 0, -4.371139e-08, -1, -5.6272317e-08, -1, 4.371139e-08, -5.102193, 4.481469, -9.588538)
+[node name="Ramp" parent="Objects" unique_id=486626686 node_paths=PackedStringArray("box") instance=ExtResource("6_vfxph")]
+transform = Transform3D(-0.5251404, 8.742277e-08, -3.8213705e-15, -4.0135123e-15, -4.371139e-08, 1, 4.5909225e-08, 1, 4.371139e-08, -5.050971, 4.2041206, -9.656046)
+faces = Array[int]([4, 1])
+box = NodePath("../..")
 
 [node name="sounds" type="Node3D" parent="." unique_id=370745251]
 

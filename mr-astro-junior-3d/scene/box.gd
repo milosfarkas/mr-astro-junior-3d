@@ -65,24 +65,35 @@ func get_size() -> Vector3:
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
-		var wall: Node3D = _find_lava_wall_owner()
-		var trigger_path: String = str(wall.get_path()) if wall else str(get_path())
-		var is_floor: bool = _is_lava_floor(wall)
+		var area: Area3D = _find_lava_area_overlapping_player(body)
+		var trigger_path: String = str(area.get_path()) if area else str(get_path())
+		var is_floor: bool = false
+		if area:
+			var wall: Node3D = area.get_parent()
+			is_floor = _is_lava_floor(wall)
 		print("[LAVA-KILL] box=", name, " trigger=", trigger_path, " is_floor=", is_floor, " player_global=", body.global_position)
 		if not is_floor:
 			print("[LAVA-KILL] ignored — lava face is not the current floor")
 			return
 		State.die_on_lava()
 
-func _find_lava_wall_owner() -> Node3D:
-	var n: Node = self
-	while n and not (n is CSGBox3D):
-		n = n.get_parent()
-	return n as Node3D
+func _find_lava_area_overlapping_player(player_body: Node3D) -> Area3D:
+	for area in _lava_areas():
+		if area.has_method("get_overlapping_bodies") and player_body in area.get_overlapping_bodies():
+			return area
+	return null
+
+func _lava_areas() -> Array[Area3D]:
+	var out: Array[Area3D] = []
+	for wall_name in ["Floor", "WallFront", "WallBack", "WallLeft", "WallRight"]:
+		var area: Area3D = get_node_or_null("Walls/" + wall_name + "/Area3D")
+		if area:
+			out.append(area)
+	return out
 
 func _is_lava_floor(wall: Node3D) -> bool:
 	if wall == null:
-		return true
+		return false
 	var world_up: Vector3 = (wall.global_transform.basis * Vector3.UP).normalized()
 	return world_up.dot(Vector3.UP) > 0.5
 
