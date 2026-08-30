@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://b267puy52keyl" path="res://scene/ramp.tscn" id="4_vsca6"]
 [ext_resource type="PackedScene" uid="uid://b0480xdan5e57" path="res://scene/steps.tscn" id="5_8grpb"]
 [ext_resource type="AudioStream" uid="uid://dvl44ka0f3glp" path="res://assets/sounds/freesound_community-lava-loop-2-67306.mp3" id="5_lava2"]
-[ext_resource type="PackedScene" uid="uid://cnadyjvigvx0r" path="res://scene/chest.tscn" id="6_h032d"]
 [ext_resource type="AudioStream" uid="uid://bhwfqrwecf8rw" path="res://assets/sounds/freesound_community-lava-loop-3-28887.mp3" id="6_lava3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lava"]
@@ -123,9 +122,6 @@ faces = Array[int]([1, 5])
 box = NodePath("../..")
 
 [node name="steps" parent="Objects" unique_id=1863953072 instance=ExtResource("5_8grpb")]
-
-[node name="Chest" parent="Objects" unique_id=487179099 instance=ExtResource("6_h032d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.011131406, 0)
 
 [node name="sounds" type="Node3D" parent="." unique_id=1042651660]
 

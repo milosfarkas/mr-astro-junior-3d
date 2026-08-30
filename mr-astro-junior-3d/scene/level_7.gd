@@ -9,6 +9,10 @@ const CHAIR: PackedScene = preload("res://scene/chair.tscn")
 const CHAIR_RIGID: PackedScene = preload("res://scene/chair_rigid_body_3d.tscn")
 const BALL: PackedScene = preload("res://scene/ball.tscn")
 const DIAMOND_GREEN: PackedScene = preload("res://scene/diamond_green.tscn")
+const DIAMOND_BLUE: PackedScene = preload("res://scene/diamond_blue.tscn")
+const DIAMOND_YELLOW: PackedScene = preload("res://scene/diamond_yellow.tscn")
+const CHEST: PackedScene = preload("res://scene/chest.tscn")
+const PORTAL: PackedScene = preload("res://scene/portal.tscn")
 const BARRELS: PackedScene = preload("res://assets/kenney-space-station/barrels.glb")
 const CONTAINER_TALL: PackedScene = preload("res://assets/kenney-space-station/container-tall.glb")
 const SATELLITE_DISH: PackedScene = preload("res://assets/kenney-space-station/satelliteDish_detailed.glb")
@@ -39,6 +43,8 @@ var box_e: Box
 var box_f: Box
 var box_g: Box
 var box_h: Box
+
+var _display_walls: Array[Node3D] = []
 
 func _ready() -> void:
 	super._ready()
@@ -97,6 +103,40 @@ func _ready() -> void:
 
 	_decorate_boxes()
 
+	var portal: Node3D = PORTAL.instantiate()
+	portal.requires_key = true
+	portal.position = box_a.position + Vector3(0, 0, -9)
+	$Boxes.add_child(portal)
+
+	var chest: Node3D = CHEST.instantiate()
+	chest.position = box_d.position + Vector3(0, 0, 0)
+	$Boxes.add_child(chest)
+	chest.key_target = chest.get_path_to(portal)
+
+	_spawn_diamonds(box_b, box_c, box_h)
+
+	State.inventory_changed.connect(_on_inventory_changed)
+
+func _spawn_diamonds(box_blue: Box, box_yellow: Box, box_green: Box) -> void:
+	var diamond_b: Node3D = DIAMOND_BLUE.instantiate()
+	box_blue.get_node("Objects").add_child(diamond_b)
+	diamond_b.name = "diamond_blue"
+	diamond_b.transform = Transform3D(Basis.IDENTITY, Vector3(0, 0.8, 0))
+
+	var diamond_c: Node3D = DIAMOND_YELLOW.instantiate()
+	box_yellow.get_node("Objects").add_child(diamond_c)
+	diamond_c.name = "diamond_yellow"
+	diamond_c.transform = Transform3D(Basis.IDENTITY, Vector3(0, 0.8, 0))
+
+	var diamond_h: Node3D = DIAMOND_GREEN.instantiate()
+	box_green.get_node("Objects").add_child(diamond_h)
+	diamond_h.name = "diamond_green"
+	diamond_h.transform = Transform3D(Basis.IDENTITY, Vector3(0, 9.2, 8))
+
+func _on_inventory_changed() -> void:
+	if State.has_item("key"):
+		_set_display_walls_color(Color.GREEN)
+
 func _decorate_boxes() -> void:
 	# Box B (not flipped) — display wall on back, floor: table, barrels, chair, screen, ball
 	_add_display_wall(box_b, SIDE_BACK, 2.0, false)
@@ -131,14 +171,9 @@ func _decorate_boxes() -> void:
 	_add_floor_obj(box_g, BALL, "ball", Vector3(0, 9.5, 0), 1.0, 0.0, true)
 
 	# Box H uses box_start.tscn (same as A/E) — objects are baked into the scene.
+	# Green diamond is spawned in _spawn_diamonds() just inside the front door.
 
-	# Box H (flipped) — green diamond just inside the front door (entered from Box F).
-	var diamond_green: Node3D = DIAMOND_GREEN.instantiate()
-	box_h.get_node("Objects").add_child(diamond_green)
-	diamond_green.name = "diamond_green"
-	diamond_green.transform = Transform3D(Basis.IDENTITY.rotated(Vector3(0, 0, 0), PI), Vector3(0, 0.8, 8))
-
-func _add_display_wall(box: Box, side: int, offset: float, flipped: bool) -> void:
+func _add_display_wall(box: Box, side: int, offset: float, flipped: bool) -> Node3D:
 	var wall: Node3D = DISPLAY_WALL.instantiate()
 	box.get_node("Objects").add_child(wall)
 	wall.name = "display_wall"
@@ -161,6 +196,21 @@ func _add_display_wall(box: Box, side: int, offset: float, flipped: bool) -> voi
 			pos = Vector3(9.7, y, offset)
 	var basis := Basis.IDENTITY.rotated(Vector3(1, 0, 0), rot_x).rotated(Vector3(0, 1, 0), rot_y).scaled(Vector3(2, 2, 2))
 	wall.transform = Transform3D(basis, pos)
+	_display_walls.append(wall)
+	return wall
+
+func _set_display_walls_color(color: Color) -> void:
+	for wall in _display_walls:
+		var plate: Node3D = wall.get_node_or_null("PortalDoor")
+		if plate == null:
+			continue
+		var mat: StandardMaterial3D = plate.material
+		if mat == null:
+			continue
+		mat = mat.duplicate()
+		mat.albedo_color = color
+		mat.emission = color
+		plate.material = mat
 
 func _add_floor_obj(box: Box, scene: PackedScene, node_name: String, pos: Vector3, scale: float, rot_y: float, flipped: bool) -> void:
 	var obj: Node3D = scene.instantiate()

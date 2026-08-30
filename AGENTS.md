@@ -61,7 +61,7 @@ e(0,20,0)   f(20,20,0)
 g(0,20,20)  h(20,20,20)
 ```
 - `box_a` and `box_e` use `box_start.tscn` (same as level 6 start/end box).
-- `box_b`, `box_c`, `box_d`, `box_g` are plain boxes (`box_b/c/d/g.tscn`).
+- `box_b`, `box_c`, `box_d`, `box_g` are plain boxes (`box_b/c/d/g.tscn`). The chest and three diamonds (blue/yellow/green) are spawned in `level_7.gd` (`_spawn_diamonds` + `CHEST.instantiate()`), not baked into the box scenes. The chest's `key_target` is wired to the portal; collecting all 3 diamonds opens the chest, which spawns a key whose pickup turns the display walls green and opens the portal.
 - `box_f` is a lava challenge box (`box_f.tscn`) — lava on faces 1 (Floor) and 2 (WallFront).
 - `box_h` is a plain box (`box_h.tscn`).
 - Top boxes (e,f,g,h) are placed via `Transform3D(Basis.IDENTITY.rotated(Vector3(1, 0, 0), PI), position)` — rotated 180° X, so local TOP points down.

@@ -67,14 +67,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body is PlayerCharacter:
 		var area: Area3D = _find_lava_area_overlapping_player(body)
 		var trigger_path: String = str(area.get_path()) if area else str(get_path())
-		var is_floor: bool = false
-		if area:
-			var wall: Node3D = area.get_parent()
-			is_floor = _is_lava_floor(wall)
-		print("[LAVA-KILL] box=", name, " trigger=", trigger_path, " is_floor=", is_floor, " player_global=", body.global_position)
-		if not is_floor:
-			print("[LAVA-KILL] ignored — lava face is not the current floor")
-			return
+		print("[LAVA-KILL] box=", name, " trigger=", trigger_path, " player_global=", body.global_position)
 		State.die_on_lava()
 
 func _find_lava_area_overlapping_player(player_body: Node3D) -> Area3D:

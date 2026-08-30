@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://boxflevel7fff"]
+[gd_scene format=3 uid="uid://boxflevel7fff"]
 
 [ext_resource type="Script" uid="uid://cdrmbi4ydvh0g" path="res://scene/box.gd" id="1_script"]
 [ext_resource type="PackedScene" uid="uid://dq5kmwg3p6crb" path="res://scene/lights.tscn" id="2_lights"]
@@ -21,152 +21,153 @@ size = Vector3(20, 1, 20)
 [sub_resource type="BoxShape3D" id="BoxShape3D_lava_wall"]
 size = Vector3(20, 10, 1)
 
-[node name="Box2" type="Node3D"]
+[node name="Box2" type="Node3D" unique_id=1071083299]
 script = ExtResource("1_script")
 
-[node name="lights" parent="." instance=ExtResource("2_lights")]
+[node name="lights" parent="." unique_id=490091795 instance=ExtResource("2_lights")]
 
-[node name="Walls" type="Node3D" parent="."]
+[node name="Walls" type="Node3D" parent="." unique_id=1555565122]
 
-[node name="Floor" type="CSGBox3D" parent="Walls"]
+[node name="Floor" type="CSGBox3D" parent="Walls" unique_id=1670868522]
 use_collision = true
 size = Vector3(20, 0.1, 20)
 material = SubResource("StandardMaterial3D_lava")
 
-[node name="Area3D" type="Area3D" parent="Walls/Floor"]
+[node name="Area3D" type="Area3D" parent="Walls/Floor" unique_id=172701126]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Floor/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/Floor/Area3D" unique_id=1228111894]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.405522, 0)
 shape = SubResource("BoxShape3D_lava_floor")
 
-[node name="Gate" type="CSGBox3D" parent="Walls/Floor"]
+[node name="Gate" type="CSGBox3D" parent="Walls/Floor" unique_id=748469257]
 visible = false
 operation = 2
 size = Vector3(4, 0.2, 4)
 
-[node name="Ceiling" type="CSGBox3D" parent="Walls"]
+[node name="Ceiling" type="CSGBox3D" parent="Walls" unique_id=1885966097]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+visible = false
 use_collision = true
 size = Vector3(20, 0.1, 20)
 
-[node name="Gate" type="CSGBox3D" parent="Walls/Ceiling"]
+[node name="Gate" type="CSGBox3D" parent="Walls/Ceiling" unique_id=196186522]
 visible = false
 operation = 2
 size = Vector3(4, 0.2, 4)
 
-[node name="WallLeft" type="CSGBox3D" parent="Walls"]
+[node name="WallLeft" type="CSGBox3D" parent="Walls" unique_id=2123866506]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -10, 5, 0)
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
-[node name="Gate" type="CSGBox3D" parent="Walls/WallLeft"]
+[node name="Gate" type="CSGBox3D" parent="Walls/WallLeft" unique_id=1056447883]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 visible = false
 operation = 2
 size = Vector3(4, 0.1, 4)
 
-[node name="WallRight" type="CSGBox3D" parent="Walls"]
+[node name="WallRight" type="CSGBox3D" parent="Walls" unique_id=1696554802]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 10, 5, 0)
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
-[node name="Gate" type="CSGBox3D" parent="Walls/WallRight"]
+[node name="Gate" type="CSGBox3D" parent="Walls/WallRight" unique_id=1989175977]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 visible = false
 operation = 2
 size = Vector3(4, 0.1, 4)
 
-[node name="WallFront" type="CSGBox3D" parent="Walls"]
-transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 4.37114e-07, 5, 10)
+[node name="WallFront" type="CSGBox3D" parent="Walls" unique_id=1338286519]
+transform = Transform3D(1.91069e-15, 2.7493996e-08, 1, 1, -2.7493996e-08, 0, 4.37114e-08, 0.62898916, -4.37114e-08, -0.12206988, 5.020508, 9.897079)
 use_collision = true
-size = Vector3(10, 0.1, 20)
+size = Vector3(9.6171875, 0.1, 19.55664)
 material = SubResource("StandardMaterial3D_lava")
 
-[node name="Area3D" type="Area3D" parent="Walls/WallFront"]
+[node name="Area3D" type="Area3D" parent="Walls/WallFront" unique_id=727289559]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/WallFront/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/WallFront/Area3D" unique_id=939472723]
 transform = Transform3D(0.497813, -8.49816e-08, 8.75685e-09, -2.17601e-08, -8.49815e-08, 0.200333, -2.17601e-08, -1.94415, -8.75684e-09, 0, -0.137896, 0.0349985)
 shape = SubResource("BoxShape3D_lava_wall")
 
-[node name="Gate" type="CSGBox3D" parent="Walls/WallFront"]
+[node name="Gate" type="CSGBox3D" parent="Walls/WallFront" unique_id=1910691641]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 visible = false
 operation = 2
 size = Vector3(4, 0.1, 4)
 
-[node name="WallBack" type="CSGBox3D" parent="Walls"]
+[node name="WallBack" type="CSGBox3D" parent="Walls" unique_id=595739896]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -4.37114e-07, 5, -10)
 use_collision = true
 size = Vector3(10, 0.1, 20)
 
-[node name="Gate" type="CSGBox3D" parent="Walls/WallBack"]
+[node name="Gate" type="CSGBox3D" parent="Walls/WallBack" unique_id=963675760]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
 visible = false
 operation = 2
 size = Vector3(4, 0.1, 4)
 
-[node name="Objects" type="Node3D" parent="."]
+[node name="Objects" type="Node3D" parent="." unique_id=13698528]
 
-[node name="rock_ceiling1" parent="Objects" instance=ExtResource("3_rock")]
+[node name="rock_ceiling1" parent="Objects" unique_id=147480869 instance=ExtResource("3_rock")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -39.2976, -5.68043, -22.978)
 
-[node name="rock_ceiling4" parent="Objects" instance=ExtResource("3_rock")]
+[node name="rock_ceiling4" parent="Objects" unique_id=975982996 instance=ExtResource("3_rock")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -38.1071, -5.68042, -40.2263)
 
-[node name="rock_ceiling2" parent="Objects" instance=ExtResource("3_rock")]
+[node name="rock_ceiling2" parent="Objects" unique_id=218311039 instance=ExtResource("3_rock")]
 transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -40.1984, -3.95402, -24.5236)
 
-[node name="rock_ceiling3" parent="Objects" instance=ExtResource("3_rock")]
+[node name="rock_ceiling3" parent="Objects" unique_id=2104195103 instance=ExtResource("3_rock")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.2958, -1.35023, -7.72827)
 
-[node name="Ramp1" parent="Objects" node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
+[node name="Ramp1" parent="Objects" unique_id=1167754976 node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.7114, 0.471951, 8.86037)
 faces = Array[int]([0, 4])
 box = NodePath("../..")
 
-[node name="Objects2" type="Node3D" parent="."]
+[node name="Objects2" type="Node3D" parent="." unique_id=1491195181]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 8.35461, 0.349584, 9.92326)
 
-[node name="rock_ceiling1" parent="Objects2" instance=ExtResource("3_rock")]
+[node name="rock_ceiling1" parent="Objects2" unique_id=1402973895 instance=ExtResource("3_rock")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -39.2976, -5.68043, -22.978)
 
-[node name="rock_ceiling2" parent="Objects2" instance=ExtResource("3_rock")]
+[node name="rock_ceiling2" parent="Objects2" unique_id=562839237 instance=ExtResource("3_rock")]
 transform = Transform3D(16, 0, 0, 0, 16, 0, 0, 0, 16, -39.6598, -3.95402, -25.4931)
 
-[node name="rock_ceiling3" parent="Objects2" instance=ExtResource("3_rock")]
+[node name="rock_ceiling3" parent="Objects2" unique_id=1335965380 instance=ExtResource("3_rock")]
 transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, -14.2958, -1.35023, -7.72827)
 
-[node name="Ramp2" parent="Objects2" node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
+[node name="Ramp2" parent="Objects2" unique_id=1838537287 node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.444478, 9.53888)
 faces = Array[int]([0, 5])
 box = NodePath("../..")
 
-[node name="sounds" type="Node3D" parent="."]
+[node name="sounds" type="Node3D" parent="." unique_id=2098541521]
 
-[node name="lava1" type="AudioStreamPlayer3D" parent="sounds"]
+[node name="lava1" type="AudioStreamPlayer3D" parent="sounds" unique_id=187350678]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6966, 0, -4.83378)
 stream = ExtResource("4_lava1")
 autoplay = true
 parameters/looping = true
 
-[node name="lava2" type="AudioStreamPlayer3D" parent="sounds"]
+[node name="lava2" type="AudioStreamPlayer3D" parent="sounds" unique_id=224626566]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.83034, 5, 9.5)
 stream = ExtResource("5_lava2")
 autoplay = true
 parameters/looping = true
 
-[node name="lava3" type="AudioStreamPlayer3D" parent="sounds"]
+[node name="lava3" type="AudioStreamPlayer3D" parent="sounds" unique_id=55742015]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.10781, 0, 4.76237)
 stream = ExtResource("6_lava3")
 autoplay = true
 parameters/looping = true
 
-[node name="Ramp_F3" parent="." node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
+[node name="Ramp_F3" parent="." unique_id=2120460706 node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39824, 0.562371, -9.58193)
 faces = Array[int]([1, 4])
 box = NodePath("..")
 
-[node name="Ramp_F4" parent="." node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
+[node name="Ramp_F4" parent="." unique_id=1553638645 node_paths=PackedStringArray("box") instance=ExtResource("7_ramp")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 4.95436, 9.72744, -9.72491)
 faces = Array[int]([1, 5])
 box = NodePath("..")

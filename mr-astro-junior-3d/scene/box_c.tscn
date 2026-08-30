@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://dq5kmwg3p6crb" path="res://scene/lights.tscn" id="2_lights"]
 [ext_resource type="PackedScene" uid="uid://csspn2i7qghus" path="res://assets/kenney-space-station/rock.glb" id="3_rock"]
 [ext_resource type="AudioStream" uid="uid://c6l65ho6uw0bi" path="res://assets/sounds/freesound_community-lava-loop-1-67307.mp3" id="4_lava1"]
-[ext_resource type="PackedScene" uid="uid://b4un5r7y2hh7c" path="res://scene/diamond_yellow.tscn" id="4_spo2g"]
 [ext_resource type="AudioStream" uid="uid://dvl44ka0f3glp" path="res://assets/sounds/freesound_community-lava-loop-2-67306.mp3" id="5_lava2"]
 [ext_resource type="PackedScene" uid="uid://b0480xdan5e57" path="res://scene/steps.tscn" id="5_p84lk"]
 [ext_resource type="AudioStream" uid="uid://bhwfqrwecf8rw" path="res://assets/sounds/freesound_community-lava-loop-3-28887.mp3" id="6_lava3"]
@@ -102,9 +101,6 @@ size = Vector3(4, 0.1, 4)
 
 [node name="rock_door_right" parent="Objects" unique_id=732281339 instance=ExtResource("3_rock")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 9, 0, -3)
-
-[node name="PickupItem" parent="Objects" unique_id=637346231 instance=ExtResource("4_spo2g")]
-transform = Transform3D(1, 0, 0, 0, -4.371138e-08, -1, 0, 1, -4.371138e-08, 7.7824183, 1.3878198, -9.42954)
 
 [node name="steps" parent="Objects" unique_id=1863953072 instance=ExtResource("5_p84lk")]
 transform = Transform3D(-1, -7.642742e-15, -8.742278e-08, 0, -1, 8.742278e-08, -8.742278e-08, 8.742278e-08, 1, -6.9606276, 10.096429, -1.0039778)
